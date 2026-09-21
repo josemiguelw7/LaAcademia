@@ -1,0 +1,277 @@
+---
+id: 03-01
+module: 3
+lesson: 1
+slug: estados-civiles
+title: Los cinco estados civiles
+objective: Elegir el estado civil correcto de cualquier cliente y explicar por qué.
+duration_min: 9
+status: draft
+source: [Lección 3 Maestro]
+cifras: [deduccion_estandar]
+practice: 03-estado-civil
+questions:
+  - id: q1
+    after_segment: 1
+    concept_tag: estado-civil-31-dic
+    prompt: "Rosa se casó el 28 de diciembre. Fue soltera casi todo el año. ¿Cómo declara ese año?"
+    options:
+      - id: a
+        text: "Como soltera, porque estuvo soltera más de la mitad del año."
+        correct: false
+        feedback: "Casi. Los meses no cuentan. El estado civil se decide por cómo estaba el 31 de diciembre, y ese día ya estaba casada."
+      - id: b
+        text: "Como casada, conjunta o por separado."
+        correct: true
+        feedback: "Exacto. El 31 de diciembre estaba casada, así que ese año es casada para todo el año. Ahora elige entre conjunta y por separado."
+      - id: c
+        text: "Mitad soltera y mitad casada, prorrateado por meses."
+        correct: false
+        feedback: "Casi. En la 1040 no hay prorrateo de estado civil. Es uno solo para todo el año, el que tenías el último día."
+  - id: q2
+    after_segment: 2
+    concept_tag: mfj-vs-single
+    prompt: "Andrés y Lucía están casados y viven juntos. Él ganó todo el ingreso; ella no trabajó. ¿Qué les conviene casi siempre?"
+    options:
+      - id: a
+        text: "Casados presentando conjuntamente."
+        correct: true
+        feedback: "Exacto. Una sola declaración con los dos, la deducción estándar más alta y acceso a todos los créditos. Que uno no haya ganado no cambia nada."
+      - id: b
+        text: "Él como soltero, ella no declara."
+        correct: false
+        feedback: "Casi. Un casado nunca puede marcar soltero. Si está casado el 31 de diciembre, es conjunta o por separado."
+      - id: c
+        text: "Cada uno por separado, para que ella no tenga que declarar."
+        correct: false
+        feedback: "Casi. Por separado casi siempre paga más y pierde créditos. Y ella no necesita ingreso propio para ir en la declaración conjunta."
+  - id: q3
+    after_segment: 3
+    concept_tag: mfs-consecuencias
+    prompt: "Una pareja casada quiere presentar por separado. Tienen dos hijos y ella pagó guardería. ¿Qué pierden?"
+    options:
+      - id: a
+        text: "Nada. Los créditos se reparten entre las dos declaraciones."
+        correct: false
+        feedback: "Casi. Presentar por separado no reparte los créditos, los cierra. El crédito por ingreso del trabajo y el de guardería, entre otros, no se permiten por separado salvo excepciones muy concretas."
+      - id: b
+        text: "El crédito por ingreso del trabajo y el crédito por cuidado de hijos, por regla general."
+        correct: true
+        feedback: "Exacto. Por separado se pierden esos créditos, la deducción estándar es la de soltero, y si uno detalla el otro también tiene que detallar."
+      - id: c
+        text: "Solo pierden la posibilidad de e-file."
+        correct: false
+        feedback: "Casi. Las declaraciones por separado sí se transmiten electrónicamente. Lo que se pierde son créditos y la deducción más alta."
+  - id: q4
+    after_segment: 3
+    concept_tag: mfs-cuando-conviene
+    prompt: "¿Cuándo sí tiene sentido que un matrimonio presente por separado?"
+    options:
+      - id: a
+        text: "Cuando uno de los dos no quiere hacerse responsable de la declaración del otro."
+        correct: true
+        feedback: "Exacto. En la conjunta los dos responden por todo. Si uno tiene deudas con el IRS, un negocio con problemas o no confía en los números del otro, por separado protege. Se paga más, pero se elige con los ojos abiertos."
+      - id: b
+        text: "Cuando quieren un reembolso más grande."
+        correct: false
+        feedback: "Casi. Es al revés. Por separado casi siempre se paga más. Nunca lo ofrezcas como forma de sacar más reembolso."
+      - id: c
+        text: "Cuando uno de los dos tiene ITIN."
+        correct: false
+        feedback: "Casi. Tener ITIN no obliga a presentar por separado. Un matrimonio con SSN e ITIN puede presentar conjunta. Lo que cambia es qué créditos alcanzan."
+  - id: q5
+    after_segment: 4
+    concept_tag: hoh-requisitos
+    prompt: "Carmen es soltera, su hijo de 8 años vive con ella todo el año, y su mamá paga la renta de la casa donde viven los tres. ¿Carmen es cabeza de familia?"
+    options:
+      - id: a
+        text: "Sí, porque es soltera y tiene un hijo que vive con ella."
+        correct: false
+        feedback: "Casi. Faltó el tercer requisito. Cabeza de familia exige pagar más de la mitad del costo de la casa, y aquí la paga la abuela."
+      - id: b
+        text: "No, porque no pagó más de la mitad del costo del hogar."
+        correct: true
+        feedback: "Exacto. Soltera y con hijo en casa cumple dos de tres. Sin pagar más de la mitad de la casa, es soltera. Quien podría ser cabeza de familia aquí es la abuela, si el nieto califica como su dependiente."
+      - id: c
+        text: "No, porque cabeza de familia solo aplica a divorciados."
+        correct: false
+        feedback: "Casi. Cabeza de familia no depende de haberse divorciado. Aplica a cualquier persona no casada que mantenga una casa para una persona calificada."
+  - id: q6
+    after_segment: 4
+    concept_tag: hoh-padre-dependiente
+    prompt: "Luis es soltero, vive solo, y paga más de la mitad de los gastos del departamento donde vive su papá, que es su dependiente. ¿Puede ser cabeza de familia?"
+    options:
+      - id: a
+        text: "No, porque su papá no vive con él."
+        correct: false
+        feedback: "Casi. Esa es la excepción que hay que saberse. Para los padres no se exige que vivan contigo. Basta pagar más de la mitad de la casa del padre y que sea tu dependiente."
+      - id: b
+        text: "Sí, porque paga más de la mitad de la casa de su padre y su padre es su dependiente."
+        correct: true
+        feedback: "Exacto. Los padres son la única persona calificada que no tiene que vivir contigo. Esto pasa muchísimo en nuestra comunidad y se pierde por no preguntarlo."
+      - id: c
+        text: "Solo si su papá tiene menos de 65 años."
+        correct: false
+        feedback: "Casi. La edad del padre no importa aquí. Lo que importa es que sea dependiente de Luis y que Luis pague más de la mitad de esa casa."
+  - id: q7
+    after_segment: 5
+    concept_tag: considerada-no-casada
+    prompt: "Marisol sigue casada legalmente, pero su esposo se fue en marzo y no volvió. Sus dos hijos viven con ella y ella paga todo. ¿Qué marca?"
+    options:
+      - id: a
+        text: "Casada presentando por separado, porque no hay divorcio."
+        correct: false
+        feedback: "Casi. Sin divorcio puede marcar por separado, sí, pero pierde créditos. Como el esposo no vivió en la casa los últimos seis meses del año, ella cuenta como no casada y puede ser cabeza de familia."
+      - id: b
+        text: "Cabeza de familia, porque el esposo no vivió en la casa los últimos seis meses y ella mantiene a los hijos."
+        correct: true
+        feedback: "Exacto. Se llama «considerada no casada»: separada de hecho los últimos seis meses del año, paga más de la mitad de la casa, y un hijo vive con ella más de medio año. Cabeza de familia, con sus créditos completos."
+      - id: c
+        text: "Soltera, porque ya no vive con él."
+        correct: false
+        feedback: "Casi. Soltera no, porque sigue casada por ley. Vivir separados no cambia el estado legal. La salida correcta es cabeza de familia, si cumple los requisitos."
+  - id: q8
+    after_segment: 6
+    concept_tag: viudo-calificado
+    prompt: "El esposo de Teresa falleció en 2025. Ella no se ha vuelto a casar y su hija de 12 años vive con ella. ¿Cómo declara el año 2026?"
+    options:
+      - id: a
+        text: "Soltera con dependiente."
+        correct: false
+        feedback: "Casi. Le corresponde algo mejor. Los dos años siguientes al fallecimiento, con un hijo dependiente en casa, puede usar las tasas de casada conjunta como viuda calificada."
+      - id: b
+        text: "Cónyuge sobreviviente calificada, con las tasas de casada conjunta."
+        correct: true
+        feedback: "Exacto. El año del fallecimiento presenta conjunta con él. Los dos años siguientes, si tiene un hijo dependiente en casa y no se ha casado, marca cónyuge sobreviviente calificada. Después pasa a cabeza de familia."
+      - id: c
+        text: "Casada conjunta, como si él viviera."
+        correct: false
+        feedback: "Casi. Conjunta con el fallecido solo se permite en el año en que murió. Del año siguiente en adelante es cónyuge sobreviviente calificada, que da las mismas tasas."
+  - id: q9
+    after_segment: 7
+    concept_tag: hoh-casado-viviendo-juntos
+    prompt: "Un cliente casado que vive con su esposa te pide marcar cabeza de familia «porque él mantiene la casa». ¿Qué haces?"
+    options:
+      - id: a
+        text: "Lo marcas, porque de verdad paga todo."
+        correct: false
+        feedback: "Casi. Pagar la casa no basta. Cabeza de familia exige no estar casado, o que el cónyuge no haya vivido en la casa los últimos seis meses. Viviendo juntos, es conjunta o por separado. Marcarlo es una declaración falsa que firmas tú."
+      - id: b
+        text: "Le explicas que viviendo con su esposa no califica y le muestras cuánto sale en conjunta."
+        correct: true
+        feedback: "Exacto. Casi siempre conjunta le sale igual o mejor. Y si insiste, la respuesta es no. Tu firma vale más que ese cliente."
+      - id: c
+        text: "Lo marcas soltero, que es más neutral."
+        correct: false
+        feedback: "Casi. Soltero es igual de falso. Un casado el 31 de diciembre solo tiene dos opciones: conjunta o por separado."
+  - id: q10
+    after_segment: 7
+    concept_tag: separacion-sin-divorcio
+    prompt: "Ana se separó de su esposo hace dos años, sin papeles. No tiene hijos y vive sola. ¿Qué marca?"
+    options:
+      - id: a
+        text: "Soltera, porque ya llevan dos años separados."
+        correct: false
+        feedback: "Casi. Sin divorcio ni separación legal por orden judicial, sigue casada ante el IRS. Es el error más común de este grupo."
+      - id: b
+        text: "Casada presentando por separado."
+        correct: true
+        feedback: "Exacto. Sin hijos en casa no puede ser cabeza de familia, y sin sentencia sigue casada. Es por separado, y le conviene saber que un divorcio o una separación legal le cambiaría el panorama."
+      - id: c
+        text: "Cabeza de familia, porque mantiene su propia casa."
+        correct: false
+        feedback: "Casi. Cabeza de familia necesita una persona calificada que viva con ella. Mantener su propia casa sola no alcanza."
+---
+
+## S1 · El 31 de diciembre decide
+
+Soy Liliana. Hoy vas a aprender lo primero que se marca en una declaración y lo primero que se marca mal.
+
+El estado civil se decide por un solo día: el 31 de diciembre. Lo que pasó antes no cuenta. Si tu cliente se casó el 28 de diciembre, ese año es casado. Si se divorció el 30 de diciembre, ese año es soltero. No hay mitades, no hay meses, no hay prorrateo.
+
+¿Por qué importa tanto? Porque el estado civil fija la deducción estándar, los tramos de impuesto y qué créditos alcanzan. Un estado civil mal elegido cambia el reembolso en cientos o miles de dólares. Y el IRS lo revisa.
+
+Son cinco: soltero, casado conjunto, casado por separado, cabeza de familia y cónyuge sobreviviente calificado. Te los enseño uno por uno, con la pregunta que le haces al cliente para cada uno.
+
+> **HISTORIA · Liliana:** Una declaración que te llegó al escritorio en el IRS con el estado civil equivocado. Qué pasó con esa persona y cuánto tardó en arreglarse. 30–45 segundos.
+
+## S2 · Soltero y casado conjunto
+
+Soltero es el que no está casado el 31 de diciembre, o está divorciado o separado legalmente por un juez. Y que no califica para nada mejor. Soltero es el estado civil por defecto, no el que conviene.
+
+Casado conjunto es una sola declaración para los dos. Todo el ingreso de los dos, todas las deducciones, todos los créditos, en un solo formulario. Es lo que le conviene a casi todos los matrimonios.
+
+Ojo con esto: no importa que solo uno haya trabajado. El que no ganó nada va igual en la declaración conjunta. Y los dos firman.
+
+La deducción estándar de conjunta es el doble que la de soltero. Míralo en la tarjeta.
+
+<Cifra concept="deduccion_estandar" status="single" />
+<Cifra concept="deduccion_estandar" status="mfj" />
+
+La pregunta que le haces al cliente: «¿Estabas casado el 31 de diciembre?». No «¿eres casado?». La fecha.
+
+## S3 · Casado por separado: lo que se pierde
+
+Casado por separado es el estado civil que más se pide y menos conviene.
+
+Cada cónyuge presenta su propia declaración con su propio ingreso. Suena cómodo. Pero se pierde esto: el crédito por ingreso del trabajo, salvo una excepción que veremos en el módulo 5. El crédito por cuidado de hijos. Los créditos de educación. La deducción estándar baja a la de soltero. Y si uno detalla deducciones, el otro tiene que detallar también, aunque no le convenga.
+
+¿Cuándo sí tiene sentido? Cuando uno de los dos no quiere responder por la declaración del otro. En conjunta, los dos son responsables por todo el impuesto. Si uno tiene deudas con el IRS, un negocio con números dudosos, o simplemente no confía, presentar por separado lo protege. Se paga más, pero se elige sabiendo por qué.
+
+Una cosa más. Tener ITIN no obliga a presentar por separado. Un matrimonio con SSN e ITIN puede presentar conjunta. Lo que cambia es qué créditos alcanzan, y eso lo vemos en la lección de ITIN.
+
+## S4 · Cabeza de familia: tres requisitos
+
+Cabeza de familia es el estado civil que más dinero deja sobre la mesa cuando no se marca. Tiene deducción estándar más alta que soltero y tramos más suaves.
+
+<Cifra concept="deduccion_estandar" status="hoh" />
+
+Tres requisitos, y se cumplen los tres o no aplica.
+
+Uno: no estar casado el 31 de diciembre. O contar como no casado, que te explico en el siguiente segmento.
+
+Dos: haber pagado más de la mitad del costo de mantener la casa ese año. Renta o hipoteca, luz, agua, comida que se come en la casa. Más de la mitad. Si la renta la paga la abuela, la abuela cumple este requisito, no la hija.
+
+Tres: que una persona calificada haya vivido contigo más de la mitad del año. Un hijo, un nieto, un hermano, un sobrino que sea tu dependiente.
+
+Hay una excepción que en nuestra comunidad se pierde todo el tiempo: los padres. Un padre o una madre no tiene que vivir contigo. Si pagas más de la mitad de la casa donde vive tu papá, y tu papá es tu dependiente, eres cabeza de familia. Aunque viva en otra ciudad. Pregúntalo siempre.
+
+## S5 · «Considerada no casada»: la mamá separada
+
+Este es el caso que más veo y el que más se marca mal.
+
+Marisol sigue casada por ley. No hay divorcio. Pero el esposo se fue en marzo y no volvió. Los hijos viven con ella. Ella paga la renta.
+
+Muchos la marcan casada por separado, porque «sigue casada». Y pierde el crédito por ingreso del trabajo, la deducción de cabeza de familia, todo.
+
+La regla: si el cónyuge no vivió en la casa los últimos seis meses del año, ella paga más de la mitad de la casa, y un hijo vive con ella más de medio año, el IRS la considera no casada. Y puede marcar cabeza de familia, con sus créditos completos.
+
+Fíjate en los últimos seis meses. Si él se fue en agosto, no cumple. Si se fue en junio o antes y no regresó, sí. Por eso la pregunta es: «¿Desde cuándo no vive en la casa?».
+
+Y si no tiene hijos ni persona calificada en casa, no hay salida: sigue casada, y es por separado. Lo que le cambia el panorama es un divorcio o una separación legal por juez.
+
+## S6 · Cónyuge sobreviviente calificado
+
+Cuando fallece el esposo o la esposa, el año del fallecimiento se presenta conjunta con él, como si estuviera. Es el último año juntos ante el IRS.
+
+Los dos años siguientes, si el que sobrevive no se ha vuelto a casar y tiene un hijo dependiente viviendo en casa, marca cónyuge sobreviviente calificado. Antes se llamaba viudo calificado. Le da los mismos tramos y la misma deducción que casado conjunta, dos años más.
+
+Después de esos dos años, si sigue con el hijo en casa, pasa a cabeza de familia. Si no, a soltero.
+
+La pregunta: «¿Cuándo falleció?» y «¿Hay un hijo viviendo contigo?». Con esas dos, sabes qué marcar los tres años siguientes.
+
+## S7 · Los tres errores y el caso completo
+
+Tres errores que vi cientos de veces desde adentro.
+
+Uno: la soltera con hijos que se marca soltera. Si paga más de la mitad de la casa y el hijo vive con ella, es cabeza de familia. Se le va dinero cada año por no preguntar.
+
+Dos: el casado que vive con su esposa y quiere cabeza de familia «porque él mantiene la casa». No. Viviendo juntos, es conjunta o por separado. Si lo marcas, lo firmas tú.
+
+Tres: la que se separó hace años sin papeles y se marca soltera. Sin divorcio sigue casada. Si tiene hijos en casa, cabeza de familia. Si no, por separado.
+
+Ahora el caso completo. Marisol: casada por ley, el esposo se fue en marzo, dos hijos con ella, ella paga todo. ¿Qué marca? Considerada no casada, cabeza de familia. Deducción alta, crédito por ingreso del trabajo, crédito por hijos. Una pregunta bien hecha le cambió el año.
+
+En la práctica de este módulo vas a hacer esto mismo con tres familias. Y en la siguiente lección vemos quién es dependiente, que es la otra mitad de esta decisión.
+
+> **HISTORIA · Liliana:** El caso de una persona real (sin nombre) a la que le cambió el reembolso por corregir el estado civil. Cuánto era antes y después, en términos generales. 30–45 segundos.
