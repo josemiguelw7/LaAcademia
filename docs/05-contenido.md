@@ -1,5 +1,7 @@
 # 05 · Contenido y currículo
 
+> **Actualización 21 sept 2026:** la estructura final de lecciones (8 módulos, 30 lecciones, fuentes por lección, correcciones al material original) está en [09-curriculo.md](09-curriculo.md). La tabla de mapeo de abajo queda como historial; las reglas de reescritura y el pipeline siguen vigentes.
+
 ## Principle
 
 Ship what exists, restructured into the mastery format; add lessons where the 8-module design has real gaps. Don't claim «25 lecciones» publicly until the count is real.
