@@ -11,5 +11,6 @@ Documentation for building the La Academia LMS. Written 21 Sep 2026 after verify
 | [05 · Contenido](05-contenido.md) | 10 existing lessons → 8-module design, rewrite rules, pipeline |
 | [06 · Roadmap](06-roadmap.md) | Phases, milestones, risks — anchored on the 2027 season |
 | [07 · Decisiones abiertas](07-decisiones-abiertas.md) | What still needs a decision, and by whom |
+| [08 · Checklist](08-checklist.md) | Build checklist and progress log — tick items here |
 
 Brand, voice, UI spec and tax-figure rules live in the `la-academia` Claude skill (Brand Book v1.0 + prototypes). Anything built here must pass its checklist.
