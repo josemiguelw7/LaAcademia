@@ -11,18 +11,20 @@ cifras: [ingreso_bruto_pariente, deduccion_estandar]
 
 Formato: tres casos. En cada uno el alumno ve los «documentos» del cliente (tarjetas con lo que diría en la entrevista), marca el estado civil en una réplica de la cabecera de la 1040 y arrastra a cada persona a «dependiente» o «no dependiente». Al revisar, cada casilla se marca ✓ o ✕ con la explicación. Pista disponible por caso. Reintentos ilimitados; se domina con los tres casos correctos.
 
-## Caso 1 · Marisol Rentería
+## Caso 1 · María Ortega (el caso de La Academia)
 
-Documentos: «Me casé en 2019. Mi esposo se fue de la casa en marzo de este año y no ha vuelto. No hay divorcio. Mis hijos Diego (9) y Valeria (6) viven conmigo todo el año. Yo pago la renta, la luz y la comida. Los niños tienen Seguro Social.»
+Documentos: «Me casé en 2018. Rubén se fue de la casa en marzo de este año y no ha vuelto. No hay divorcio. Mis hijos Sofía (7) y Mateo (4) viven conmigo todo el año. Yo pago la renta, la luz y la comida. Los niños tienen Seguro Social. Tengo el contrato de renta a mi nombre.»
 
 | Casilla | Esperado | Si se equivoca |
 |---|---|---|
 | Estado civil | Cabeza de familia | MFS: «Casi. Como el esposo no vivió en la casa los últimos seis meses, cuenta como no casada y puede ser cabeza de familia.» · Soltera: «Casi. Sigue casada por ley; sin divorcio no es soltera. Su salida es cabeza de familia.» · MFJ: «Casi. Para conjunta necesitaría la firma del esposo y su ingreso. No aplica.» |
-| Diego | Dependiente (hijo calificado) | No: «Casi. Hijo, menor de 19, vive con ella todo el año, no se mantiene solo. Es hijo calificado.» |
-| Valeria | Dependiente (hijo calificado) | igual |
-| Esposo | No dependiente | Sí: «Casi. Un cónyuge nunca es dependiente. Y además no vive en la casa.» |
+| Sofía | Dependiente (hijo calificado) | No: «Casi. Hijo, menor de 19, vive con ella todo el año, no se mantiene solo. Es hijo calificado.» |
+| Mateo | Dependiente (hijo calificado) | igual |
+| Rubén | No dependiente | Sí: «Casi. Un cónyuge nunca es dependiente. Y además no vive en la casa.» |
 
-Pista: «¿Desde qué mes no vive el esposo en la casa? Cuenta los últimos seis meses del año.»
+Pista: «¿Desde qué mes no vive Rubén en la casa? Cuenta los últimos seis meses del año.»
+
+Qué documentarías (casillas extra en este caso): contrato de renta a nombre de María · registro escolar de Sofía con la dirección · fecha en que Rubén dejó la casa. Marcar las tres para dominar el caso.
 
 ## Caso 2 · Doña Elena y su nieto
 
@@ -52,4 +54,4 @@ Pista: «La prueba de residencia del dependiente acepta México y Canadá. Pero 
 ## Notas para Liliana
 
 - Caso 3: confirmar que la explicación del crédito por otros dependientes para el padre residente en México es como ella lo enseña (el crédito exige que el dependiente sea ciudadano, nacional o residente de EE. UU., así que el padre en Monterrey es dependiente pero **no** da el crédito; sí cuenta para otros fines). Si prefiere no entrar en ese matiz en la práctica, se cambia a padre que vive en Texas.
-- Los nombres son ficticios y coinciden con los de los prototipos donde aplica.
+- María Ortega es el caso recurrente del curso (`content/casos/maria.md`); Marisol Rentería, de los prototipos, se fusiona con ella.

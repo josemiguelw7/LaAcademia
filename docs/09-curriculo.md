@@ -1,6 +1,6 @@
 # 09 · Currículo v1 — 8 módulos, 30 lecciones
 
-Estado: **propuesta para aprobación de Liliana** (21 sept 2026). Sustituye la tabla de mapeo de `05-contenido.md` y el «25 lecciones» del diseño. Cuando Liliana apruebe, este documento es la fuente de verdad del contenido; `05-contenido.md` conserva las reglas de reescritura y el pipeline.
+Estado: **propuesta para aprobación de Liliana** (21 sept 2026; principios actualizados 22 sept con su retroalimentación — ver `10-feedback-liliana.md`). Liliana va a hacer su propia pasada sobre esta lista; la estructura final se cierra cuando llegue. Sustituye la tabla de mapeo de `05-contenido.md` y el «25 lecciones» del diseño. Cuando Liliana apruebe, este documento es la fuente de verdad del contenido; `05-contenido.md` conserva las reglas de reescritura y el pipeline.
 
 Cómo se construyó: se leyeron completos los 10 guiones Maestro, el complemento de ITIN, el bono «Rumbo al Éxito», la «Guía Completa para Convertirse en Preparador» y el examen final (100 preguntas). Las clases grabadas en vivo (2025) se tomaron por título; no están transcritas. Cada lección de abajo dice de qué archivo sale, qué le falta y qué hay que corregir.
 
@@ -12,7 +12,10 @@ Cómo se construyó: se leyeron completos los 10 guiones Maestro, el complemento
 2. **Una lección = una decisión que el preparador toma en la vida real.** No «los formularios», sino «leer un W-2 sin errores». Si el título no describe algo que el alumno hará con un cliente, está mal planteada.
 3. **5–8 segmentos de 60–120 segundos, una pregunta después de cada segmento**, 10 preguntas por lección en total (algunas lecciones tienen 2 preguntas después de un segmento denso). Cada pregunta con 3 opciones y retroalimentación por cada opción incorrecta que nombre la confusión exacta.
 4. **Ningún monto en el guion.** Se dice «la deducción estándar de este año»; la app muestra la tarjeta desde la tabla `cifras`. Cada lección lista abajo sus `cifra_concept`.
-5. **Al menos un «esto es lo que pasa de verdad»** por lección: una historia de los 20 años de Liliana en el IRS. Los guiones originales no tienen ninguna; hay que grabarlas con ella (ver §8).
+5. **Historias de Liliana donde haya una fuerte**, de su práctica o de su paso por el IRS como Tax Examiner. Son opcionales: su experiencia es el hilo conductor, no una anécdota obligatoria por lección. Los guiones originales no tienen ninguna; se recogen con ella (ver §8).
+5b. **Un cliente recorre todo el curso.** María Ortega (`content/casos/maria.md`): el alumno la entrevista, decide su estado civil, captura sus documentos, revisa sus créditos, hace su Anexo C y revisa su declaración antes de transmitir. Al terminar, preparó una declaración, no vio 30 videos.
+5c. **Cada lección sigue la misma secuencia** (qué resuelves → regla → qué preguntas → qué evidencia buscas → caso → decisión → por qué las otras están mal → dónde va en la 1040 → qué guardas → checklist). Detalle en `content/README.md`.
+5d. **Demos de software aparte.** Las lecciones son neutrales; cada una puede llevar una demo «Ahora míralo en el software» de 2–5 min que se regraba por temporada.
 6. **La práctica no enseña lo que el video se saltó.** Aplica lo que ya se entendió. Por eso el intake y la debida diligencia son lecciones, no ejercicios.
 7. **Orden pedagógico, no el orden del diseño.** Familia (estado civil, dependientes) va **antes** de deducciones y créditos, porque EITC, CTC y cabeza de familia dependen de quién vive en la casa. Anexo C va después, cuando el alumno ya tiene ritmo.
 
@@ -84,7 +87,7 @@ Leyenda de estado: **existe** = hay guion que se reescribe · **parcial** = hay 
 *Al terminar: el alumno explica con sus palabras cómo se llega de un ingreso a un reembolso, y cuándo es la temporada.*
 
 **1.1 Preparador, contribuyente e IRS: quién es quién** — existe (L1) · 7 min
-Segmentos: (1) Soy Liliana, 20 años adentro: qué vas a poder hacer al terminar el curso. (2) Qué es una declaración y por qué existe. (3) El contribuyente: sus tres obligaciones (declarar todo, a tiempo, pagar). (4) El preparador: lo que asumes cuando firmas. (5) El IRS: qué hace y qué no hace (no da miedo cuando lo conoces). (6) «Esto es lo que pasa de verdad»: cómo se ve una declaración desde adentro del IRS.
+Segmentos: (1) Soy Liliana, más de 20 años preparando declaraciones y un tiempo dentro del IRS: qué vas a poder hacer al terminar el curso. (2) Qué es una declaración y por qué existe. (3) El contribuyente: sus tres obligaciones (declarar todo, a tiempo, pagar). (4) El preparador: lo que asumes cuando firmas. (5) El IRS: qué hace y qué no hace (no da miedo cuando lo conoces). (6) «Esto es lo que pasa de verdad»: cómo se ve una declaración desde adentro del IRS.
 Cifras: ninguna. Práctica: no. Notas: quitar el intro y el cierre de 4 párrafos; la lección 1 no lleva la historia del Tío Sam.
 
 **1.2 Cómo funciona el impuesto sobre la renta** — existe (L2, L6) · 10 min · *la lección conceptual más importante del curso*
@@ -117,7 +120,7 @@ Cifras: ninguna. Práctica: **PDF descargable «Lo que le pides a tu cliente»**
 ### Módulo 3 · Familia: estado civil y dependientes
 *Al terminar: el alumno elige el estado civil correcto y sabe quién sí y quién no es dependiente, incluidos los casos de la comunidad (padres en México, hijos con ITIN).*
 
-**3.1 Los cinco estados civiles** — existe (L3) · 9 min · **lección piloto**
+**3.1 Los cinco estados civiles** — existe (L3) · 10 min · **lección piloto** (revisada 22 sept con notas de Liliana)
 Segmentos: (1) El estado civil se decide por el 31 de diciembre. (2) Soltero; casado conjunto; casado separado: qué se pierde al presentar separado. (3) Cabeza de familia: los tres requisitos (no casado o «considerado no casado», más de la mitad del costo de la casa, persona calificada más de medio año). (4) Viudo con hijo: dos años con tasas de casado. (5) Los tres errores que más vi: soltera con hijos que califica para cabeza de familia; casado viviendo con su esposa marcando cabeza de familia; separada sin divorcio marcando soltera. (6) Caso: Marisol, separada desde marzo, dos hijos, paga la renta — ¿qué marca?
 Cifras: `deduccion_estandar` por estado. Práctica: **Práctica del módulo 3 «Elige el estado civil y los dependientes»** (tres casos con documentos).
 

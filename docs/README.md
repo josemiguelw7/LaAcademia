@@ -16,3 +16,4 @@ Documentation for building the La Academia LMS. Written 21 Sep 2026 after verify
 Brand, voice, UI spec and tax-figure rules live in the `la-academia` Claude skill (Brand Book v1.0 + prototypes). Anything built here must pass its checklist.
 
 - [09 · Currículo v1](09-curriculo.md)
+- [10 · Retroalimentación de Liliana 22 sept](10-feedback-liliana.md) — qué dijo, qué se adoptó, qué falta
