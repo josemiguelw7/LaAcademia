@@ -22,6 +22,13 @@ export async function middleware(request: NextRequest) {
     url.searchParams.set("sigue", p);
     return NextResponse.redirect(url);
   }
+  // Quien ya entró no vuelve a la pantalla de entrada: directo a su curso.
+  if (p === "/entrar" && user) {
+    const url = request.nextUrl.clone();
+    url.pathname = request.nextUrl.searchParams.get("sigue") || "/curso";
+    url.search = "";
+    return NextResponse.redirect(url);
+  }
   return response;
 }
 

@@ -4,6 +4,8 @@ import Link from "next/link";
 import Header from "@/components/marketing/Header";
 import Footer from "@/components/marketing/Footer";
 import Reveal from "@/components/marketing/Reveal";
+import Motion from "@/components/marketing/Motion";
+import PhoneDemo from "@/components/marketing/PhoneDemo";
 import { getPlans, precio } from "@/lib/plans";
 
 export const revalidate = 300;
@@ -71,6 +73,7 @@ export default async function Home() {
   return (
     <>
       <Header />
+      <Motion />
       <main>
         {/* Portada */}
         <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-16 pt-12 md:grid-cols-[1.1fr_.9fr] md:px-8 md:pb-24 md:pt-20">
@@ -100,7 +103,7 @@ export default async function Home() {
               Más de 20 años preparando impuestos · Experiencia como Tax Examiner en el IRS · Más de 500 clientes
             </p>
           </div>
-          <div className="hero-in hero-in-3 relative mx-auto w-full max-w-[380px]">
+          <div className="hero-in hero-in-3 relative mx-auto w-full max-w-[380px]" data-parallax="-0.08">
             <div className="absolute inset-x-6 bottom-0 top-10 rounded-hoja bg-bronce-suave" aria-hidden />
             <Image
               src="/liliana/retrato.png"
@@ -165,12 +168,45 @@ export default async function Home() {
           </div>
         </section>
 
+        {/* Por dentro de La Academia */}
+        <section id="por-dentro" className="border-y border-linea bg-blanco">
+          <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 md:grid-cols-2 md:px-8 md:py-24">
+            <Reveal>
+              <p className="text-[11px] font-bold uppercase tracking-[.14em] text-bronce-oscuro">Por dentro</p>
+              <h2 className="mt-3 max-w-[20ch] text-[26px] leading-[1.15] md:text-[32px]">
+                Así se ve una lección por dentro
+              </h2>
+              <ul className="mt-7 space-y-5">
+                {[
+                  ["Un video corto, una pregunta", "Ves un segmento, respondes, y si fallas te explico exactamente dónde está la confusión."],
+                  ["Las cifras siempre al día", "Ningún monto va grabado en el video: salen de la tabla del año, verificada contra el IRS."],
+                  ["Prácticas en el formulario real", "Terminas llenando réplicas del Anexo C y la 1040, casilla por casilla, con casos como Rosa y María."],
+                ].map(([t, d]) => (
+                  <li key={t} className="flex gap-4">
+                    <span aria-hidden className="mt-[7px] h-2 w-2 shrink-0 rounded-full bg-bronce" />
+                    <span>
+                      <span className="block text-[16px] font-bold">{t}</span>
+                      <span className="mt-1 block text-[14px] leading-relaxed text-gris-texto">{d}</span>
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-8 text-[14px] text-gris-texto">
+                ¿Ya eres alumna? <a href="/entrar" className="font-semibold text-bronce-oscuro underline underline-offset-4">Entra a tu curso aquí</a>.
+              </p>
+            </Reveal>
+            <Reveal delay={120}>
+              <PhoneDemo />
+            </Reveal>
+          </div>
+        </section>
+
         {/* Sobre Liliana */}
         <section className="bg-tinta text-blanco">
           <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
             <Reveal>
               <p className="text-[11px] font-bold uppercase tracking-[.14em] text-bronce">Sobre Liliana</p>
-              <blockquote className="mt-6 max-w-[26ch] font-titulo text-[26px] leading-[1.25] md:text-[36px]">
+              <blockquote data-scrub-clip className="mt-6 max-w-[26ch] font-titulo text-[26px] leading-[1.25] md:text-[36px]">
                 «No enseño desde un libro. Enseño desde la experiencia.»
               </blockquote>
               <p className="mt-6 max-w-[60ch] text-[16px] leading-relaxed text-blanco/80">

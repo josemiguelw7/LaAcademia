@@ -4,6 +4,7 @@ import Link from "next/link";
 const links: [string, string][] = [
   ["/#como-funciona", "Cómo funciona"],
   ["/#modulos", "Módulos"],
+  ["/#por-dentro", "Por dentro"],
   ["/#testimonios", "Testimonios"],
   ["/precios", "Precios"],
 ];
