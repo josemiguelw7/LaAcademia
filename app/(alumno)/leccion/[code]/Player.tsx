@@ -4,6 +4,10 @@ import { useState, useTransition, useEffect, useRef } from "react";
 import type { PlayerLesson, PlayerSegment } from "@/lib/course";
 import { startAttempt, answerQuestion, finishAttempt, type AnswerResult, type FinishResult } from "./actions";
 
+const DOWNLOADS: Record<string, { href: string; title: string }> = {
+  "pdf-checklist-intake": { href: "/descargas/lo-que-le-pides-a-tu-cliente.pdf", title: "Lo que le pides a tu cliente" },
+  "pdf-checklist-revision": { href: "/descargas/checklist-de-60-segundos.pdf", title: "El checklist de 60 segundos" },
+};
 type Seg = PlayerSegment & { html: string };
 type Step = { kind: "segment"; seg: number } | { kind: "question"; seg: number; q: number };
 
@@ -66,6 +70,12 @@ export function Player({ lesson, mastered }: { lesson: PlayerLesson & { segments
               : <button onClick={() => location.reload()} className="h-[52px] w-full rounded-boton bg-tinta text-[15px] font-bold text-blanco">Repetir la lección</button>}
             <Link href="/curso" className="flex h-[52px] items-center justify-center rounded-boton border-[1.5px] border-linea bg-blanco text-[15px] font-semibold">Volver al curso</Link>
           </div>
+          {DOWNLOADS[lesson.practiceCode ?? ""] && (
+            <a href={DOWNLOADS[lesson.practiceCode!].href} download className="mt-8 flex items-center justify-between rounded-tarjeta border border-bronce bg-bronce-suave p-4">
+              <span><span className="block text-[12px] font-bold text-bronce-oscuro">PDF para imprimir</span><span className="text-[16px] font-semibold">{DOWNLOADS[lesson.practiceCode!].title}</span></span>
+              <span className="text-[14px] font-semibold text-bronce-oscuro">Descargar</span>
+            </a>
+          )}
           {lesson.checklist.length > 0 && (
             <section className="mt-10 rounded-tarjeta border border-linea bg-blanco p-5">
               <h2 className="font-cuerpo text-[16px] font-bold">Lo que te llevas de esta lección</h2>

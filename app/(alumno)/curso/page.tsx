@@ -4,6 +4,7 @@ import { getCourseTree } from "@/lib/course";
 import { LessonNode } from "../LessonNode";
 
 export const metadata = { title: "El curso · La Academia" };
+const PRACTICES: Record<number, { code: string; title: string }> = { 6: { code: "06-anexo-c-rosa", title: "arma el Anexo C de Rosa" } };
 const LABEL = { dominada: "Dominada", en_progreso: "En progreso", disponible: "Disponible", bloqueada: "Bloqueada" } as const;
 
 export default async function Curso() {
@@ -36,6 +37,9 @@ export default async function Curso() {
                 return <li key={l.id}>{locked ? row : <Link href={`/leccion/${l.code}`}>{row}</Link>}</li>;
               })}
             </ul>
+            {PRACTICES[m.position] && (done === m.lessons.length || v.isStaff
+              ? <Link href={`/practica/${PRACTICES[m.position].code}`} className="mt-3 flex items-center justify-between rounded-tarjeta border border-bronce bg-bronce-suave px-4 py-3.5"><span className="text-[15px] font-semibold">Práctica: {PRACTICES[m.position].title}</span><span className="text-[14px] font-semibold text-bronce-oscuro">Abrir</span></Link>
+              : <p className="mt-3 rounded-tarjeta border border-linea px-4 py-3.5 text-[14px] text-gris-texto">Práctica del módulo: {PRACTICES[m.position].title}. Se abre al dominar todas las lecciones.</p>)}
           </section>
         );
       })}

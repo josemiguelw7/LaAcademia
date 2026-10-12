@@ -7,9 +7,9 @@ export function BottomNav({ isStaff }: { isStaff: boolean }) {
   const items = [
     { href: "/progreso", label: "Progreso" },
     { href: "/curso", label: "Curso" },
-    ...(isStaff ? [{ href: "/revision", label: "Guiones" }] : []),
+    ...(isStaff ? [{ href: "/panel", label: "Panel" }] : []),
   ];
-  if (p.startsWith("/leccion")) return null;
+  if (p.startsWith("/leccion") || p.startsWith("/practica")) return null;
   return (
     <nav className="fixed inset-x-0 bottom-0 border-t border-linea bg-blanco pb-[env(safe-area-inset-bottom)]">
       <ul className="mx-auto flex max-w-2xl">

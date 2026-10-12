@@ -1,0 +1,3 @@
+-- Aplicada en producción el 12 oct 2026 vía Supabase MCP (ver historial de migraciones del proyecto).
+-- Planes con precios PROPUESTOS (docs/02) y la práctica del Anexo C de Rosa (casos + casillas con expected_expr).
+-- El contenido completo de esta migración vive en la base; para reconstruirla: supabase db dump --data-only -t public.plans -t public.practice_cases -t public.practice_boxes

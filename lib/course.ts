@@ -28,19 +28,19 @@ export async function getCourseTree(userId: string, unlockAll = false): Promise<
 
 export type PlayerQuestion = { id: string; prompt: string; options: { id: string; letter: string; text: string }[] };
 export type PlayerSegment = { id: string; position: number; title: string; transcript: string; videoId: string | null; questions: PlayerQuestion[] };
-export type PlayerLesson = { id: string; code: string; module: number; moduleTitle: string; position: number; title: string; objective: string | null; threshold: number; checklist: string[]; cifras: string[]; segments: PlayerSegment[] };
+export type PlayerLesson = { practiceCode: string | null; id: string; code: string; module: number; moduleTitle: string; position: number; title: string; objective: string | null; threshold: number; checklist: string[]; cifras: string[]; segments: PlayerSegment[] };
 
 /** Lesson for the player. Never includes is_correct or feedback: grading happens in a server action. */
 export async function getPlayerLesson(code: string): Promise<PlayerLesson | null> {
   const db = createAdminClient();
   const { data: l } = await db.from("lessons")
-    .select("id, code, position, title, objective, mastery_threshold, checklist, cifra_concepts, modules(position, title), segments(id, position, title, transcript, stream_video_id), questions(id, position, prompt, segment_id, options(id, letter, text))")
+    .select("id, code, position, title, objective, mastery_threshold, checklist, cifra_concepts, practice_code, modules(position, title), segments(id, position, title, transcript, stream_video_id), questions(id, position, prompt, segment_id, options(id, letter, text))")
     .eq("code", code).single();
   if (!l) return null;
   const mod = l.modules as unknown as { position: number; title: string };
   const qs = [...(l.questions ?? [])].sort((a, b) => a.position - b.position);
   return {
-    id: l.id, code: l.code, module: mod.position, moduleTitle: mod.title, position: l.position, title: l.title, objective: l.objective,
+    practiceCode: l.practice_code, id: l.id, code: l.code, module: mod.position, moduleTitle: mod.title, position: l.position, title: l.title, objective: l.objective,
     threshold: l.mastery_threshold, checklist: (l.checklist as string[]) ?? [], cifras: l.cifra_concepts ?? [],
     segments: [...(l.segments ?? [])].sort((a, b) => a.position - b.position).map((s) => ({
       id: s.id, position: s.position, title: s.title, transcript: s.transcript, videoId: s.stream_video_id,
