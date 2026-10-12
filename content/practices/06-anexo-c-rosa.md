@@ -4,7 +4,7 @@ module: 6
 title: Arma el Anexo C de Rosa
 unlocks_after: [06-01, 06-02, 06-03, 06-04, 06-05]
 status: draft
-cifras: [tarifa_millas, tarifa_oficina_simplificada, umbral_1099k, umbral_se]
+cifras: [tarifa_millas, tarifa_oficina_simplificada, umbral_1099_k, umbral_se]
 ---
 
 # Práctica del módulo 6 · Arma el Anexo C de Rosa
