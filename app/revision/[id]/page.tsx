@@ -1,11 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getLesson, getLessons, MODULE_TITLES } from "@/lib/content";
+import { getLesson, MODULE_TITLES } from "@/lib/content";
 import { StatusPill } from "../StatusPill";
-
-export function generateStaticParams() {
-  return getLessons().map((l) => ({ id: l.id }));
-}
 
 export default async function LessonReview({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;

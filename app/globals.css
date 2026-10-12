@@ -53,3 +53,9 @@ table, input, .cifras { font-variant-numeric: tabular-nums; }
 .guion blockquote { margin: 1em 0; padding: 12px 16px; background: var(--color-bronce-suave); border-radius: 12px; }
 .guion blockquote p { margin: 0; color: var(--color-tinta); font-size: 15px; }
 .guion .cifra { display: inline-block; padding: 1px 8px; border: 1px solid var(--color-bronce); border-radius: 999px; font-size: 13px; color: var(--color-bronce-oscuro); background: #fff; }
+.guion .cifra-card { margin: 1em 0; padding: 14px 16px; border: 1px solid var(--color-bronce); border-radius: 14px; background: #fff; }
+.guion .cifra-card p { margin: 0 0 6px; font-size: 12px; font-weight: 700; color: var(--color-bronce-oscuro); }
+.guion .cifra-card ul { margin: 0; padding: 0; list-style: none; }
+.guion .cifra-card li { display: flex; justify-content: space-between; gap: 12px; padding: 4px 0; font-size: 15px; border-top: 1px solid var(--color-linea); }
+.guion .cifra-card li:first-child { border-top: 0; }
+.guion .cifra-card em { color: var(--color-error); font-size: 12px; }

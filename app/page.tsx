@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         La nueva Academia abre muy pronto.
       </p>
       <p className="mt-8 text-[13px] text-gris-texto">— Liliana Miranda</p>
+      <Link href="/entrar" className="mt-10 text-[15px] font-semibold text-bronce-oscuro underline underline-offset-4">¿Ya tienes el curso? Entra aquí</Link>
     </main>
   );
 }
