@@ -1,4 +1,4 @@
-# 09 · Currículo v1 — 8 módulos, 30 lecciones
+# 09 · Currículo v1.1 — 8 módulos, 31 lecciones
 
 Estado: **propuesta para aprobación de Liliana** (21 sept 2026; principios actualizados 22 sept con su retroalimentación — ver `10-feedback-liliana.md`). Liliana va a hacer su propia pasada sobre esta lista; la estructura final se cierra cuando llegue. Sustituye la tabla de mapeo de `05-contenido.md` y el «25 lecciones» del diseño. Cuando Liliana apruebe, este documento es la fuente de verdad del contenido; `05-contenido.md` conserva las reglas de reescritura y el pipeline.
 
@@ -75,11 +75,11 @@ Se corrigen al reescribir. Ninguna se hereda.
 - **Nuevas:** 2.3 La entrevista con el cliente · 5.4 Debida diligencia (8867) · 6.2 Gastos · 6.3 Millas · 6.4 Oficina en casa · 7.2 Cartas del IRS.
 - **Recuperadas del curso viejo que el diseño había dejado fuera:** 3.3 ITIN y W-7 · 4.4 Desempleo, Seguro Social y pensiones · 5.5 el 1095-A · 7.3 la 1040-X y el plan de pagos 9465.
 - **Fuera de v1** (ver §7): Anexo E (renta), Anexo D e inversiones, Anexo B, declaraciones estatales, LLC/S-corp, pista en inglés.
-- **Conteo:** 30 lecciones. Landing, certificado y árbol dicen «30 lecciones» (no 25).
+- **Conteo:** 31 lecciones (30 + la clase complementaria 3.4 de CAA, oct 2026). Landing, certificado y árbol dicen «31 lecciones».
 
 ---
 
-## 5. Los 8 módulos y 30 lecciones
+## 5. Los 8 módulos y 31 lecciones
 
 Leyenda de estado: **existe** = hay guion que se reescribe · **parcial** = hay material pero incompleto · **nuevo** = se escribe desde cero con Liliana. Duración = minutos objetivo de video. Segmentos = esqueleto propuesto; Liliana lo corrige.
 
@@ -130,7 +130,11 @@ Cifras: `ingreso_bruto_pariente`. Práctica: módulo 3.
 
 **3.3 ITIN y el Formulario W-7** — existe (complemento ITIN, L6) · 9 min
 Segmentos: (1) Qué es el ITIN, quién lo necesita, qué no da (no autoriza trabajar, no da Seguro Social). (2) Lo que sí y lo que no se puede reclamar con ITIN: sin EITC para quien tenga ITIN; hijos con ITIN reciben el crédito por otros dependientes, no el CTC. (3) El W-7 paso a paso: datos, razón, documentos (pasaporte resuelve identidad y estatus). (4) Se presenta junto con la declaración: por correo a Austin, en un TAC o con un Agente de Aceptación Certificado. (5) Tiempos y renovación: 7–11 semanas; caduca si no se usa tres años seguidos. (6) Errores: sin declaración adjunta, documentos sin traducción certificada, nombres que no coinciden.
-Cifras: `plazo_itin`. Práctica: no. Notas: quitar la regla vieja de dígitos medios; confirmar si Liliana es CAA (cambia el guion).
+Cifras: `plazo_itin`. Práctica: no. Notas: quitar la regla vieja de dígitos medios; Liliana no es CAA por ahora: recomienda la ruta y deriva (resuelto oct 2026).
+
+**3.4 El agente certificador de ITIN (CAA) — clase complementaria** — nueva (material de Liliana, oct 2026) · 9 min
+Segmentos: (1) Una oportunidad de servicio, con reglas: PTIN no es CAA. (2) AA y CAA: la frontera es la autenticación; el W-7(COA); el IRS decide. (3) Qué autentica el CAA: principal y cónyuge (excepto ID militar extranjera); dependientes solo pasaporte y acta; notariada no es certificada. (4) Cómo se solicita: capacitación AA, forense, e-Services, carga de documentos, no anunciarse antes. (5) Flujo con el cliente y caso de la familia con la niña de 9 años. (6) Errores del programa y el consejo de Liliana.
+Cifras: ninguna. Práctica: no.
 
 ### Módulo 4 · Ingresos: W-2, 1099 y efectivo
 *Al terminar: el alumno pasa cualquier documento de ingreso a la línea correcta de la 1040 y sabe que todo ingreso se reporta, llegue o no formulario.*
@@ -256,13 +260,15 @@ Regla: las respuestas esperadas se calculan desde `cifras` con el año fiscal de
 
 ## 8. Lo que Liliana tiene que aportar (no se puede escribir sin ella)
 
-1. **Su lista real de errores** para 7.1 — los que ella vio en el IRS y los que ven sus alumnos.
-2. **Una historia por lección** (30 en total, de 30–60 segundos): el «esto es lo que pasa de verdad». Se recogen en una o dos sesiones de grabación con preguntas guía.
-3. **Sus preguntas de intake** reales (2.3) y si tiene un formulario que ya usa.
-4. **Rangos de precios** por tipo de declaración (8.2).
-5. **Si es Agente de Aceptación Certificado** (cambia 3.3) y si tiene AFSP.
-6. **TaxAct o neutral** (8.1).
-7. **Aprobación de este documento**: orden de módulos, 30 lecciones, títulos.
+Estado al 12 oct 2026: las 30 lecciones originales aprobadas por Liliana (Drive «Nueva Academia Sep 26»). Sus aportes llegaron en «Mis pendientes» (11 oct) y están integrados.
+
+1. ~~Su lista real de errores para 7.1~~ — integrada.
+2. **Historias opcionales** (28 espacios marcados): pendiente decidir cuáles graba.
+3. ~~Sus preguntas de intake (2.3)~~ — integradas.
+4. ~~Rangos de precios (8.2)~~ — integrados.
+5. ~~CAA (3.3)~~ — no es CAA por ahora; nueva clase 3.4.
+6. ~~TaxAct o neutral (8.1)~~ — TaxAct para las prácticas, lección neutral en el método.
+7. Revisión rápida de las 6 lecciones en `review` (2.3, 3.3, 3.4, 7.1, 8.1, 8.2) y de las prácticas de los módulos 4, 5, 6 y 8.
 
 ---
 

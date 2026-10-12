@@ -1,0 +1,260 @@
+---
+id: 05-05
+module: 5
+lesson: 5
+slug: educacion-guarderia-1095a
+title: Educación, guardería y el 1095-A
+objective: Aplicar los créditos de educación (AOTC y LLC) y de cuidado de dependientes, y conciliar el 1095-A del Marketplace sin rechazos.
+duration_min: 10
+status: approved
+source: [Lección 5 Maestro, Lección 7 Maestro]
+cifras: [aotc_max, llc_max, cuidado_tope]
+practice: 05-creditos-familia
+demos: []
+checklist:
+  - "AOTC: primeros 4 años de universidad, al menos medio tiempo, con 1098-T — parcialmente reembolsable; exige 8867"
+  - "LLC: cualquier estudio para mejorar habilidades, sin límite de años — no reembolsable"
+  - "Un mismo estudiante no puede usar los dos créditos el mismo año"
+  - "Guardería (2441): para poder trabajar, niño menor de 13, con nombre/dirección/EIN del proveedor — sin esos datos no entra"
+  - "1095-A: si hubo seguro del Marketplace, el 8962 es obligatorio — sin él, rechazo de e-file"
+  - "El subsidio se concilia con el ingreso real: puede devolver o deber — explícalo antes de mostrar el resultado"
+questions:
+  - id: q1
+    after_segment: 1
+    concept_tag: aotc-requisitos
+    prompt: "¿Cuál estudiante califica al AOTC?"
+    options:
+      - id: a
+        text: "El que cursa sus primeros cuatro años de universidad, al menos medio tiempo, buscando un título o credencial."
+        correct: true
+        feedback: "Exacto. AOTC es el crédito fuerte y exigente: primeros cuatro años, medio tiempo mínimo, con título como meta, y sin condena por drogas que lo bloquee. Su papel base: el 1098-T."
+      - id: b
+        text: "Cualquiera que tome un curso de lo que sea."
+        correct: false
+        feedback: "Casi. Ese perfil abierto es del LLC, el crédito hermano. El AOTC exige carrera en curso: primeros cuatro años, medio tiempo, título en la mira."
+      - id: c
+        text: "Solo estudiantes de maestría."
+        correct: false
+        feedback: "Casi. Al revés: la maestría queda fuera del AOTC (ya pasó los primeros cuatro años). El posgrado usa el LLC."
+  - id: q2
+    after_segment: 1
+    concept_tag: aotc-reembolsable
+    prompt: "¿Qué hace especial al AOTC entre los créditos de educación?"
+    options:
+      - id: a
+        text: "Que es parcialmente reembolsable: una parte puede llegar como cheque aunque el impuesto sea cero."
+        correct: true
+        feedback: "Exacto. Hasta un porcentaje del crédito se devuelve aun sin impuesto — el monto máximo y la parte reembolsable, en la tarjeta. Por eso el AOTC exige 8867: es de los beneficios vigilados."
+      - id: b
+        text: "Que no tiene límite de monto."
+        correct: false
+        feedback: "Casi. Tiene monto máximo anual por estudiante — en la tarjeta. Lo especial es la parte reembolsable, rara entre créditos de educación."
+      - id: c
+        text: "Que se puede usar todos los años de la vida."
+        correct: false
+        feedback: "Casi. Máximo cuatro años por estudiante. El de toda la vida es literalmente el otro: el Lifetime Learning Credit."
+  - id: q3
+    after_segment: 2
+    concept_tag: llc-perfil
+    prompt: "Una clienta tomó un diplomado de repostería para mejorar su negocio, un solo curso, medio año. ¿Qué crédito evalúas?"
+    options:
+      - id: a
+        text: "El AOTC, por ser educación."
+        correct: false
+        feedback: "Casi. Sin carrera de título ni medio tiempo, el AOTC no abre. El LLC sí: cualquier educación para adquirir o mejorar habilidades de trabajo, sin mínimo de carga ni límite de años."
+      - id: b
+        text: "El LLC: cursos para mejorar habilidades, sin mínimo de carga académica ni límite de años."
+        correct: true
+        feedback: "Exacto. El LLC es el flexible: un curso basta, la meta puede ser el oficio, y se usa cuantos años haga falta. Es no reembolsable y por declaración — los montos, en la tarjeta."
+      - id: c
+        text: "Ninguno: la repostería no cuenta."
+        correct: false
+        feedback: "Casi. Cuenta si es en una institución elegible y mejora sus habilidades de trabajo. El LLC existe justo para este perfil."
+  - id: q4
+    after_segment: 2
+    concept_tag: no-doble-credito
+    prompt: "El hijo de un cliente cursa segundo año de universidad. ¿Se pueden tomar AOTC y LLC por él este año «para sumar»?"
+    options:
+      - id: a
+        text: "Sí: los créditos se suman siempre."
+        correct: false
+        feedback: "Casi. Por el mismo estudiante en el mismo año se elige uno, no los dos. Con perfil de AOTC, el AOTC casi siempre gana: mayor y con parte reembolsable."
+      - id: b
+        text: "No: un estudiante, un crédito por año — y con su perfil, el AOTC conviene."
+        correct: true
+        feedback: "Exacto. La regla es un crédito por estudiante por año. Ahora, en una familia con dos estudiantes distintos, uno puede dar AOTC y el otro LLC — cada quien con el suyo."
+      - id: c
+        text: "Solo si estudia doble carrera."
+        correct: false
+        feedback: "Casi. Las carreras no duplican créditos. Un estudiante, un crédito por año — se compara y se elige el mejor."
+  - id: q5
+    after_segment: 2
+    concept_tag: 1098t-gastos
+    prompt: "¿Qué documenta los gastos de educación para estos créditos?"
+    options:
+      - id: a
+        text: "El 1098-T de la institución, más recibos de colegiatura y materiales requeridos."
+        correct: true
+        feedback: "Exacto. El 1098-T es la base — lo que la escuela reportó — y los recibos completan: libros y materiales obligatorios cuentan para el AOTC. Becas y ayudas que pagaron esos gastos se restan: solo deduce lo pagado del bolsillo."
+      - id: b
+        text: "Una carta del estudiante jurando lo que gastó."
+        correct: false
+        feedback: "Casi. La palabra no sostiene un crédito vigilado. 1098-T y recibos — y si la escuela no emitió 1098-T, se investiga por qué antes de reclamar nada."
+      - id: c
+        text: "El recibo de la renta del estudiante."
+        correct: false
+        feedback: "Casi. Vivienda y comida no califican para estos créditos: colegiatura, cuotas obligatorias y materiales requeridos. La renta no entra."
+  - id: q6
+    after_segment: 3
+    concept_tag: 2441-requisitos
+    prompt: "María pagó guardería de Mateo (4 años) para poder trabajar. ¿Qué exige su crédito de cuidado de dependientes?"
+    options:
+      - id: a
+        text: "Que el gasto sea para poder trabajar (o buscar trabajo), niño menor de 13, y los datos del proveedor: nombre, dirección y EIN o SSN."
+        correct: true
+        feedback: "Exacto. Las tres patas del 2441. La del proveedor es la que tumba el crédito en la práctica: sin EIN o SSN de la guardería, no entra — por eso lo pides desde el intake."
+      - id: b
+        text: "Solo el recibo del monto pagado."
+        correct: false
+        feedback: "Casi. El monto sin el proveedor identificado no basta: el 2441 pide nombre, dirección y EIN o SSN. Y el propósito importa: cuidado para poder trabajar."
+      - id: c
+        text: "Que la guardería sea de gobierno."
+        correct: false
+        feedback: "Casi. Puede ser privada, de iglesia, o hasta una persona — mientras se identifique con su número y no sea el propio cónyuge u otro dependiente."
+  - id: q7
+    after_segment: 3
+    concept_tag: 2441-ambos-trabajan
+    prompt: "Pareja casada declarando junta: él trabaja, ella no trabajó ni estudió ni buscó empleo este año. Pagaron guardería. ¿Hay crédito?"
+    options:
+      - id: a
+        text: "Sí: pagaron guardería y eso basta."
+        correct: false
+        feedback: "Casi. En conjunta, el crédito pide ingreso del trabajo de los dos cónyuges (con excepciones por estudiar tiempo completo o incapacidad). Si ella no tuvo ingreso ni excepción, el crédito no entra."
+      - id: b
+        text: "En principio no: en conjunta, ambos necesitan ingreso del trabajo, salvo excepciones (estudiante de tiempo completo, incapacidad)."
+        correct: true
+        feedback: "Exacto. La lógica del crédito es «cuidado para poder trabajar» — de los dos. Se verifican las excepciones antes de cerrar la puerta, y se explica sin drama."
+      - id: c
+        text: "Sí, pero solo la mitad."
+        correct: false
+        feedback: "Casi. No hay mitades por cónyuge sin ingreso: sin ingreso o excepción de ambos, el crédito no procede en conjunta."
+  - id: q8
+    after_segment: 4
+    concept_tag: 1095a-obligatorio
+    prompt: "Un cliente tuvo seguro del Marketplace con subsidio, pero no trae su 1095-A. «Transmítela así y luego lo mando.» ¿Qué pasa si lo haces?"
+    options:
+      - id: a
+        text: "Nada: el 1095-A es opcional."
+        correct: false
+        feedback: "Casi. Con seguro del Marketplace, la declaración debe llevar el Formulario 8962 conciliando el subsidio — y sin el 1095-A no se puede llenar. El e-file rebota o el IRS la detiene con carta. Se consigue el 1095-A primero."
+      - id: b
+        text: "La declaración rebota o queda detenida: con Marketplace, el 8962 es obligatorio y sale del 1095-A."
+        correct: true
+        feedback: "Exacto. Es de los rechazos más comunes de la temporada. El 1095-A se descarga de la cuenta del Marketplace del cliente en minutos — se consigue hoy, no «luego»."
+      - id: c
+        text: "El IRS le manda el subsidio de nuevo."
+        correct: false
+        feedback: "Casi. Nadie manda subsidios por transmitir incompleto. Lo que llega es el rechazo o la carta 12C pidiendo el 8962. El 1095-A primero, siempre."
+  - id: q9
+    after_segment: 4
+    concept_tag: conciliacion-subsidio
+    prompt: "María estimó su ingreso al inscribirse al Marketplace, y con las propinas y DoorDash ganó más de lo estimado. ¿Qué hace el 8962 con eso?"
+    options:
+      - id: a
+        text: "Concilia: si el subsidio recibido fue mayor al que le tocaba por su ingreso real, devuelve una parte (con topes según ingreso); si fue menor, recibe la diferencia."
+        correct: true
+        feedback: "Exacto. El subsidio fue un adelanto sobre un estimado; el 8962 lo ajusta a la realidad. Puede sumar o restar al resultado — y se explica antes de mostrar el número, no después."
+      - id: b
+        text: "Nada: el subsidio recibido es intocable."
+        correct: false
+        feedback: "Casi. El subsidio se concilia cada año contra el ingreso real. Ganar más de lo estimado suele significar devolver parte — mejor que lo escuche de ti con explicación que verlo de golpe en el resultado."
+      - id: c
+        text: "Cancela el seguro del año siguiente."
+        correct: false
+        feedback: "Casi. La conciliación es de dinero, no de cobertura. Eso sí: el buen consejo es actualizar su ingreso en el Marketplace cuando cambie, para que el adelanto no se desvíe tanto."
+  - id: q10
+    after_segment: 5
+    concept_tag: cierre-modulo-5
+    prompt: "Cierra el módulo: ¿en qué orden se arma la parte de créditos de una declaración familiar como la de María?"
+    options:
+      - id: a
+        text: "Estándar o detallada; luego créditos verificados uno por uno (EITC, CTC/ACTC, guardería, educación si hay); el 8962 si hubo Marketplace; y el 8867 cubriendo lo que lo exige."
+        correct: true
+        feedback: "Exacto. Deducción primero, créditos con su verificación cada uno, la conciliación del seguro, y la diligencia documentada. Ese es el esqueleto del módulo 5 — y de la práctica que sigue."
+      - id: b
+        text: "Se marcan todos los créditos que el software sugiera y listo."
+        correct: false
+        feedback: "Casi. El software sugiere; tú verificas. Cada crédito tiene su lista propia — hijos, números, ingresos, papeles — y el 8867 da fe de que la corriste."
+      - id: c
+        text: "Primero el 8867 y después se ve qué créditos poner."
+        correct: false
+        feedback: "Casi. El 8867 no elige créditos: certifica la diligencia de los que procedieron. Primero se verifica qué corresponde; el formulario documenta ese trabajo."
+---
+
+## S1 · AOTC: el crédito fuerte de la universidad
+
+Soy Liliana. Última lección del módulo de bajar el impuesto: tres piezas que completan la declaración familiar: educación, guardería, y el seguro del Marketplace.
+
+Empiezo con los créditos de educación, que son dos hermanos con personalidades opuestas.
+
+El fuerte: el AOTC, el crédito de oportunidad americana. Para el estudiante en sus primeros cuatro años de universidad o colegio técnico, inscrito al menos medio tiempo, buscando un título o credencial. Paga por colegiatura, cuotas obligatorias y materiales requeridos, libros incluidos. Su monto máximo anual por estudiante está en la tarjeta, y tiene el superpoder raro entre créditos de educación: es parcialmente reembolsable: una porción llega como cheque aunque el impuesto sea cero.
+
+<Cifra concept="aotc_max" />
+
+Ese superpoder tiene precio: vigilancia. El AOTC es el cuarto beneficio del 8867 que viste en la lección pasada. Su papel base: el Formulario 1098-T que emite la institución, más los recibos de gastos. Y una resta que no se olvida: las becas y ayudas que pagaron esos gastos se descuentan: el crédito es por lo pagado del bolsillo.
+
+Máximo cuatro años por estudiante, contando los años en que ya se tomó. La pregunta de intake: «¿cuántos años lleva tomando este crédito?».
+
+## S2 · LLC: el flexible, y la regla de uno por estudiante
+
+El hermano flexible: el LLC, el crédito de aprendizaje de por vida.
+
+Su perfil es todo lo que el AOTC rechaza: cualquier educación en institución elegible que mantenga o mejore habilidades de trabajo. Un solo curso basta. Sin mínimo de medio tiempo, sin meta de título, sin límite de años: el diplomado de repostería de la clienta con negocio, la certificación técnica, la clase de un semestre, el posgrado. Su monto por declaración está en la tarjeta, y es no reembolsable: baja impuesto y ahí se detiene.
+
+<Cifra concept="llc_max" />
+
+La regla que los ordena: un estudiante, un crédito por año. Por el mismo muchacho no se toman los dos. Con perfil de AOTC, el AOTC casi siempre gana: más grande y con parte reembolsable. Pero en una familia con dos estudiantes, cada quien puede llevar el suyo: el hijo de segundo año con AOTC, la mamá del diplomado con LLC, en la misma declaración.
+
+Y los dos créditos tienen límites de ingreso que los reducen y apagan: en la tarjeta, como siempre. El formulario de ambos: el 8863.
+
+Documentación: 1098-T más recibos. Si la escuela no emitió 1098-T, se averigua por qué antes de reclamar. Vivienda y comida no cuentan, ni con recibo dorado.
+
+## S3 · Guardería: el 2441 y el dato que lo tumba
+
+Tercera pieza: el crédito por cuidado de hijos y dependientes, el de la guardería de Mateo. Vive en el Formulario 2441 y tiene tres patas.
+
+Pata uno: el propósito. El gasto es para que el cliente pueda trabajar o buscar trabajo. En pareja que declara junta, los dos necesitan ingreso del trabajo, con dos excepciones: el cónyuge estudiante de tiempo completo o incapacitado de cuidarse. La pareja donde ella no trabajó ni estudió: el crédito no entra, y se explica sin drama.
+
+Pata dos: la persona cuidada. Un niño menor de 13 años, o un dependiente o cónyuge incapaz de cuidarse solo. Mateo, 4 años: de sobra.
+
+Pata tres, la que tumba el crédito en la vida real: el proveedor identificado. Nombre, dirección y EIN o Seguro Social de la guardería o la persona que cuida. Sin esos datos, el crédito no se sostiene. Por eso está en tu checklist de intake desde la lección 2.3: se pide en la primera cita, no en la última. Y el proveedor no puede ser el otro papá del niño, el cónyuge, ni un dependiente tuyo, la hermana de 15 que cuida no genera crédito.
+
+El monto: un porcentaje de los gastos, con tope de gastos por un hijo y por dos o más, y el porcentaje baja con el ingreso. Números: tarjeta. Es no reembolsable.
+
+<Cifra concept="cuidado_tope" />
+
+Un dato de radar: si el W-2 trae beneficios de guardería del patrón en la casilla 10, se concilian en el mismo 2441; el software lo pide y tú sabes por qué.
+
+## S4 · El 1095-A: el formulario que detiene declaraciones
+
+Cuarta pieza, y la que más rechazos de e-file causa cada temporada: el seguro del Marketplace.
+
+El cuadro: quien se aseguró por el Marketplace con subsidio, el crédito premium por adelantado, recibe cada enero el Formulario 1095-A. Ese formulario alimenta el Formulario 8962, donde el subsidio se concilia. Y la regla dura: con Marketplace, el 8962 es obligatorio. Transmitir sin él: rechazo, o la declaración detenida con una carta 12C pidiéndolo. «Transmítela y luego lo mando» no existe: el 1095-A se descarga de la cuenta del Marketplace del cliente en minutos, y se consigue antes de transmitir.
+
+La conciliación, explicada como se la explicas a María: «Cuando te inscribiste, estimaste tu ingreso del año, y con ese estimado te dieron el subsidio mes a mes, como adelanto. Hoy sabemos tu ingreso real. Si ganaste más de lo estimado, el adelanto fue grande y una parte se devuelve, con topes según tu ingreso. Si ganaste menos, te deben diferencia y llega en el reembolso.»
+
+María, con las propinas y DoorDash, probablemente ganó más de lo que estimó: su 8962 va a restar algo del reembolso. Se lo dices antes de mostrar el resultado, con la explicación, no después, como sorpresa. Y el consejo que la cuida el año que entra: «cuando tu ingreso cambie, actualízalo en el Marketplace, para que el adelanto se ajuste solo y abril no cobre».
+
+> **HISTORIA · Liliana (opcional):** el cliente al que el 1095-A olvidado le detuvo el reembolso meses, o al que la conciliación le cambió el resultado — y cómo se lo explicaste. 30–45 segundos.
+
+## S5 · La declaración de María, armada
+
+Cerramos el módulo armando de corrido la parte de «bajar el impuesto» de María, porque ya tienes todas las piezas.
+
+Deducción: estándar de cabeza de familia, ganó la resta de la 5.1, con sus donaciones por la puerta nueva. Créditos: EITC con dos hijos calificados, verificado con su expediente, 5.2. CTC por Sofía y Mateo, con el sobrante volviéndose ACTC sobre su ingreso del trabajo, 5.3. Guardería de Mateo con el EIN del proveedor que pediste desde el intake, 5.5. Educación: nada este año, pero sabes qué mirar si Sofía crece hacia la universidad. Marketplace: su 8962 concilia el subsidio con su ingreso real, explicado antes del resultado. Y sobre todo ello, el 8867 con su respaldo de tres años, 5.4.
+
+Ese es el orden profesional: deducción primero, créditos verificados uno por uno, conciliación del seguro, diligencia documentada. El software suma; tú verificaste cada pieza que suma.
+
+En la práctica de este módulo lo haces tú: tres familias, sus créditos completos, con tarjetas de cifras enfrente.
+
+Y el módulo que sigue es el que tu clientela más necesita y menos preparadores dominan: el Anexo C. El negocio propio, de la señora de la limpieza a María la repartidora: ingresos, gastos, millas, y el impuesto que nadie les contó. Ahí nos vemos.

@@ -1,0 +1,261 @@
+---
+id: 04-02
+module: 4
+lesson: 2
+slug: los-distintos-1099
+title: Los distintos 1099
+objective: Reconocer cada 1099, mandarlo a su línea correcta, y no duplicar ni omitir ingresos de apps.
+duration_min: 9
+status: approved
+source: [Lección 8 Maestro, Clase en vivo "1099-R"]
+cifras: [umbral_1099_nec, umbral_1099_k, umbral_anexo_b]
+practice: 04-w2-a-1040
+demos: []
+checklist:
+  - "La regla que no cambia: los umbrales son del pagador; el cliente reporta todo su ingreso, llegue o no el formulario"
+  - "1099-NEC: trabajo de contratista → Anexo C"
+  - "1099-K: apps y plataformas; monto bruto (incluye comisiones y reembolsos) → Anexo C si es negocio; no duplicar con el NEC"
+  - "1099-MISC: rentas, premios → cada casilla a su destino"
+  - "1099-INT y DIV: directo a la 1040; Anexo B solo si pasan el umbral del año"
+  - "Pregunta de barrido: «¿te llegó algún 1099 que no me trajiste?» — el IRS ya tiene todos"
+questions:
+  - id: q1
+    after_segment: 1
+    concept_tag: umbral-del-pagador
+    prompt: "Un cliente hizo trabajos de pintura y le pagaron por debajo del umbral del 1099-NEC, así que no le llegó formulario. ¿Qué se reporta?"
+    options:
+      - id: a
+        text: "Nada: sin formulario no hay ingreso que reportar."
+        correct: false
+        feedback: "Casi. El umbral obliga al pagador a emitir el formulario; no borra la obligación del que cobró. Todo el ingreso de pintura se reporta, con papel o sin él."
+      - id: b
+        text: "Todo el ingreso de pintura: el umbral es del pagador, no del contribuyente."
+        correct: true
+        feedback: "Exacto. Es la regla que gobierna toda esta lección y no cambia aunque los umbrales cambien: el formulario es obligación de quien paga; reportar es obligación de quien cobra."
+      - id: c
+        text: "Solo la mitad, por no haber formulario."
+        correct: false
+        feedback: "Casi. No existen mitades ni descuentos por falta de papel. El ingreso completo, siempre."
+  - id: q2
+    after_segment: 2
+    concept_tag: nec-a-anexo-c
+    prompt: "Llega un 1099-NEC de una compañía de construcción. ¿A dónde va ese ingreso?"
+    options:
+      - id: a
+        text: "A la línea de sueldos, como un W-2."
+        correct: false
+        feedback: "Casi. El NEC es pago a un contratista, no salario. Va al Anexo C como ingreso de trabajo por cuenta propia, con sus gastos y su impuesto de trabajo por cuenta propia."
+      - id: b
+        text: "Al Anexo C, como ingreso de trabajo por cuenta propia."
+        correct: true
+        feedback: "Exacto. NEC es «compensación de no empleado»: contratista. Anexo C, gastos deducibles, y Anexo SE. Todo el módulo 6 es de esto."
+      - id: c
+        text: "A «otros ingresos», sin más trámite."
+        correct: false
+        feedback: "Casi. Mandarlo a otros ingresos le quita al cliente sus gastos deducibles y esquiva mal el impuesto por cuenta propia. Trabajo de contratista es Anexo C."
+  - id: q3
+    after_segment: 2
+    concept_tag: nec-vs-w2-clasificacion
+    prompt: "Una clienta trabajó todo el año en un solo lugar, con horario fijo que le ponía el dueño, y le dieron 1099-NEC en vez de W-2. ¿Qué observas?"
+    options:
+      - id: a
+        text: "Nada: el papel que dé el patrón es el que vale."
+        correct: false
+        feedback: "Casi. El formulario no decide la realidad: si el negocio controla cómo, cuándo y dónde trabaja, suena a empleada mal clasificada como contratista. Se reporta lo que hay, y existe una ruta para disputar la clasificación."
+      - id: b
+        text: "Posible clasificación incorrecta: por el control que describe, parece empleada. Se lo explicas y existe una ruta para disputarlo."
+        correct: true
+        feedback: "Exacto. La clasificación depende del control, no del papel. Le explicas la diferencia — con NEC ella paga las dos mitades del Seguro Social — y que hay formularios para plantear la disputa si decide darla. Decisión de ella, informada por ti."
+      - id: c
+        text: "Le preparas un W-2 tú misma para corregirlo."
+        correct: false
+        feedback: "Casi. El W-2 lo emite el patrón, nunca el preparador. Tu papel es explicar, reportar correctamente lo que existe, y mostrar la ruta de disputa."
+  - id: q4
+    after_segment: 3
+    concept_tag: k-monto-bruto
+    prompt: "El 1099-K de DoorDash de María dice más de lo que ella vio llegar a su cuenta. ¿Por qué, y qué haces?"
+    options:
+      - id: a
+        text: "La app se equivocó; se captura lo que llegó al banco."
+        correct: false
+        feedback: "Casi. El 1099-K reporta el monto bruto procesado, antes de comisiones de la plataforma y reembolsos. Se captura el bruto del formulario, y las comisiones se deducen como gasto en el Anexo C."
+      - id: b
+        text: "El K trae el monto bruto: se captura completo, y las comisiones y cuotas se deducen como gastos en el Anexo C."
+        correct: true
+        feedback: "Exacto. Bruto arriba, comisiones abajo como gasto. El neto sale igual, pero cuadra con el formulario que el IRS ya tiene. Capturar el neto directo provoca el descuadre y su carta."
+      - id: c
+        text: "Se promedian los dos números."
+        correct: false
+        feedback: "Casi. Nada de promedios: el bruto del formulario como ingreso, y las comisiones documentadas como gasto. Así cuadra con el cruce del IRS y el cliente no pierde nada."
+  - id: q5
+    after_segment: 3
+    concept_tag: k-nec-no-duplicar
+    prompt: "Un repartidor trae de la misma plataforma un 1099-NEC y un 1099-K que parecen cubrir lo mismo. ¿Qué haces?"
+    options:
+      - id: a
+        text: "Capturas los dos completos: papel que llega, papel que se suma."
+        correct: false
+        feedback: "Casi. Si los dos cubren los mismos pagos, sumarlos duplica el ingreso del cliente y le inflas el impuesto. Se identifica qué cubre cada uno y el ingreso real se reporta una sola vez."
+      - id: b
+        text: "Verificas qué pagos cubre cada formulario y reportas el ingreso real una sola vez, documentando la conciliación."
+        correct: true
+        feedback: "Exacto. Con los resúmenes de la app se concilia: a veces el NEC trae bonos e incentivos y el K los viajes; a veces se traslapan. El ingreso verdadero una vez, y tu nota de cómo cuadraste queda en el expediente."
+      - id: c
+        text: "Ignoras el K y usas solo el NEC, que es más chico."
+        correct: false
+        feedback: "Casi. Ignorar un formulario que el IRS ya tiene es invitar al CP2000. No se ignora: se concilia y se documenta."
+  - id: q6
+    after_segment: 4
+    concept_tag: misc-casillas
+    prompt: "Un 1099-MISC trae una cantidad en la casilla de rentas. El cliente renta un cuartito de su propiedad a un pequeño negocio. ¿A dónde va?"
+    options:
+      - id: a
+        text: "Al Anexo C, como todo 1099."
+        correct: false
+        feedback: "Casi. No todo 1099 es Anexo C. Rentas de propiedad van al Anexo E — fuera de esta versión del curso, pero lo identificas y lo canalizas. El MISC se lee casilla por casilla."
+      - id: b
+        text: "A rentas — Anexo E; identificas el caso aunque su detalle no sea de este curso."
+        correct: true
+        feedback: "Exacto. El MISC es un formulario multiusos: rentas a su anexo, premios a otros ingresos, cada casilla a su destino. Reconocer a dónde va cada cosa también es saber cuándo el caso excede la v1 del curso."
+      - id: c
+        text: "A la línea de sueldos."
+        correct: false
+        feedback: "Casi. Sueldos vienen en W-2. El MISC nunca es salario; se lee por casilla y cada una tiene su lugar."
+  - id: q7
+    after_segment: 5
+    concept_tag: int-div-anexo-b
+    prompt: "Un cliente trae un 1099-INT pequeño del banco. ¿Necesita Anexo B?"
+    options:
+      - id: a
+        text: "Sí: todo interés lleva Anexo B."
+        correct: false
+        feedback: "Casi. El Anexo B se exige cuando intereses o dividendos pasan el umbral del año — está en la tarjeta. Por debajo, el interés va directo a su línea de la 1040, sin anexo."
+      - id: b
+        text: "Solo si sus intereses del año pasan el umbral; si no, el monto va directo a la 1040."
+        correct: true
+        feedback: "Exacto. Pequeño y directo a la línea; grande, con Anexo B detallando pagadores. Y en cualquiera de los dos casos, el ingreso se reporta completo."
+      - id: c
+        text: "No se reporta si es menos de lo que el banco exige."
+        correct: false
+        feedback: "Casi. El interés se reporta desde el primer dólar, con o sin formulario. El umbral solo decide si además se llena el Anexo B."
+  - id: q8
+    after_segment: 5
+    concept_tag: cuadro-formulario-linea
+    prompt: "Rápido: 1099-G por desempleo, 1099-R por un retiro del 401(k), 1099-DIV por dividendos. ¿Reconoces el destino de cada uno?"
+    options:
+      - id: a
+        text: "Todos al Anexo C, por ser 1099."
+        correct: false
+        feedback: "Casi. El Anexo C es solo para el trabajo por cuenta propia (NEC, K de negocio, efectivo). Desempleo va al Anexo 1; el retiro a la línea de pensiones con sus reglas; los dividendos a su línea, con Anexo B si pasan el umbral."
+      - id: b
+        text: "Desempleo al Anexo 1; el retiro a la línea de pensiones (casilla 7 mediante); dividendos a su línea, con Anexo B si superan el umbral."
+        correct: true
+        feedback: "Exacto. Cada formulario tiene su línea, y el cuadro completo lo tienes en el checklist. El G y el R los vemos a fondo en la lección 4.4."
+      - id: c
+        text: "Los tres a «otros ingresos»."
+        correct: false
+        feedback: "Casi. «Otros ingresos» es el último recurso para lo que no tiene línea propia, no el cajón de todo. Estos tres tienen destino con nombre."
+  - id: q9
+    after_segment: 6
+    concept_tag: cp2000-preventivo
+    prompt: "¿Cuál es la forma más segura de que un cliente reciba un CP2000 el año que viene?"
+    options:
+      - id: a
+        text: "Transmitir la declaración sin un 1099 que el pagador sí emitió."
+        correct: true
+        feedback: "Exacto. El cruce del IRS encuentra el formulario que faltó, meses después, y la carta llega con impuesto e intereses. Por eso la pregunta de barrido y la conciliación de formularios no son opcionales."
+      - id: b
+        text: "Reportar ingresos de más."
+        correct: false
+        feedback: "Casi. Reportar de más no dispara el CP2000 — aunque tampoco es correcto: se reporta lo exacto. El descuadre que genera carta es el ingreso que falta."
+      - id: c
+        text: "Presentar en papel."
+        correct: false
+        feedback: "Casi. El papel es más lento, no más vigilado. La carta viene del descuadre de ingresos, no del método de presentación."
+  - id: q10
+    after_segment: 6
+    concept_tag: barrido-1099
+    prompt: "Cierras la captura de ingresos de un cliente. ¿Cuál es la última pregunta antes de seguir?"
+    options:
+      - id: a
+        text: "«¿Te llegó algún otro 1099 o pago que no me hayas traído — banco, apps, plataformas, desempleo, retiros?»"
+        correct: true
+        feedback: "Exacto. El barrido con ejemplos, una vez más. Cada 1099 que el cliente olvidó, el IRS lo recuerda. Y la respuesta va anotada en tus notas con fecha."
+      - id: b
+        text: "«¿Quieres que le pongamos más gastos?»"
+        correct: false
+        feedback: "Casi. Los gastos se documentan, no se «ponen». Y la pregunta de cierre de ingresos es el barrido de formularios faltantes."
+      - id: c
+        text: "«¿Firmamos ya?»"
+        correct: false
+        feedback: "Casi. Firmar es el final del proceso completo, con la declaración revisada junto al cliente. Antes de eso, el barrido: que no falte un formulario."
+---
+
+## S1 · La regla que no cambia
+
+Soy Liliana. Hoy vas a resolver la familia de formularios que define a tu clientela: los 1099. Al terminar sabrás reconocer cada uno y mandarlo a su línea, sin duplicar y sin omitir.
+
+Pero antes de las letras, la regla que gobierna todo y que no cambia aunque los números cambien: los umbrales de los 1099 son del pagador, no del contribuyente. La ley le dice a quien paga: «si pagaste tanto o más, emite el formulario». No le dice a quien cobró: «si no te llegó papel, no reportes». La obligación de reportar el ingreso es completa, desde el primer dólar, llegue o no el formulario.
+
+Los umbrales, además, se mueven: el del 1099-NEC cambió hace poco, el del 1099-K ha ido y venido con las leyes. Por eso los números viven en las tarjetas, con su año, y no en mi voz. Lo que memorizas es la regla: el umbral decide si llega papel; el ingreso se reporta siempre.
+
+<Cifra concept="umbral_1099_nec" />
+<Cifra concept="umbral_1099_k" />
+
+Cuando un cliente te diga «no me llegó nada, así que eso no va», tu respuesta ya la sabes de memoria. Y ahora vamos formulario por formulario.
+
+## S2 · 1099-NEC: el contratista
+
+El primero y más común en tu clientela: el 1099-NEC, «compensación de no empleado». Lo emite un negocio que le pagó a un contratista independiente: el pintor, la estilista que renta silla, el chofer subcontratado, la que limpia oficinas por su cuenta.
+
+Su destino es uno solo: el Anexo C. Es ingreso de trabajo por cuenta propia, con derecho a deducir gastos y con impuesto de trabajo por cuenta propia. Nunca va a la línea de sueldos, y nunca a «otros ingresos», porque ahí el cliente pierde sus gastos. Todo el módulo 6 es de esto.
+
+Fíjate en la casilla 4: a veces trae retención federal. Se acredita como cualquier retención.
+
+Y una situación que vas a ver seguido y merece tu criterio: la clienta que trabajó todo el año en un solo lugar, con horario que le ponía el dueño, con las herramientas del negocio, y le dieron NEC en vez de W-2. El papel no decide la realidad: la clasificación depende de quién controla el trabajo. Si el negocio controla cómo, cuándo y dónde, eso huele a empleada mal clasificada, que está pagando las dos mitades del Seguro Social que le tocaban a medias al patrón. Se lo explicas; existe una ruta formal para disputar la clasificación ante el IRS si ella decide darla, con sus consecuencias laborales, que son decisión suya. Tu papel: informar, reportar correctamente lo que existe, y nunca fabricar tú el formulario que falta.
+
+## S3 · 1099-K: las apps, en bruto
+
+El formulario de la década para nuestra gente: el 1099-K. Lo emiten las plataformas y procesadores de pagos: DoorDash, Uber, las apps de venta, los lectores de tarjeta.
+
+Dos cosas lo hacen tramposo. La primera: reporta el monto bruto procesado. Todo lo que pasó por la plataforma, antes de descontar sus comisiones, cuotas y reembolsos. Por eso el K de María dice más de lo que ella vio llegar al banco. No es error: es bruto. Se captura el bruto como ingreso del Anexo C, y las comisiones de la plataforma se deducen como gasto. El neto queda igual, pero la declaración cuadra con el formulario que el IRS ya tiene. Capturar «lo que llegó al banco» es sembrar el descuadre y su carta.
+
+La segunda trampa: la duplicación. Una misma plataforma puede emitir NEC y K, o el cliente recibe K por los viajes y NEC por bonos e incentivos. Si los dos cubren los mismos pagos y los sumas, duplicaste su ingreso. La disciplina: con los resúmenes anuales de la app enfrente, identificas qué cubre cada formulario, reportas el ingreso real una sola vez, y anotas en el expediente cómo conciliaste. Esa nota te defiende a ti y al cliente.
+
+Y el umbral del K, que ha cambiado varias veces: hoy es alto, así que muchos repartidores pequeños no recibirán K. Ya sabes qué significa eso: nada. El ingreso se reporta igual, y la lección que viene es justo de eso.
+
+## S4 · 1099-MISC: el multiusos
+
+El veterano: el 1099-MISC, «ingresos misceláneos». Antes cargaba con todo; desde que existe el NEC, le quedaron los usos sueltos, y se lee casilla por casilla porque cada una tiene destino distinto.
+
+Casilla 1, rentas: pagos de renta de propiedad. Destino: Anexo E, el de rentas, que queda fuera de esta versión del curso; tu trabajo es reconocerlo y canalizarlo, no improvisarlo. Casilla 3, otros ingresos: premios, rifas, pagos diversos. Destino: otros ingresos del Anexo 1, generalmente sin impuesto de trabajo por cuenta propia, porque no es un negocio. Y las demás casillas, menos comunes, cada una con su regla: se busca, no se adivina.
+
+La idea que te llevas: MISC no es sinónimo de Anexo C. Es un formulario multiusos, y el destino lo decide la casilla, no la costumbre.
+
+> **HISTORIA · Liliana (opcional):** un cliente con un MISC mal mandado al Anexo C por años, pagando impuesto por cuenta propia que no debía. 30–45 segundos.
+
+## S5 · INT, DIV y el cuadro completo
+
+Los tranquilos: 1099-INT, intereses del banco, y 1099-DIV, dividendos de inversiones.
+
+Van directo a sus líneas de la 1040: intereses a la suya, dividendos a la suya, con la distinción entre ordinarios y calificados que el software maneja con lo que el formulario trae. El Anexo B aparece solo cuando los intereses o los dividendos del año pasan el umbral, que está en la tarjeta; entonces se detallan los pagadores. Por debajo, sin anexo. Y en los dos casos, el ingreso se reporta desde el primer dólar, aunque el banco no haya mandado papel por ser poquito.
+
+<Cifra concept="umbral_anexo_b" />
+
+Y el resto de la familia, para que los reconozcas de vista: el 1099-G, del gobierno: desempleo y reembolsos estatales. El 1099-R, de retiros de pensiones y planes. El SSA-1099, del Seguro Social. Esos tres son la lección 4.4, porque tienen reglas propias.
+
+El cuadro completo, formulario por línea, lo tienes en tu checklist descargable. Con el tiempo lo verás sin pensar: NEC, Anexo C. K de negocio, Anexo C en bruto. MISC, por casilla. INT y DIV, directo o con B. G y R, sus reglas.
+
+## S6 · El CP2000 por el que «nunca llegó»
+
+Cierro con la consecuencia de hacerlo mal, para que se te grabe la disciplina.
+
+El CP2000 es la carta que el IRS manda cuando su cruce encuentra ingreso que el pagador reportó y la declaración no trae. Llega un año o más después, con el impuesto recalculado, más intereses. Y la frase del cliente es siempre la misma: «ese 1099 nunca me llegó».
+
+Ya sabes que eso no importa: el IRS tenía su copia. El formulario que se pierde en el correo no se pierde en el sistema. Cómo se responde un CP2000 lo vemos en el módulo 7; hoy lo que importa es no generarlo.
+
+Tu prevención cuesta una pregunta, la última antes de cerrar ingresos: «¿Te llegó algún otro 1099 o pago que no me hayas traído? ¿Del banco, de una app, de desempleo, de algún retiro?». Ejemplos, como siempre. La respuesta, anotada con fecha. Y para el cliente que de verdad extravió un formulario, existe la transcripción de salarios e ingresos del IRS, donde aparece todo lo que le reportaron: la herramienta se ve en el módulo 7.
+
+Dónde va: NEC y K al Anexo C, que ya te espera en el módulo 6. INT y DIV a sus líneas. MISC por casilla. Y en la práctica de este módulo, vas a clasificar una pila de formularios revueltos, como llegan en la vida real.
+
+Siguiente lección: el ingreso que no trae papel — efectivo, propinas y apps chicas.

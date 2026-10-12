@@ -1,0 +1,282 @@
+---
+id: 02-03
+module: 2
+lesson: 3
+slug: la-entrevista-con-el-cliente
+title: La entrevista con el cliente (intake)
+objective: Conducir la entrevista completa antes de abrir el software, y salir con la información, los documentos y las notas que sostienen la declaración.
+duration_min: 11
+status: review
+source: [nueva — requiere entrevista con Liliana]
+cifras: []
+practice: pdf-checklist-intake
+demos: []
+checklist:
+  - "Identidad: ID vigente, tarjetas de Seguro Social o cartas de ITIN de todos los que van en la declaración, y la declaración del año pasado"
+  - "La casa: ¿quién vivió contigo y cuántos meses? ¿Estabas casado el 31 de diciembre? ¿Alguien más podría reclamar a ese niño?"
+  - "El dinero: W-2, 1099, apps, efectivo, propinas, desempleo, Seguro Social, pensiones — «¿te llegó algo más que no me estés trayendo?»"
+  - "Lo que baja el impuesto: 1095-A, 1098-T, guardería (nombre y EIN del proveedor), 1098 de hipoteca, pagos estimados, carta del IP PIN"
+  - "Preguntas que destapan: ¿vendiste algo? ¿te llegó carta del IRS? ¿trabajaste o viviste en otro estado?"
+  - "Cierre: cuenta para depósito directo verificada dos veces, qué falta y para cuándo, y todo anotado con fecha"
+questions:
+  - id: q1
+    after_segment: 1
+    concept_tag: intake-antes-de-software
+    prompt: "Llega un cliente con prisa: «solo captúrame el W-2 y ya». ¿Por qué la entrevista va primero de todos modos?"
+    options:
+      - id: a
+        text: "Porque el software no abre sin la entrevista."
+        correct: false
+        feedback: "Casi. El software abre con lo que le pongas; ese es justo el peligro. La entrevista va primero porque el W-2 no dice quién vivió en su casa ni qué otros ingresos tuvo, y eso cambia toda la declaración."
+      - id: b
+        text: "Porque el formulario no cuenta la vida del cliente: estado civil, dependientes y otros ingresos salen de preguntar, no de capturar."
+        correct: true
+        feedback: "Exacto. Capturar sin entrevistar es recetar sin examinar. Diez minutos de preguntas evitan la mayoría de los errores del oficio, y rehacer una declaración cuesta mucho más que esos diez minutos."
+      - id: c
+        text: "Porque así puedes cobrarle más tiempo."
+        correct: false
+        feedback: "Casi. La entrevista no es para inflar el precio: es para que la declaración salga bien a la primera. El precio se fija por el trabajo, no por el reloj."
+  - id: q2
+    after_segment: 2
+    concept_tag: identidad-documentos
+    prompt: "Una clienta nueva trae su ID y «se sabe de memoria» los números de Seguro Social de sus hijos. ¿Capturas con eso?"
+    options:
+      - id: a
+        text: "Sí: si los números están bien, no hay problema."
+        correct: false
+        feedback: "Casi. Un dígito bailado o un nombre que no coincide con la tarjeta es el rechazo de e-file más común. Se captura con las tarjetas o cartas a la vista, no de memoria."
+      - id: b
+        text: "No: pides ver la tarjeta de Seguro Social o carta de ITIN de cada persona que va en la declaración."
+        correct: true
+        feedback: "Exacto. El nombre se escribe exactamente como está en la tarjeta. Es la forma más barata de evitar rechazos, y es parte de tu diligencia."
+      - id: c
+        text: "Sí, pero le adviertes que si está mal es su culpa."
+        correct: false
+        feedback: "Casi. Advertir no arregla el rechazo, y la diligencia de verificar es tuya. El documento a la vista, siempre."
+  - id: q3
+    after_segment: 2
+    concept_tag: declaracion-ano-pasado
+    prompt: "¿Para qué le pides a un cliente nuevo su declaración del año pasado?"
+    options:
+      - id: a
+        text: "Para copiarla y cambiar solo las cantidades."
+        correct: false
+        feedback: "Casi. Copiar arrastra los errores del preparador anterior. La del año pasado es un mapa para comparar y detectar cambios, no una plantilla."
+      - id: b
+        text: "Para comparar: ver qué llevaba, detectar qué cambió este año, y encontrar errores o cosas que el anterior dejó fuera."
+        correct: true
+        feedback: "Exacto. Ahí ves su estado civil anterior, sus dependientes, sus fuentes de ingreso, y a veces un error que puedes corregir con una enmienda. Es la radiografía del cliente."
+      - id: c
+        text: "Solo por si el IRS la pide."
+        correct: false
+        feedback: "Casi. El IRS ya la tiene. La pides para ti: es tu punto de comparación y tu detector de cambios y errores."
+  - id: q4
+    after_segment: 3
+    concept_tag: casa-quien-vivio
+    prompt: "De estas tres formas de preguntar por los dependientes, ¿cuál destapa la verdad?"
+    options:
+      - id: a
+        text: "«¿Cuántos dependientes tienes?»"
+        correct: false
+        feedback: "Casi. Esa pregunta le pide al cliente una conclusión legal que no le toca a él. Muchos responden con quien «siempre han puesto», esté bien o mal."
+      - id: b
+        text: "«¿Quiénes vivieron en tu casa este año y cuántos meses cada uno?»"
+        correct: true
+        feedback: "Exacto. Preguntas por hechos, no por conclusiones. Con la lista de personas y meses, la que decide quién es dependiente eres tú, con la regla en la mano."
+      - id: c
+        text: "«¿Vas a poner a los mismos niños del año pasado?»"
+        correct: false
+        feedback: "Casi. Esa pregunta invita a repetir sin verificar. Las casas cambian: gente que llegó, gente que se fue. Se pregunta por este año, con hechos."
+  - id: q5
+    after_segment: 3
+    concept_tag: otro-que-reclame
+    prompt: "La clienta dice que su sobrina vivió con ella nueve meses. ¿Cuál es la siguiente pregunta obligada?"
+    options:
+      - id: a
+        text: "«¿Y alguien más podría reclamarla? ¿Dónde están sus papás?»"
+        correct: true
+        feedback: "Exacto. Un niño con dos casas posibles es la fuente clásica de dependientes duplicados y rechazos. Preguntar por el otro posible reclamante es diligencia pura, y va a tus notas."
+      - id: b
+        text: "«¿Quieres reclamarla?»"
+        correct: false
+        feedback: "Casi. Querer no es poder. Antes de lo que quiere el cliente está lo que la regla permite, y para eso necesitas saber si alguien más tiene derecho."
+      - id: c
+        text: "Ninguna: nueve meses ya alcanza."
+        correct: false
+        feedback: "Casi. Los meses son un requisito, no todos. Falta saber de los padres, el sustento y la relación. Una respuesta buena genera la siguiente pregunta."
+  - id: q6
+    after_segment: 4
+    concept_tag: dinero-pregunta-cierre
+    prompt: "Ya tienes los W-2 y 1099 que trajo el cliente. ¿Cómo cierras el tema de ingresos?"
+    options:
+      - id: a
+        text: "«¿Te llegó algún otro dinero este año: apps, efectivo, propinas, desempleo, algo que no me estés trayendo?»"
+        correct: true
+        feedback: "Exacto. La pregunta de barrido, con ejemplos, siempre. Los papeles que trajo son lo que recuerda; tu pregunta busca lo que olvidó o creyó que «no contaba». Y anotas su respuesta."
+      - id: b
+        text: "«¿Esto es todo, verdad?»"
+        correct: false
+        feedback: "Casi. Esa pregunta invita a decir que sí. La versión útil da ejemplos concretos: apps, efectivo, propinas, desempleo. Los ejemplos despiertan la memoria."
+      - id: c
+        text: "No preguntas: si el IRS tiene algo más, ya le llegará carta."
+        correct: false
+        feedback: "Casi. Esperar la carta es regalarle al cliente un CP2000 con intereses. La pregunta de barrido hoy evita la carta del año que viene."
+  - id: q7
+    after_segment: 5
+    concept_tag: guarderia-datos
+    prompt: "El cliente dice que pagó guardería. ¿Qué necesitas exactamente para que ese crédito entre?"
+    options:
+      - id: a
+        text: "El monto aproximado que gastó."
+        correct: false
+        feedback: "Casi. Sin el nombre, la dirección y el EIN o SSN del proveedor, el crédito no se sostiene. El monto aproximado, además, no es un monto: se pide el recibo."
+      - id: b
+        text: "Nombre, dirección y EIN o Seguro Social del proveedor, y el monto con recibo."
+        correct: true
+        feedback: "Exacto. El Formulario 2441 pide identificar al proveedor. Si el cliente no lo trae hoy, se anota como pendiente y la declaración espera ese dato."
+      - id: c
+        text: "Una carta del cliente jurando que pagó."
+        correct: false
+        feedback: "Casi. La palabra del cliente no reemplaza los datos del proveedor. Recibo y EIN, o el crédito no entra."
+  - id: q8
+    after_segment: 5
+    concept_tag: ip-pin
+    prompt: "Una clienta menciona que «el IRS le mandó un número» después de un robo de identidad. ¿Qué es y por qué importa hoy?"
+    options:
+      - id: a
+        text: "Es el IP PIN: sin ese número de seis dígitos, su declaración electrónica se rechaza. Pídele la carta de este año."
+        correct: true
+        feedback: "Exacto. El IP PIN cambia cada año y va en la declaración. Preguntarlo en el intake evita un rechazo seguro al transmitir."
+      - id: b
+        text: "Es su PTIN, y no afecta la declaración."
+        correct: false
+        feedback: "Casi. El PTIN es del preparador. Lo que ella recibió es un IP PIN de protección de identidad, y sin él su e-file rebota."
+      - id: c
+        text: "Es un número viejo que ya no se usa."
+        correct: false
+        feedback: "Casi. Se renueva cada año y es obligatorio para quien lo tiene asignado. La carta de este año trae el número vigente."
+  - id: q9
+    after_segment: 6
+    concept_tag: preguntas-que-destapan
+    prompt: "¿Por qué preguntas «¿te llegó alguna carta del IRS este año?» en cada intake?"
+    options:
+      - id: a
+        text: "Por curiosidad; las cartas no cambian la declaración."
+        correct: false
+        feedback: "Casi. Una carta puede cambiar todo: un saldo pendiente que se comerá el reembolso, un IP PIN asignado, un problema del año pasado que hay que resolver antes o junto con esta declaración."
+      - id: b
+        text: "Porque una carta pendiente cambia la estrategia: saldos que absorben el reembolso, identidad por verificar, años por corregir."
+        correct: true
+        feedback: "Exacto. El cliente rara vez la menciona solo; hay que preguntarla. Con la carta en la mano decides qué se resuelve primero. Las cartas las vemos a fondo en el módulo 7."
+      - id: c
+        text: "Para cobrarle un servicio extra."
+        correct: false
+        feedback: "Casi. Puede haber trabajo extra, sí, pero la razón de preguntar es hacer bien la declaración de hoy, no facturar."
+  - id: q10
+    after_segment: 7
+    concept_tag: cierre-y-notas
+    prompt: "Termina la entrevista de María. ¿Cómo la cierras bien?"
+    options:
+      - id: a
+        text: "«Yo te aviso cuando esté.» Y capturas después, de memoria."
+        correct: false
+        feedback: "Casi. De memoria se pierde la mitad. El cierre profesional deja tres cosas por escrito: qué falta, para cuándo, y la cuenta de depósito verificada. Y tus notas con fecha."
+      - id: b
+        text: "Repites qué falta y para cuándo, verificas la cuenta del depósito dos veces, y guardas tus notas fechadas en su expediente."
+        correct: true
+        feedback: "Exacto. El cliente sale sabiendo qué debe traer, y tú te quedas con notas que en tres años seguirán contando la historia. Ese expediente es tu prueba de diligencia."
+      - id: c
+        text: "Le pides que firme el 8879 de una vez, aunque falten documentos."
+        correct: false
+        feedback: "Casi. El 8879 se firma cuando la declaración está terminada y revisada con el cliente, nunca antes. Firmar en blanco es una falta seria del preparador."
+---
+
+## S1 · Los diez minutos que evitan el 80 % de los errores
+
+Soy Liliana. Hoy vas a aprender la habilidad que separa a una preparadora profesional de una capturista: la entrevista. Los diez o quince minutos antes de abrir el software.
+
+Te digo por qué va primero, siempre, aunque el cliente llegue con prisa. Los formularios que trae cuentan lo que le pagaron. No cuentan quién vivió en su casa, ni si se separó en marzo, ni el efectivo de los fines de semana, ni la carta del IRS que tiene en un cajón. Y esas cosas deciden el estado civil, los dependientes, los créditos: la declaración entera.
+
+Capturar sin entrevistar es recetar sin examinar. Y el costo es concreto: una declaración rehecha, un rechazo de e-file, o una carta el año que viene. Los diez minutos de hoy son la inversión más rentable de tu oficio.
+
+La entrevista tiene un orden fijo, y es el de esta lección: identidad, la casa, el dinero, lo que baja el impuesto, las preguntas que destapan, y el cierre. Al final tienes la lista completa en un PDF para imprimir y tener enfrente en cada cita.
+
+Después de más de veinte años preparando impuestos, he aprendido que una buena declaración empieza con una buena entrevista, no con el software. Cuando recibo a un cliente, especialmente si es nuevo, primero trato de conocer su situación. Le pregunto: «cuéntame, ¿qué cambió en tu vida durante este año?». Porque a veces el cliente llega pensando que solamente necesito sus W-2, y no me cuenta que se casó, se separó, tuvo un hijo, comenzó un negocio, compró una casa o recibió ingresos adicionales. Muchas veces una sola pregunta cambia completamente una declaración.
+
+## S2 · Identidad: documentos a la vista
+
+Primer bloque: quiénes son, con papeles.
+
+Pides tres cosas de entrada. Una: identificación vigente con foto del cliente, y de su cónyuge si es declaración conjunta. Dos: la tarjeta de Seguro Social o la carta de ITIN de cada persona que va a ir en la declaración. Del cliente, del cónyuge, de cada dependiente. Tres: su declaración del año pasado.
+
+Sobre las tarjetas, la regla de oro: se captura con el documento a la vista, nunca de memoria. El nombre se escribe exactamente como aparece en la tarjeta, con los dos apellidos si los trae, sin acomodar. El rechazo de e-file más común de toda la temporada es nombre o número que no coincide con la base de Seguro Social. Un minuto de verificación te ahorra ese rechazo.
+
+Y la declaración del año pasado no es para copiarla: es para leerla. Ahí ves qué estado civil usó, qué dependientes llevaba, qué fuentes de ingreso tenía. Comparas contra lo que te cuenta hoy y las diferencias son tus preguntas. A veces encuentras un error del preparador anterior que se puede corregir con una enmienda, y ese hallazgo te gana un cliente para siempre.
+
+Al expediente: copia de la ID, los números capturados con tarjeta a la vista, y la declaración anterior.
+
+## S3 · La casa: hechos, no conclusiones
+
+Segundo bloque, el que más dinero mueve: la casa.
+
+Aquí está el secreto de toda la entrevista: preguntas por hechos, no por conclusiones. No preguntas «¿cuántos dependientes tienes?», porque esa es una conclusión legal que no le toca al cliente. Preguntas: «¿Quiénes vivieron en tu casa este año, y cuántos meses cada uno?». Y anotas la lista completa: nombre, relación, meses. Los adultos también.
+
+Después: «¿Estabas casado el 31 de diciembre?». La fecha, no el sentimiento. Y si hubo separación: «¿desde qué mes no vive en la casa?» y «¿hay papeles de un juez?». Ya sabes de la lección 3.1, que viene en el próximo módulo, cuánto pesa esa respuesta.
+
+Y la pregunta que casi nadie hace y que evita los rechazos por dependiente duplicado: «¿Alguien más podría reclamar a ese niño? ¿Dónde están sus papás?». Un sobrino, un nieto, un hermanito: si hay otra casa posible, necesitas saberlo hoy, no cuando el e-file rebote.
+
+Quién paga la casa: «¿Quién paga la renta, la luz, la comida? ¿Alguien más ayuda?». De ahí sale cabeza de familia o no.
+
+Cada respuesta buena genera la siguiente pregunta. «Vive conmigo» — ¿desde cuándo? ¿quién más lo mantiene? ¿tienes algo que lo muestre, un registro de la escuela, del doctor? No es desconfianza: es el expediente que sostiene la declaración.
+
+Hay preguntas que para mí son indispensables, y te las doy como las digo yo en la mesa: «¿tuviste algún otro ingreso aunque no hayas recibido un formulario?», «¿quién vivió contigo durante el año y quién pagó los gastos de la casa?» y «¿hay otra persona que pueda reclamar a alguno de estos dependientes?». No basta con recibir documentos; tenemos que escuchar, aclarar las respuestas y dejar notas que respalden nuestro trabajo. Por eso te lo repito: no asumas. Pregunta, escucha y documenta.
+
+## S4 · El dinero: la pregunta de barrido
+
+Tercer bloque: todo lo que entró.
+
+Recibes lo que trajo: W-2, 1099, resúmenes de las apps. Los revisas uno por uno, y por cada trabajo preguntas las fechas y si sigue ahí. Pero los papeles que trajo son lo que recuerda. Tu trabajo es encontrar lo que falta.
+
+La pregunta de barrido, con ejemplos, siempre: «¿Te llegó algún otro dinero este año? ¿Apps como Uber o DoorDash? ¿Trabajos en efectivo? ¿Propinas? ¿Desempleo? ¿Seguro Social, alguna pensión? ¿Intereses del banco? ¿Vendiste algo?». Los ejemplos despiertan la memoria. «¿Esto es todo, verdad?» invita a decir que sí; la lista con ejemplos saca el «ah, sí, también…».
+
+Y cuando aparece el ingreso sin papel, «me pagaron en efectivo por limpiar unas casas», no se te olvide la cara: neutra. Todo ingreso se reporta, y reportarlo le conviene, como viste en el módulo 1. Le preguntas cuánto fue, cómo lo controla, y lo anotas.
+
+Anota la respuesta a la pregunta de barrido, textual, con fecha. «Cliente confirma que no tuvo otros ingresos» en tus notas vale oro si en octubre llega un CP2000.
+
+## S5 · Lo que baja el impuesto
+
+Cuarto bloque: los papeles que reducen o que obligan.
+
+La lista corta que preguntas siempre: ¿Tuviste seguro médico del Marketplace? — si sí, el 1095-A es obligatorio, y sin él la declaración rebota. ¿Alguien estudió en universidad o colegio técnico? — el 1098-T. ¿Pagaste guardería? — y aquí no basta el sí: necesitas nombre, dirección y EIN o Seguro Social del proveedor, más el recibo. Sin esos datos el crédito no entra. ¿Tienes casa con hipoteca? — el 1098. ¿Hiciste pagos estimados? — los comprobantes, con fechas y montos. ¿Aportaste a una cuenta de retiro por tu cuenta?
+
+Y una pregunta que se volvió obligatoria: «¿El IRS te mandó una carta con un número de seis dígitos, un IP PIN?». Quien lo tiene asignado, por robo de identidad o porque lo pidió, debe ponerlo en la declaración, y cambia cada año. Sin él, rechazo seguro. Pide la carta de este año.
+
+Lo que el cliente no trae hoy no mata la cita: se anota como pendiente, con fecha compromiso. Pero la declaración no se transmite con huecos.
+
+## S6 · Las preguntas que destapan
+
+Quinto bloque: tres preguntas cortas que destapan lo que el cliente no dice, no por ocultarlo, sino porque no sabe que importa.
+
+«¿Vendiste algo este año?» Un carro, cosas por internet, acciones en una app, cripto. Ventas que pueden traer un 1099-K o una ganancia que reportar.
+
+«¿Te llegó alguna carta del IRS?» La carta cambia la estrategia: un saldo pendiente se va a comer el reembolso y es mejor que lo sepa por ti; una verificación de identidad detiene todo hasta resolverse; un problema del año pasado quizá se arregla junto con esta declaración. El cliente casi nunca la menciona solo. Pregúntala siempre.
+
+«¿Viviste o trabajaste en otro estado?» Ya sabes de la lección 1.3: eso activa declaraciones estatales.
+
+Tres preguntas, treinta segundos, y te ahorran las sorpresas de abril.
+
+> **HISTORIA · Liliana (opcional):** una vez que una de estas tres preguntas destapó algo grande. 30–45 segundos.
+
+## S7 · El cierre: María sale sabiendo, tú te quedas con notas
+
+Cierro con el final de la cita, usando a María, que desde ahora nos acompaña todo el curso.
+
+María llegó con su W-2 del restaurante y el resumen de DoorDash. En la entrevista salió todo lo demás: Rubén se fue en marzo y no hay divorcio; Sofía y Mateo viven con ella todo el año; ella paga la renta y todo lo de la casa; propinas en efectivo de los repartos; Mateo va a guardería tres días por semana; seguro del Marketplace con subsidio; y una carta del IRS del año pasado que tiene guardada. Cada una de esas frases cambia su declaración. Ninguna estaba en sus papeles.
+
+El cierre tiene tres pasos. Uno: le repites qué falta y para cuándo — «me traes el recibo de la guardería con el EIN, y la carta del IRS, el viernes». Dos: la cuenta del depósito directo, leída dos veces, número por número, del documento del banco, no de memoria; una cuenta mal escrita es un reembolso perdido en el limbo por meses. Tres: le dices qué sigue — «con eso la termino, la revisamos juntas, firmas, y la transmito».
+
+Y lo tuyo: las notas. Fecha, qué preguntaste, qué respondió, qué documentos viste, qué quedó pendiente. En papel o en el sistema, pero escritas hoy. Ese expediente es tu memoria en marzo, tu prueba de diligencia en una revisión, y la base del Formulario 8867 que veremos en el módulo 5.
+
+La lista completa de esta lección está en tu PDF descargable: «Lo que le pides a tu cliente». Imprímela. Tenla enfrente en cada cita hasta que te la sepas, y aun entonces.
+
+Con esto cierras el módulo 2: estás registrada, sabes lo que firma tu nombre, y sabes entrevistar. En el módulo 3 tomamos las respuestas de María y decidimos su estado civil y sus dependientes.

@@ -1,0 +1,246 @@
+---
+id: 03-04
+module: 3
+lesson: 4
+slug: caa
+title: "El agente certificador de ITIN (CAA) — clase complementaria"
+objective: "Distinguir AA y CAA, conocer qué puede y qué no puede autenticar un CAA, y el proceso para solicitar la autorización ante el IRS."
+duration_min: 9
+status: review
+source: [Clase complementaria de Liliana, oct 2026]
+cifras: []
+practice: null
+demos: []
+checklist:
+  - "PTIN no es CAA: ser preparador no autoriza a certificar documentos — la autorización CAA es un trámite aparte ante el IRS"
+  - "AA ayuda a preparar y tramitar el W-7; el CAA además autentica ciertos documentos y presenta el certificado W-7(COA)"
+  - "Para solicitante principal y cónyuge: el CAA autentica documentos de identidad y condición extranjera admitidos (excepto ID militar extranjera)"
+  - "Para dependientes: el CAA solo autentica pasaporte y certificado de nacimiento — lo demás va en original o copia certificada por el emisor"
+  - "Una copia notariada NO equivale a una copia certificada por la agencia emisora"
+  - "La decisión de emitir el ITIN siempre es del IRS: jamás se promete aprobación ni fecha"
+questions:
+  - id: q1
+    after_segment: 1
+    concept_tag: ptin-no-es-caa
+    prompt: "Tienes tu PTIN y preparas W-7 muy bien. ¿Puedes certificar los pasaportes de tus clientes?"
+    options:
+      - id: a
+        text: "No: el PTIN te hace preparadora, no agente certificador — la autorización CAA es un trámite aparte ante el IRS, con su propia capacitación y aprobación."
+        correct: true
+        feedback: "Exacto. Ser preparador de impuestos o tener PTIN no te convierte automáticamente en CAA. Anunciarse como CAA sin la autorización es de los errores graves: primero el trámite, luego el servicio."
+      - id: b
+        text: "Sí: cualquier preparador con PTIN puede certificar documentos."
+        correct: false
+        feedback: "Casi. Esa confusión es justo la que esta clase previene: PTIN y CAA son autorizaciones distintas. Sin el acuerdo CAA aprobado por el IRS, no se certifica ningún documento."
+      - id: c
+        text: "Sí, pero solo pasaportes de clientes de confianza."
+        correct: false
+        feedback: "Casi. La confianza no sustituye la autorización: sin el programa CAA aprobado, no se certifica ningún documento — de nadie."
+  - id: q2
+    after_segment: 2
+    concept_tag: aa-vs-caa
+    prompt: "¿Cuál es la diferencia entre un AA y un CAA?"
+    options:
+      - id: a
+        text: "El AA ayuda a preparar y tramitar el W-7 pero NO autentica documentos; el CAA además puede autenticar ciertos documentos y presentar el certificado W-7(COA)."
+        correct: true
+        feedback: "Exacto. Esa es la frontera: la autenticación. El AA acompaña el trámite; el CAA certifica — con límites por tipo de documento y de solicitante — y firma el W-7(COA)."
+      - id: b
+        text: "Son lo mismo con dos nombres."
+        correct: false
+        feedback: "Casi. Son dos niveles distintos del programa: solo el CAA autentica documentos, y por eso su capacitación incluye el entrenamiento forense que el AA no lleva."
+      - id: c
+        text: "El CAA emite el ITIN directamente."
+        correct: false
+        feedback: "Casi. El ITIN lo emite ÚNICAMENTE el IRS. El CAA certifica documentos y presenta el paquete — la decisión final nunca es suya."
+  - id: q3
+    after_segment: 2
+    concept_tag: quien-emite
+    prompt: "¿Quién decide si el ITIN se emite?"
+    options:
+      - id: a
+        text: "El IRS, siempre: el CAA autentica y presenta, pero la decisión final de emitir el número es del IRS."
+        correct: true
+        feedback: "Exacto. Por eso jamás se promete aprobación: el mejor paquete del mundo sigue siendo una solicitud, y quien resuelve es el IRS."
+      - id: b
+        text: "El CAA, por eso cobra el servicio."
+        correct: false
+        feedback: "Casi. El CAA cobra por preparar, verificar y certificar — no por aprobar. Prometer la aprobación es de los errores que destruyen la credibilidad del servicio."
+      - id: c
+        text: "El Seguro Social."
+        correct: false
+        feedback: "Casi. El Seguro Social emite SSN. El ITIN es del IRS — justamente existe para quien no es elegible para un SSN."
+  - id: q4
+    after_segment: 3
+    concept_tag: limites-dependientes
+    prompt: "Una familia trae a su hija con pasaporte, acta de nacimiento y registros escolares. ¿Qué puede autenticar el CAA de la niña?"
+    options:
+      - id: a
+        text: "Solo el pasaporte y el certificado de nacimiento: los registros escolares deben ir en original o copia certificada por la agencia emisora."
+        correct: true
+        feedback: "Exacto. Para dependientes la lista del CAA es corta: pasaporte y acta de nacimiento. Los demás documentos — escolares, médicos — viajan en original o copia certificada por quien los emitió."
+      - id: b
+        text: "Todo lo que traiga, para eso es certificador."
+        correct: false
+        feedback: "Casi. La autoridad del CAA tiene límites por tipo de solicitante: con dependientes solo autentica pasaporte y acta de nacimiento — autenticar de más es violar el acuerdo con el IRS."
+      - id: c
+        text: "Nada: los dependientes no pueden usar CAA."
+        correct: false
+        feedback: "Casi. Sí pueden — pero con lista corta: pasaporte y certificado de nacimiento. El resto de su evidencia va por la ruta de originales o copias certificadas."
+  - id: q5
+    after_segment: 3
+    concept_tag: notariada-no-certificada
+    prompt: "El cliente trae una copia notariada de su acta. ¿Sirve como copia certificada?"
+    options:
+      - id: a
+        text: "No por sí misma: la copia certificada la emite la AGENCIA que produjo el documento; el notario no sustituye a la agencia emisora."
+        correct: true
+        feedback: "Exacto. Es de las confusiones más caras del W-7: notariada y certificada no son lo mismo. La certificación válida viene de la oficina que emitió el documento original."
+      - id: b
+        text: "Sí: notariada y certificada son sinónimos."
+        correct: false
+        feedback: "Casi. El notario da fe de una firma o una copia; la agencia emisora certifica su propio documento. El IRS pide lo segundo — aceptar lo primero rebota el paquete."
+      - id: c
+        text: "Sirve si el notario es amigo del preparador."
+        correct: false
+        feedback: "Casi. La amistad no cambia la regla: certificada por la agencia emisora, o el original. Punto."
+  - id: q6
+    after_segment: 3
+    concept_tag: id-militar
+    prompt: "¿Puede el CAA autenticar una identificación militar extranjera del solicitante principal?"
+    options:
+      - id: a
+        text: "No: es la excepción expresa — aun para principales y cónyuges, la identificación militar extranjera queda fuera de lo que el CAA autentica."
+        correct: true
+        feedback: "Exacto. Para principal y cónyuge el CAA autentica los documentos de identidad y condición extranjera admitidos por el programa, con esa excepción marcada: la ID militar extranjera no."
+      - id: b
+        text: "Sí, es un documento de identidad como cualquier otro."
+        correct: false
+        feedback: "Casi. El programa la excluye expresamente de la autenticación del CAA. Si es el único documento, se evalúan las otras rutas de entrega."
+      - id: c
+        text: "Solo si viene notariada."
+        correct: false
+        feedback: "Casi. La notarización no la habilita — y ya sabes que notariada tampoco equivale a certificada. Esa identificación simplemente no está en la lista del CAA."
+  - id: q7
+    after_segment: 4
+    concept_tag: proceso-autorizacion
+    prompt: "¿Qué capacitación adicional distingue al CAA del AA al solicitar la autorización?"
+    options:
+      - id: a
+        text: "La capacitación forense en documentos: además del entrenamiento de Acceptance Agent, las personas responsables del CAA completan el curso forense y conservan su certificado."
+        correct: true
+        feedback: "Exacto. El CAA va a examinar pasaportes y actas de verdad — por eso el programa exige el entrenamiento forense además de la capacitación general, y el certificado se guarda para la solicitud."
+      - id: b
+        text: "Ninguna: con el PTIN basta."
+        correct: false
+        feedback: "Casi. El PTIN ni siquiera es requisito suficiente para AA: el programa tiene su propia capacitación, y el CAA suma la forense. Son trámites separados del PTIN."
+      - id: c
+        text: "Un curso de notariado público."
+        correct: false
+        feedback: "Casi. El notariado es otra figura y no participa en este programa. Lo que pide el IRS es su capacitación de Acceptance Agent más el entrenamiento forense en documentos."
+  - id: q8
+    after_segment: 4
+    concept_tag: no-anunciarse-antes
+    prompt: "Ya enviaste tu solicitud de CAA por e-Services. ¿Puedes empezar a anunciar el servicio?"
+    options:
+      - id: a
+        text: "No: hasta tener la aprobación y el acuerdo firmado con el IRS, no se ofrece ni se anuncia el servicio de certificación."
+        correct: true
+        feedback: "Exacto. Solicitud enviada no es autorización. El IRS verifica antecedentes y puede pedir más; anunciarse antes de la aprobación es empezar el servicio con una falta."
+      - id: b
+        text: "Sí: la solicitud ya cuenta como permiso provisional."
+        correct: false
+        feedback: "Casi. No existe el CAA provisional: o hay acuerdo aprobado o no se certifica. Mientras tanto, se sigue sirviendo al cliente por las rutas autorizadas — TAC o un CAA ya aprobado."
+      - id: c
+        text: "Sí, si solo lo anuncias de palabra."
+        correct: false
+        feedback: "Casi. De palabra también es anunciarse. La regla es simple: el servicio existe cuando la autorización existe."
+  - id: q9
+    after_segment: 5
+    concept_tag: flujo-cliente
+    prompt: "En el flujo con el cliente, ¿qué se confirma ANTES de preparar cualquier W-7?"
+    options:
+      - id: a
+        text: "Que la persona de verdad necesita un ITIN y NO califica para un SSN — y el motivo del W-7: con declaración adjunta o bajo una excepción."
+        correct: true
+        feedback: "Exacto. El W-7 de alguien elegible para SSN rebota — esa verificación va primero. Después el motivo: la mayoría de los W-7 viajan con la declaración, salvo las excepciones del programa."
+      - id: b
+        text: "Que pague por adelantado."
+        correct: false
+        feedback: "Casi. El cobro se acuerda como en cualquier servicio — pero lo técnico que decide si el W-7 procede es la elegibilidad: ITIN sí, SSN no, y el motivo correcto."
+      - id: c
+        text: "Que traiga fotocopias de todo."
+        correct: false
+        feedback: "Casi. Justo las fotocopias simples NO sirven: originales o copias certificadas por el emisor. Y antes de los documentos va la pregunta de elegibilidad."
+  - id: q10
+    after_segment: 6
+    concept_tag: promesas
+    prompt: "El cliente pregunta: «¿me garantizas que me dan el ITIN y en cuánto tiempo?». ¿Tu respuesta profesional?"
+    options:
+      - id: a
+        text: "Le explicas que la decisión y los tiempos son del IRS: tu garantía es un paquete completo y correcto, con seguimiento — nunca una aprobación ni una fecha exacta."
+        correct: true
+        feedback: "Exacto. Igual que con los reembolsos: se promete el trabajo, no el resultado ajeno. El paquete bien armado es tu parte; la emisión y el calendario son del IRS."
+      - id: b
+        text: "«Garantizado en dos semanas» — para cerrar el servicio."
+        correct: false
+        feedback: "Casi. Esa promesa no la puedes cumplir y es de los errores listados del programa. El cliente informado con expectativas reales es el que no llama enojado."
+      - id: c
+        text: "«Si pagas extra, el IRS lo acelera.»"
+        correct: false
+        feedback: "Casi. No existe la vía rápida pagada — ofrecerla es derechamente un engaño. Seguimiento sí; promesas de resultado, jamás."
+---
+
+## S1 · Una oportunidad de servicio — con reglas
+
+Soy Liliana. Hoy quiero enseñarte algo que puede abrirte una nueva oportunidad de servicio profesional: el programa CAA del IRS. Durante años he ayudado a familias que necesitan un ITIN, y sé que una de sus mayores preocupaciones es entregar su pasaporte original. Pero antes de ofrecer un servicio debemos conocer sus reglas y sus límites. Ser preparador de impuestos o tener PTIN no nos convierte automáticamente en CAA.
+
+Esta es una clase complementaria de la 3.3: allá aprendiste a preparar un W-7 completo y las tres rutas de entrega; aquí vamos a abrir la tercera ruta por dentro — el agente certificador — por si algún día quieres ofrecerla tú.
+
+El repaso en tres líneas: el ITIN es el número tributario que emite el IRS para quien necesita identificación fiscal federal y no tiene ni es elegible para un SSN; no autoriza empleo ni cambia estatus migratorio. El W-7 es su solicitud. Y la pieza nueva de hoy tiene dos niveles: el AA y el CAA.
+
+## S2 · AA y CAA: la frontera es la autenticación
+
+Los dos son figuras autorizadas por el IRS dentro del mismo programa, y la diferencia cabe en una palabra: autenticar.
+
+El AA — Acceptance Agent, agente de aceptación — ayuda a preparar y tramitar el W-7. Acompaña, revisa, presenta. Pero no autentica documentos: el cliente de un AA todavía manda sus originales o copias certificadas.
+
+El CAA — Certifying Acceptance Agent, agente de aceptación certificador — puede además autenticar ciertos documentos conforme a las reglas del programa, devolverlos en el momento, y presentar el certificado de exactitud: el W-7(COA). Ese formulario es la firma del CAA diciendo «yo vi los originales y doy fe». Para la familia que no quiere soltar su pasaporte, esa es la diferencia completa.
+
+Y la regla que corona todo el programa: la decisión final de emitir el ITIN corresponde al IRS. Siempre. El CAA certifica documentos; no aprueba números.
+
+## S3 · Qué puede autenticar un CAA — y qué no
+
+Aquí vive el corazón técnico de la clase, porque la autoridad del CAA tiene límites precisos por tipo de solicitante.
+
+Para el solicitante principal y el cónyuge: el CAA puede autenticar los documentos de identidad y de condición extranjera que admite el programa — con una excepción expresa: la identificación militar extranjera, esa no.
+
+Para los dependientes, la lista se encoge a dos: pasaporte y certificado de nacimiento. Nada más. Los otros documentos que un dependiente a veces necesita — registros escolares, récords médicos cuando se exigen — no los autentica el CAA: viajan como originales o como copias certificadas por la agencia que los emitió.
+
+Y la confusión cara que debes poder deshacer en la mesa: un documento notariado no equivale a una copia certificada por la agencia emisora. El notario da fe de firmas; la certificación válida para el IRS la da la oficina que produjo el documento. Son cosas distintas y el paquete rebota si se confunden.
+
+Último límite: la autenticación del CAA no borra los demás requisitos. Si el dependiente necesita demostrar residencia, esa evidencia se junta igual — certificar el pasaporte no la sustituye.
+
+## S4 · Cómo se solicita la autorización
+
+Si el servicio te interesa, este es el camino, en seis pasos:
+
+Uno: revisar la elegibilidad y los requisitos vigentes del programa en el sitio del IRS — cambian, y se verifica antes de empezar. Dos: todas las personas responsables de la firma completan la capacitación obligatoria de Acceptance Agent. Tres: para el nivel CAA, esas mismas personas completan además la capacitación forense en documentos — aprender a reconocer un pasaporte verdadero de uno alterado — y conservan su certificado. Cuatro: se presenta la solicitud electrónica por IRS e-Services, a nombre de la firma, identificando las funciones que se piden. Cinco: se completan las firmas y juramentos y se cargan los documentos de respaldo con la herramienta de carga del programa, siguiendo las instrucciones del IRS. Seis: se atiende cualquier solicitud adicional y se espera la aprobación y el acuerdo.
+
+Dos notas de realismo: el IRS hace verificación de antecedentes (actualmente sin tarjetas de huellas en la solicitud — verifica las instrucciones vigentes antes de aplicar). Y la regla de oro mientras tanto: no anunciarse como CAA antes de tener la autorización. Solicitud enviada no es permiso.
+
+## S5 · El flujo con el cliente, y un caso para resolver
+
+Cuando el servicio ya existe — tuyo o del CAA al que derivas — el flujo con el cliente es este, en orden:
+
+Primero se confirma que el solicitante de verdad necesita un ITIN y no califica para un SSN. Segundo, el motivo del W-7: ¿acompaña una declaración federal, o aplica una excepción del programa? Tercero, los documentos: válidos, vigentes, originales o copias certificadas por el emisor. Cuarto, se verifica identidad, condición extranjera y, si corresponde, la residencia de los dependientes. Quinto, el W-7 se completa sin errores — y si actúas como CAA autorizado, autenticas solo lo permitido y preparas el W-7(COA) con sus copias. Sexto, el paquete se envía por el canal autorizado y se conserva la documentación según las reglas. Y séptimo, el seguimiento: sin prometer aprobación ni fecha.
+
+Ahora resuélvelo tú. Llega una pareja con su hija de nueve años. El padre necesita ITIN y trae pasaporte vigente; la hija tiene pasaporte, acta de nacimiento y registros escolares. ¿Quién necesita W-7? ¿Qué puede autenticar un CAA para cada uno? ¿Los registros escolares de la niña se autentican?
+
+La guía: la elegibilidad se analiza persona por persona. El CAA puede autenticar el pasaporte del padre, y de la niña el pasaporte y el acta — los registros escolares no: esos van en original o copia certificada por la escuela. Y queda por revisar la evidencia de residencia que el caso exija. Si lo razonaste así, ya piensas como agente.
+
+## S6 · Los errores del programa, y mi consejo
+
+La lista corta de lo que hunde este servicio — repásala antes de ofrecerlo: prometer que el ITIN da permiso de trabajo (jamás lo da); confundir PTIN con autorización CAA; autenticar documentos que no están permitidos; aceptar copias notariadas como si fueran certificadas por el emisor; omitir la evidencia de residencia de los dependientes; enviar un W-7 sin declaración cuando no existe excepción; y anunciar aprobaciones o plazos garantizados.
+
+Y mi consejo para cerrar: primero aprende a preparar un W-7 correctamente — eso es la 3.3, y es la base de todo. Si más adelante quieres ofrecer el servicio CAA, hazlo con capacitación, con autorización y con procedimientos claros. Nuestros clientes confían en nosotros con los documentos más importantes que tienen. Esa confianza vale más que cualquier trámite.

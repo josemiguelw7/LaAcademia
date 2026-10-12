@@ -1,0 +1,272 @@
+---
+id: 04-01
+module: 4
+lesson: 1
+slug: leer-un-w2
+title: Leer un W-2 sin errores
+objective: Capturar cualquier W-2 casilla por casilla sabiendo qué significa cada una y qué hacer cuando falta o viene corregido.
+duration_min: 10
+status: approved
+source: [Lección 8 Maestro, Clase en vivo "W-2"]
+cifras: [deduccion_propinas, deduccion_horas_extra]
+practice: 04-w2-a-1040
+demos: []
+checklist:
+  - "Casilla 1 contra 3 y 5: si no coinciden, busca el 401(k) u otro plan en la casilla 12 antes de asumir error"
+  - "Casilla 2: la retención federal — la que más se equivoca al teclear; verifícala dos veces"
+  - "Casilla 12: identifica los códigos D (401k), DD (costo del seguro, informativa) y W (HSA)"
+  - "Casilla 13 «plan de retiro» marcada: puede limitar la deducción de IRA"
+  - "Casilla 14 y propinas/horas extra: revisa qué reportó el patrón para las nuevas deducciones"
+  - "Casillas 15–17: la retención estatal que se olvida cuando el cliente trabajó en otro estado"
+  - "¿No llegó el W-2? Contactar al patrón; si no aparece, Formulario 4852 con el último talón"
+questions:
+  - id: q1
+    after_segment: 1
+    concept_tag: casilla-1-vs-3-5
+    prompt: "En un W-2, la casilla 1 dice menos que las casillas 3 y 5. El cliente cree que el patrón se equivocó. ¿Qué revisas primero?"
+    options:
+      - id: a
+        text: "La casilla 12: un aporte a 401(k) (código D) baja la casilla 1 pero no la 3 ni la 5."
+        correct: true
+        feedback: "Exacto. El 401(k) tradicional reduce el salario gravable para el impuesto sobre la renta, pero no para Seguro Social y Medicare. La diferencia entre 1 y 3 casi siempre tiene esa explicación en la casilla 12."
+      - id: b
+        text: "Nada: pides un W-2 corregido de inmediato."
+        correct: false
+        feedback: "Casi. Pedir corrección sin revisar es quedar mal con el patrón y atrasar al cliente. Primero la casilla 12: un código D explica la diferencia y todo está correcto."
+      - id: c
+        text: "La casilla 2, porque ahí está el error."
+        correct: false
+        feedback: "Casi. La casilla 2 es retención, no salario. La diferencia entre 1 y 3/5 se explica con los aportes antes de impuestos que muestra la casilla 12."
+  - id: q2
+    after_segment: 1
+    concept_tag: que-va-a-1040
+    prompt: "¿Cuál casilla del W-2 es el salario que va a la línea de sueldos de la 1040?"
+    options:
+      - id: a
+        text: "La casilla 1."
+        correct: true
+        feedback: "Exacto. La 1 es el salario gravable para el impuesto sobre la renta. Las casillas 3 y 5 son bases de Seguro Social y Medicare y no se capturan como ingreso."
+      - id: b
+        text: "La casilla 3, porque suele ser la más grande."
+        correct: false
+        feedback: "Casi. La 3 es la base de Seguro Social. Capturarla como salario infla el ingreso del cliente y su impuesto. A la 1040 va la casilla 1."
+      - id: c
+        text: "La suma de la 1 y la 3."
+        correct: false
+        feedback: "Casi. Nunca se suman: son el mismo salario medido con reglas distintas. Solo la 1 va como ingreso."
+  - id: q3
+    after_segment: 2
+    concept_tag: casilla-2-retencion
+    prompt: "¿Por qué la casilla 2 merece verificarse dos veces al capturar?"
+    options:
+      - id: a
+        text: "Porque un dígito de más o de menos ahí cambia directamente el reembolso, y es el error de captura más común."
+        correct: true
+        feedback: "Exacto. La retención federal se acredita dólar por dólar contra el impuesto. Teclearla mal es regalarle o quitarle dinero al cliente, y el IRS la cruza contra su copia: la diferencia genera carta."
+      - id: b
+        text: "Porque esa casilla decide el estado civil."
+        correct: false
+        feedback: "Casi. El estado civil salió de la entrevista, no del W-2. La casilla 2 es la retención federal: dinero ya pagado que se acredita en la declaración."
+      - id: c
+        text: "Porque si está en cero, el W-2 es falso."
+        correct: false
+        feedback: "Casi. Una casilla 2 en cero puede ser legítima: ingreso bajo o un W-4 con muchas exenciones. Se verifica, no se acusa. Eso sí: cliente con casilla 2 en cero puede terminar debiendo."
+  - id: q4
+    after_segment: 3
+    concept_tag: codigos-casilla-12
+    prompt: "En la casilla 12 aparece «DD» con una cantidad grande. El cliente se asusta: «¿me van a cobrar impuesto por eso?»"
+    options:
+      - id: a
+        text: "Sí: DD es ingreso extra que se suma."
+        correct: false
+        feedback: "Casi. DD es el costo del seguro médico del empleador y es puramente informativa. No se suma al ingreso ni paga impuesto. Es de las preguntas que más tranquilizan al responderse bien."
+      - id: b
+        text: "No: DD es informativa — el costo del seguro médico que pagó el empleador. No es ingreso."
+        correct: true
+        feedback: "Exacto. Los códigos que sí mueven la declaración son otros: D es aporte a 401(k), W es aporte a cuenta HSA, que trae su propio formulario. DD solo informa."
+      - id: c
+        text: "Depende del estado."
+        correct: false
+        feedback: "Casi. DD es federal e informativa en todos lados. Los códigos se buscan en la guía del W-2, no se adivinan."
+  - id: q5
+    after_segment: 3
+    concept_tag: casilla-13-retiro
+    prompt: "La casilla 13 «Retirement plan» viene marcada. ¿Qué te avisa eso?"
+    options:
+      - id: a
+        text: "Que el cliente ya no puede aportar a ningún IRA."
+        correct: false
+        feedback: "Casi. Aportar siempre puede. Lo que puede limitarse, según su ingreso, es la deducción del IRA tradicional. La casilla marcada te dice: revisa los límites antes de prometer esa deducción."
+      - id: b
+        text: "Que participa en un plan del trabajo, y la deducción de su IRA tradicional puede estar limitada según su ingreso."
+        correct: true
+        feedback: "Exacto. Es una bandera, no una prohibición. El software aplica los límites, pero tú tienes que saber por qué la deducción se achicó cuando el cliente pregunte."
+      - id: c
+        text: "Que el cliente ya está jubilado."
+        correct: false
+        feedback: "Casi. Marca participación en un plan del empleador, no jubilación. Un empleado de 25 años con 401(k) la trae marcada."
+  - id: q6
+    after_segment: 4
+    concept_tag: propinas-casillas
+    prompt: "María trae su W-2 del restaurante: propinas en la casilla 7 y una cantidad en la casilla 8, «propinas asignadas». ¿Qué diferencia hay?"
+    options:
+      - id: a
+        text: "Ninguna: las dos ya están incluidas en la casilla 1."
+        correct: false
+        feedback: "Casi. Las de la casilla 7 sí están en la 1 y ya traen retención de Seguro Social. Las de la casilla 8 NO están en la 1: se suman al ingreso y pagan su Seguro Social con el Formulario 4137."
+      - id: b
+        text: "Las de la 7 ya están en el salario; las de la 8 se agregan aparte y llevan el Formulario 4137."
+        correct: true
+        feedback: "Exacto. La casilla 8 es la que se escapa: propinas que el patrón asignó porque lo reportado quedó bajo. Se agregan, y el 4137 calcula el Seguro Social pendiente."
+      - id: c
+        text: "Las de la 8 no se declaran porque el patrón las inventó."
+        correct: false
+        feedback: "Casi. Asignadas no es inventadas: es una estimación que la ley obliga al restaurante a hacer. Se reportan, salvo que el cliente tenga registro propio que pruebe otra cifra."
+  - id: q7
+    after_segment: 4
+    concept_tag: deduccion-propinas-nueva
+    prompt: "Con la nueva deducción por propinas, ¿qué buscas en el W-2 de una mesera?"
+    options:
+      - id: a
+        text: "Cómo reportó el patrón las propinas calificadas — según las instrucciones del año — para que la deducción se calcule bien."
+        correct: true
+        feedback: "Exacto. La deducción por propinas es nueva y el reporte del patrón es la base. Se revisa qué informó — en la casilla correspondiente según el año — y el límite anual está en la tarjeta, nunca de memoria."
+      - id: b
+        text: "Nada: las propinas ya no pagan ningún impuesto."
+        correct: false
+        feedback: "Casi. La deducción tiene límite anual y requisitos, y aplica al impuesto sobre la renta, no al Seguro Social. «Las propinas ya no pagan impuesto» es una promesa falsa que no vas a repetir."
+      - id: c
+        text: "Le pides al cliente una carta de sus propinas totales."
+        correct: false
+        feedback: "Casi. La base es lo reportado por el patrón y los registros del empleado, no una carta hecha para la ocasión. Primero el W-2; después, si hay diferencias, el registro diario del cliente."
+  - id: q8
+    after_segment: 5
+    concept_tag: estatal-olvidada
+    prompt: "Tu cliente vive en Texas, pero uno de sus tres W-2 es de unos meses que trabajó en Oklahoma, con retención en la casilla 17. ¿Qué haces con eso?"
+    options:
+      - id: a
+        text: "Nada: viviendo en Texas, lo estatal no aplica."
+        correct: false
+        feedback: "Casi. La retención de Oklahoma existe y probablemente hay declaración de ese estado que presentar — y quizá reembolso que recuperar. Ignorar las casillas 15–17 es dejar dinero del cliente tirado."
+      - id: b
+        text: "Anotas que hay declaración estatal de Oklahoma pendiente, con esa retención a favor del cliente."
+        correct: true
+        feedback: "Exacto. Las casillas 15 a 17 son el recordatorio de que el mapa importa. Trabajo en otro estado con retención: declaración de ese estado, donde esa retención se acredita."
+      - id: c
+        text: "Sumas esa retención a la federal para no perderla."
+        correct: false
+        feedback: "Casi. Retención estatal y federal nunca se mezclan: cada una se acredita en su propia declaración. La de Oklahoma va a la declaración de Oklahoma."
+  - id: q9
+    after_segment: 6
+    concept_tag: varios-w2-corregido
+    prompt: "Un cliente trae dos W-2 y luego llega un W-2c del primer patrón. ¿Qué capturas?"
+    options:
+      - id: a
+        text: "Los tres formularios, sumados."
+        correct: false
+        feedback: "Casi. El W-2c corrige al primero: se usa el dato corregido en lugar del original, no además. Se capturan el W-2c del primer patrón y el W-2 normal del segundo."
+      - id: b
+        text: "El W-2c en lugar del W-2 original del primer patrón, más el W-2 del segundo."
+        correct: true
+        feedback: "Exacto. La c es de «corregido»: reemplaza las casillas que corrige. Y si la declaración ya se había transmitido con el original, toca evaluar una enmienda — módulo 7."
+      - id: c
+        text: "Solo el W-2c, porque es el más reciente."
+        correct: false
+        feedback: "Casi. El W-2c solo corrige al patrón que lo emitió. El W-2 del segundo patrón sigue vivo y se captura completo."
+  - id: q10
+    after_segment: 6
+    concept_tag: w2-no-llego
+    prompt: "Es marzo y a tu clienta no le llegó el W-2 de un trabajo que dejó en agosto. El patrón no contesta. ¿Cuál es la ruta?"
+    options:
+      - id: a
+        text: "Declarar sin ese trabajo: si no hay papel, no hay ingreso."
+        correct: false
+        feedback: "Casi. El ingreso existe y el IRS tiene su copia del W-2 aunque ella no. Omitirlo es un CP2000 seguro. La ruta es reconstruirlo, no borrarlo."
+      - id: b
+        text: "Intentar con el patrón y el IRS; si no aparece, preparar el Formulario 4852 con el último talón de pago como sustituto del W-2."
+        correct: true
+        feedback: "Exacto. El 4852 es el sustituto oficial: se estima salario y retención con el último talón, se explica el esfuerzo por conseguirlo, y la declaración sale completa. Si el W-2 aparece después con cifras distintas, se enmienda."
+      - id: c
+        text: "Esperar hasta octubre a ver si llega."
+        correct: false
+        feedback: "Casi. Esperar sin límite le cuesta la fecha de abril. Hay ruta oficial para este caso: el 4852. Se usa y se presenta a tiempo."
+---
+
+## S1 · Casilla 1 contra 3 y 5: el susto que no es error
+
+Soy Liliana. Hoy empieza el módulo del dinero, y empieza por el papel que más vas a tener enfrente en tu vida: el W-2. Al terminar vas a leerlo casilla por casilla, sin sustos y sin errores de captura.
+
+El W-2 es el resumen anual que el patrón entrega a cada empleado y al gobierno: cuánto le pagó y cuánto le retuvo. Tu cliente trae su copia; el IRS ya tiene la suya. Capturar es transcribir con exactitud, y entender es poder explicar.
+
+Primera parada, y primera pregunta de susto: la casilla 1 no coincide con la 3 y la 5. La casilla 1 es el salario gravable para el impuesto sobre la renta: es la que va a la línea de sueldos de la 1040. Las casillas 3 y 5 son las bases de Seguro Social y de Medicare. Son el mismo salario medido con reglas distintas, y por eso pueden diferir.
+
+La causa más común: el 401(k). Lo que el empleado aporta a su plan de retiro tradicional se resta de la casilla 1, paga impuesto después, cuando lo retire, pero no se resta de la 3 ni de la 5, porque Seguro Social y Medicare se pagan hoy. Resultado: casilla 1 menor que la 3. ¿Dónde lo confirmas? En la casilla 12, con el código D.
+
+Regla de mesa: diferencia entre 1 y 3 no es error hasta que la casilla 12 no lo explique. Y nunca, nunca se capturan la 3 o la 5 como ingreso.
+
+## S2 · Casillas 2, 4 y 6: lo retenido
+
+Segunda parada: lo que ya se pagó.
+
+Casilla 2: retención federal de impuesto sobre la renta. El adelanto del río. Se acredita dólar por dólar en la declaración, y por eso es la casilla que más cuesta cuando se teclea mal: un dígito cambiado cambia el reembolso en esa misma cantidad. Es, con diferencia, el error de captura más común del oficio. Mi disciplina, y ahora la tuya: la casilla 2 se verifica dos veces, contra el papel, antes de seguir.
+
+Y recuerda que el IRS cruza: su copia del W-2 contra tu captura. Una casilla 2 inflada no es reembolso gratis; es una carta con intereses.
+
+Casillas 4 y 6: retención de Seguro Social y de Medicare. Ya sabes de la lección 1.3: no se acreditan, no vuelven. Se capturan porque el software las pide y porque en casos raros, dos patrones que en conjunto retuvieron Seguro Social de más, generan un crédito. El software lo detecta; tú sabes que existe.
+
+Una casilla 2 en cero no es falsificación: puede ser ingreso bajo o un W-4 agresivo. Lo que sí te dice es: este cliente puede terminar debiendo. Mejor decírselo en la entrevista que en la revisión final.
+
+## S3 · Casillas 12 y 13: los códigos que importan
+
+Tercera parada: la casilla 12, la de los códigos. Trae letras y montos, y la guía completa viene al reverso del W-2. Tres códigos cubren casi todo lo que verás:
+
+D: aporte del empleado a su 401(k) tradicional. Ya sabes qué hace: explica la diferencia entre la casilla 1 y la 3. También te dice que el cliente ahorra para su retiro, dato que sirve para la casilla 13.
+
+DD: el costo del seguro médico pagado por el empleador. Puramente informativa. No es ingreso, no paga impuesto, no se suma a nada. Como suele ser una cantidad grande, asusta; tu respuesta de una línea: «es información, no ingreso».
+
+W: aportes a una cuenta de ahorro médico HSA, del empleador o del empleado por nómina. Este sí mueve la declaración: obliga a presentar el formulario de la HSA para reportar aportes y retiros. Si ves una W, hay un formulario más en esta declaración.
+
+Los demás códigos: se buscan en la guía, no se adivinan.
+
+Y la casilla 13, «Retirement plan». Si está marcada, el empleado participa en un plan del trabajo. No le prohíbe nada, pero puede limitar, según su ingreso, la deducción de un IRA tradicional que aporte por fuera. Es una bandera: cuando el cliente diga «también le puse a un IRA», tú ya sabes que hay límites que revisar antes de prometer la deducción completa.
+
+## S4 · Propinas y las deducciones nuevas
+
+Cuarta parada, la de María: las propinas.
+
+Las propinas que María reportó a su restaurante viajan en la casilla 7, «propinas de Seguro Social», y ya están incluidas en la casilla 1. Están declaradas y con sus contribuciones al día. Nada extra que hacer.
+
+La que se escapa es la casilla 8: «propinas asignadas». Cuando lo reportado por los empleados de un restaurante queda por debajo de cierto nivel, la ley obliga al patrón a asignar la diferencia. Esas propinas no están en la casilla 1: se suman al ingreso del cliente, y pagan su Seguro Social pendiente con el Formulario 4137. La excepción: si el cliente llevó un registro diario de propinas que pruebe una cifra menor, se usa su registro. La pregunta: «¿llevas registro de tus propinas?» — y la mesera que lo lleva, vale oro.
+
+Ahora lo nuevo. Desde 2025 existen dos deducciones que le hablan directo a tu clientela: la deducción por propinas calificadas y la deducción por horas extra calificadas. Las dos con límites anuales y requisitos, las dos dependen de lo que el patrón reporte en el W-2 según las instrucciones del año, y las dos bajan el impuesto sobre la renta, no el Seguro Social. Los montos y reglas del año, en las tarjetas; la mecánica completa, en la lección 4.3.
+
+<Cifra concept="deduccion_propinas" />
+<Cifra concept="deduccion_horas_extra" />
+
+Lo que no vas a decir jamás: «las propinas ya no pagan impuesto». Tiene límites, tiene requisitos, y prometerlo completo es fabricar una decepción.
+
+## S5 · Casillas 15 a 17: lo estatal que se olvida
+
+Quinta parada, corta y cara: la esquina estatal del W-2, casillas 15, 16 y 17.
+
+En un cliente de Texas puro, vienen vacías y está bien, como viste en la lección 1.3. Pero mira siempre: el cliente que trabajó unos meses en Oklahoma trae un W-2 con retención en la casilla 17. Esa retención es dinero suyo, pagado a Oklahoma, y solo se recupera o se acredita presentando la declaración de ese estado.
+
+El error clásico: capturar la parte federal de los tres W-2 y no levantar la vista a la esquina estatal. La declaración federal sale bien, y el cliente deja tirado un reembolso estatal, o peor, una obligación estatal sin presentar que después cobra intereses.
+
+Tu disciplina: por cada W-2, un vistazo a la esquina. Estado, salario estatal, retención. Si aparece un estado con impuesto, se anota: declaración estatal pendiente. Nunca se suma retención estatal a la federal: cada una vive en su declaración.
+
+> **HISTORIA · Liliana (opcional):** un cliente con años de retenciones de otro estado sin reclamar, y qué se recuperó. 30–45 segundos.
+
+## S6 · Varios W-2, el corregido y el que no llegó
+
+Última parada: los W-2 con complicación.
+
+Varios W-2: se capturan todos, cada uno completo. Recuerda de la lección 1.3: cada patrón retuvo como si fuera el único, así que el cliente con tres trabajos es candidato a deber. Anticípaselo.
+
+El W-2c, corregido: reemplaza las casillas que corrige del W-2 original de ese patrón. Se captura el dato corregido en lugar del original, nunca ambos. Los W-2 de otros patrones no se tocan. Y si la declaración ya se había transmitido con el original, se compara: si el cambio mueve el resultado, hay enmienda, y eso es del módulo 7.
+
+El que no llegó: primero el patrón, por escrito si hace falta. Si para febrero avanzado no aparece, el cliente puede pedir ayuda al IRS, que contacta al patrón. Y si de plano no llega, existe la ruta oficial: el Formulario 4852, sustituto del W-2. Se estiman salario y retención con el último talón de pago del año, se explica qué se hizo para conseguir el original, y la declaración se presenta completa y a tiempo. Si el W-2 real aparece después con otras cifras, se enmienda. Lo que nunca se hace: declarar sin ese trabajo «porque no hay papel». El IRS tiene su copia; la carta llegaría sola.
+
+Dónde va todo: la casilla 1 a la línea de sueldos; la 2 a los pagos; la 8 se suma con su 4137; lo estatal a su estado. En la práctica de este módulo vas a pasar un W-2 completo, con 401(k) y retención estatal, a las líneas de la 1040.
+
+Siguiente lección: la familia de los 1099, empezando por la regla que no cambia.

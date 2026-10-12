@@ -1,0 +1,244 @@
+---
+id: 06-05
+module: 6
+lesson: 5
+slug: se-y-estimados
+title: El impuesto SE y los pagos estimados
+objective: Calcular y explicar el impuesto de trabajo por cuenta propia, aplicar sus ajustes, y montarle al cliente su sistema de pagos estimados.
+duration_min: 10
+status: approved
+source: [Lección 8 Maestro]
+cifras: [umbral_se]
+practice: 06-anexo-c-rosa
+demos: []
+checklist:
+  - "SE: 15.3% sobre el 92.35% de la ganancia neta — las dos mitades de Seguro Social y Medicare, juntas"
+  - "La mitad del SE se deduce como ajuste en el Anexo 1"
+  - "La deducción QBI (hasta 20% de la ganancia) la calcula el software — tú sabes que existe y a quién beneficia"
+  - "1040-ES: cuatro pagos al año, en línea o con cupones — fechas en el calendario de la lección 1.4"
+  - "Puerto seguro: pagar el 100% del impuesto del año anterior evita multas por pago insuficiente"
+  - "Consejo de mesa: separar 25-30% de cada cobro del negocio en una cuenta aparte"
+questions:
+  - id: q1
+    after_segment: 1
+    concept_tag: se-dos-mitades
+    prompt: "¿Por qué el dueño de negocio paga 15.3% de SE si el empleado «solo» ve 7.65% en su talón?"
+    options:
+      - id: a
+        text: "Porque el negocio propio paga las dos mitades: la del empleado y la del patrón — es su propio patrón."
+        correct: true
+        feedback: "Exacto. El empleado paga su mitad y el patrón la otra, invisible. El dueño de negocio es ambos: 15.3% completo de Seguro Social y Medicare. La lección 1.3, cobrando."
+      - id: b
+        text: "Porque el IRS castiga a los negocios."
+        correct: false
+        feedback: "Casi. No es castigo: son las mismas contribuciones de todos, solo que sin patrón que pague la otra mitad. Y esas contribuciones construyen su Seguro Social — su retiro."
+      - id: c
+        text: "Porque el 15.3% incluye el impuesto sobre la renta."
+        correct: false
+        feedback: "Casi. El SE es aparte del impuesto sobre la renta: son dos cuentas. La ganancia del negocio paga las dos — por eso los estimados de esta lección."
+  - id: q2
+    after_segment: 1
+    concept_tag: base-9235
+    prompt: "¿Sobre qué base se calcula el 15.3%?"
+    options:
+      - id: a
+        text: "Sobre el 92.35% de la ganancia neta del Anexo C."
+        correct: true
+        feedback: "Exacto. La ley descuenta primero un 7.65% de la base — el equivalente de la mitad patronal — y el 15.3% corre sobre el 92.35% restante. El Anexo SE hace la cuenta; tú sabes de dónde sale."
+      - id: b
+        text: "Sobre el ingreso bruto, antes de gastos."
+        correct: false
+        feedback: "Casi. Sobre la ganancia NETA — después de gastos. Por eso cada gasto legítimo del módulo baja también esta cuenta. Y de esa neta, el 92.35%."
+      - id: c
+        text: "Sobre lo que quedó en el banco en diciembre."
+        correct: false
+        feedback: "Casi. El saldo del banco no es base de nada: la base es la ganancia neta del Anexo C, ajustada al 92.35%."
+  - id: q3
+    after_segment: 2
+    concept_tag: mitad-deducible
+    prompt: "¿Qué alivio tiene el SE dentro de la misma declaración?"
+    options:
+      - id: a
+        text: "La mitad del SE se deduce como ajuste en el Anexo 1, bajando el ingreso para el impuesto sobre la renta."
+        correct: true
+        feedback: "Exacto. El equivalente de la mitad patronal se deduce — como el patrón deduce la suya. No borra el SE, pero baja la otra cuenta. El software lo aplica solo; tú lo explicas."
+      - id: b
+        text: "El SE se perdona si el negocio es chico."
+        correct: false
+        feedback: "Casi. No hay perdón por tamaño: desde el umbral de la tarjeta, se paga. El alivio real es la deducción de la mitad en el Anexo 1 — y los créditos de Seguro Social que construye."
+      - id: c
+        text: "Se paga solo año de por medio."
+        correct: false
+        feedback: "Casi. Cada año con ganancia sobre el umbral trae su SE. El alivio es la mitad deducible, no calendarios inventados."
+  - id: q4
+    after_segment: 2
+    concept_tag: qbi
+    prompt: "¿Qué es la deducción QBI y cuál es tu papel con ella?"
+    options:
+      - id: a
+        text: "Una deducción de hasta el 20% de la ganancia del negocio calificado; el software la calcula con sus límites — tú sabes que existe y verificas que aparezca."
+        correct: true
+        feedback: "Exacto. Es de las deducciones más valiosas del dueño de negocio y va aparte del Anexo C: baja la renta, no el SE. Su cálculo fino tiene límites por ingreso y tipo de negocio — territorio del software, radar tuyo."
+      - id: b
+        text: "Un crédito reembolsable que se pide con formulario aparte al banco."
+        correct: false
+        feedback: "Casi. Es deducción, no crédito, y vive dentro de la declaración. El software la arma con los datos del Anexo C — tu papel es saber que a tu clientela de negocio le corresponde."
+      - id: c
+        text: "Algo que ya expiró y no aplica."
+        correct: false
+        feedback: "Casi. Sigue vigente — la ley reciente la hizo permanente. Cliente de Anexo C con ganancia: la QBI casi siempre está trabajando en su declaración."
+  - id: q5
+    after_segment: 3
+    concept_tag: por-que-estimados
+    prompt: "¿Por qué el cliente de negocio debe pagar impuestos durante el año y no todo en abril?"
+    options:
+      - id: a
+        text: "Porque el sistema es de pagar sobre la marcha: sin patrón que retenga, los estimados son su retención — y no pagarlos genera multa por pago insuficiente."
+        correct: true
+        feedback: "Exacto. La lección 1.2: el impuesto se paga cuando se gana. El empleado lo hace vía retención; el negocio, vía 1040-ES. Llegar a abril sin nada adelantado cuesta multa además del susto."
+      - id: b
+        text: "Por amabilidad con el IRS; es opcional."
+        correct: false
+        feedback: "Casi. No es cortesía: es la regla de pagar sobre la marcha, con multa por incumplirla cuando se debe lo suficiente. Los estimados son la retención del que no tiene patrón."
+      - id: c
+        text: "Porque los negocios pagan doble si esperan."
+        correct: false
+        feedback: "Casi. No es doble: es el mismo impuesto más una multa por no adelantarlo. La multa se evita fácil — estimados o puerto seguro — y eso es lo que montas hoy."
+  - id: q6
+    after_segment: 3
+    concept_tag: cuatro-fechas
+    prompt: "¿Cómo se pagan los estimados?"
+    options:
+      - id: a
+        text: "Cuatro pagos al año en las fechas del calendario oficial, en línea en la cuenta del IRS o con los cupones del 1040-ES."
+        correct: true
+        feedback: "Exacto. Cuatro fechas — las del calendario de la lección 1.4, ojo que no son trimestres parejos — y el pago en línea es el camino moderno: minutos, con comprobante. Los cupones por correo siguen existiendo."
+      - id: b
+        text: "Un solo pago gigante en diciembre."
+        correct: false
+        feedback: "Casi. El sistema pide cuatro a lo largo del año; juntarlo todo al final puede dejar multa por los periodos no cubiertos. Cuatro fechas, cuatro pagos."
+      - id: c
+        text: "Se descuentan solos de la cuenta del negocio."
+        correct: false
+        feedback: "Casi. Nada se descuenta solo: el cliente los paga activamente (aunque puede programarlos en línea). Tu trabajo es dejarle las fechas y el cómo montados."
+  - id: q7
+    after_segment: 4
+    concept_tag: puerto-seguro
+    prompt: "¿Qué es la regla del puerto seguro y para qué la usas?"
+    options:
+      - id: a
+        text: "Pagar durante el año el 100% del impuesto del año anterior (repartido en los estimados) protege de la multa, aunque este año se gane más."
+        correct: true
+        feedback: "Exacto. Es el ancla perfecta para el ingreso variable: la cifra del año pasado ya la tienes, se divide entre cuatro, y la multa queda cubierta — lo que falte se liquida en abril sin castigo. (Ingresos altos usan un porcentaje mayor: tarjeta.)"
+      - id: b
+        text: "No pagar nada y pedir perdón en abril."
+        correct: false
+        feedback: "Casi. El perdón no está en el menú: la multa corre sola. El puerto seguro es lo contrario — un mínimo claro pagado a tiempo que garantiza cero multa."
+      - id: c
+        text: "Pagar el doble del año pasado por seguridad."
+        correct: false
+        feedback: "Casi. No hace falta doble: el 100% del año anterior (o el porcentaje mayor para ingresos altos) ya protege. Lo demás es planeación fina, no requisito."
+  - id: q8
+    after_segment: 4
+    concept_tag: retencion-alternativa
+    prompt: "María tiene W-2 del restaurante Y su negocio de repartos. ¿Qué alternativa a los cupones tiene para cubrir el impuesto del negocio?"
+    options:
+      - id: a
+        text: "Subir la retención de su W-2 con un W-4 nuevo, para que el empleo adelante también lo del negocio."
+        correct: true
+        feedback: "Exacto. La retención del empleo cuenta para todo su impuesto del año — y tiene la ventaja de tratarse como pagada parejo. Para el cliente mixto W-2 más Anexo C, ajustar el W-4 suele ser lo más cómodo. Don Ramón hizo lo mismo con su pensión."
+      - id: b
+        text: "Nada: el W-2 y el negocio son mundos separados."
+        correct: false
+        feedback: "Casi. En la declaración todo se junta: una sola cuenta de impuesto, y la retención del W-2 abona a toda ella. Subirla vía W-4 es un estimado disfrazado de nómina."
+      - id: c
+        text: "Pedirle a DoorDash que le retenga."
+        correct: false
+        feedback: "Casi. Las apps no retienen a contratistas: no son patrones. Sus caminos son los estimados o la retención de su otro empleo — ese sí patrón."
+  - id: q9
+    after_segment: 5
+    concept_tag: regla-25-30
+    prompt: "¿Cuál es el consejo de mesa que le montas a todo cliente de negocio nuevo?"
+    options:
+      - id: a
+        text: "Separar el 25-30% de cada cobro del negocio en una cuenta aparte, y de ahí salen los estimados."
+        correct: true
+        feedback: "Exacto. El hábito que evita el drama de abril: cada cobro deja su porción apartada — cubre SE más renta para la mayoría de tu clientela — y las cuatro fechas se pagan de esa bolsa sin dolor."
+      - id: b
+        text: "Gastarse todo y ver en abril."
+        correct: false
+        feedback: "Casi. Ese es el plan que produce los llantos de abril y los planes de pago del módulo 7. La porción apartada por cobro es la vacuna."
+      - id: c
+        text: "Guardar el 90% por si acaso."
+        correct: false
+        feedback: "Casi. Tampoco se trata de no vivir: 25-30% cubre a la gran mayoría. Si el caso es atípico — márgenes enormes, otro ingreso fuerte — se afina con números, no con pánico."
+  - id: q10
+    after_segment: 5
+    concept_tag: rosa-cierre
+    prompt: "Cierra el módulo con Rosa: ganancia neta positiva en su Anexo C. ¿Qué pasa con ella de aquí en adelante?"
+    options:
+      - id: a
+        text: "Su neta corre por el Anexo SE (15.3% sobre el 92.35%), la mitad se deduce en el Anexo 1, la QBI trabaja a su favor, y sale de tu oficina con sus cuatro fechas y su 25-30% apartado."
+        correct: true
+        feedback: "Exacto. El módulo completo en una clienta: ingreso documentado, gastos justos, SE explicado sin susto, y el sistema de pagos montado. Eso es un preparador que vale lo que cobra."
+      - id: b
+        text: "Solo se le cobra el SE y se le desea suerte."
+        correct: false
+        feedback: "Casi. Cobrar sin sistema es dejarla igual que antes. El cierre profesional incluye la explicación, los ajustes (mitad deducible, QBI) y los estimados montados para el año que corre."
+      - id: c
+        text: "Se le recomienda cerrar el negocio para no pagar SE."
+        correct: false
+        feedback: "Casi. El SE no es razón para cerrar un negocio que gana: es el costo de construir Seguro Social propio. Se administra con gastos justos, ajustes y estimados — no con rendición."
+---
+
+## S1 · El impuesto que nadie les contó: 15.3% sobre el 92.35%
+
+Soy Liliana. Cierre del módulo, y la lección que le da sentido a todo: el impuesto SE, el de trabajo por cuenta propia. El que hace llorar en abril al cliente de negocio que nadie preparó, y el que tus clientes van a entender y pagar sin drama, porque tú se los montas bien.
+
+Ya traes las piezas desde la lección 1.3: el Seguro Social y el Medicare se pagan a mitades, empleado y patrón, 7.65% cada quien. El dueño de negocio es sus dos personajes: paga las dos mitades. 15.3%, y ese porcentaje sí se dice de memoria, porque lo fija la ley, no el año.
+
+¿Sobre qué? Sobre el 92.35% de la ganancia neta del Anexo C. La ley descuenta primero el equivalente de la mitad patronal, un 7.65% de la base, y el 15.3% corre sobre lo que queda. La cuenta vive en el Anexo SE, el software la hace en un segundo, y tú sabes explicar cada paso: «tu ganancia, menos un descuentito de base, por el 15.3% de tus dos mitades».
+
+Dos consecuencias que ya sembraste en el módulo: se activa desde una ganancia bajita, el umbral de la tarjeta, cientos, no miles, y se calcula sobre la neta: cada gasto legítimo de las lecciones 6.2 a 6.4 baja también esta cuenta. Y una verdad que endulza la medicina: este impuesto construye el Seguro Social del cliente, sus trimestres, su retiro, su incapacidad. Don Ramón cobra hoy lo que pagó así ayer.
+
+<Cifra concept="umbral_se" />
+
+## S2 · Los dos alivios: la mitad deducible y la QBI
+
+El SE viene con dos alivios dentro de la misma declaración, y los dos se le explican al cliente porque los dos son suyos.
+
+Alivio uno: la mitad del SE se deduce. Como ajuste, en el Anexo 1, igual que el patrón deduce la mitad que paga por sus empleados. No borra el SE, pero baja el ingreso sobre el que se calcula el impuesto sobre la renta: la otra cuenta. El software lo aplica automático; tú lo señalas: «de este impuesto, la mitad te la descuenta la ley del otro lado».
+
+Alivio dos: la deducción QBI, la del ingreso de negocio calificado: hasta el 20% de la ganancia del negocio, deducida contra la renta. La ley reciente la hizo permanente, y para tu clientela de Anexo C casi siempre está trabajando. Su cálculo fino tiene límites por nivel de ingreso y tipo de negocio, territorio del software, que la arma con los datos que tú capturaste. Tu papel: saber que existe, verificar que apareció en la declaración del cliente de negocio con ganancia, y explicarla en una frase: «por tener negocio propio, la ley te deja deducir hasta una quinta parte de tu ganancia antes de calcular tu impuesto». Ojo con su alcance: baja la renta, no el SE.
+
+Y recuerda de la 6.2 el tercer ajuste vecino: el seguro médico propio, también en el Anexo 1. Los tres juntos, mitad del SE, QBI, seguro médico, son la diferencia entre el Anexo C bien armado y el que deja dinero tirado.
+
+## S3 · Los estimados: la retención del que no tiene patrón
+
+Ahora el sistema de pago, porque saber cuánto se debe sin saber cómo pagarlo es medio trabajo.
+
+El principio, de la lección 1.2: este sistema cobra sobre la marcha, cuando se gana, no en abril. Al empleado se lo resuelve el patrón con la retención. El dueño de negocio no tiene patrón: su retención se llama pagos estimados, el Formulario 1040-ES, y no hacerlos cuando se debe lo suficiente genera una multa por pago insuficiente, intereses corriendo encima del susto.
+
+La mecánica: cuatro pagos al año, en las fechas oficiales que ya viven en tu calendario de la lección 1.4, y ojo, que no son trimestres parejos: el calendario manda, no la lógica. El cómo, dos caminos: el moderno, pagar en línea desde la cuenta del IRS del cliente, minutos, con comprobante que se guarda, y hasta se pueden programar; y el clásico, los cupones del 1040-ES por correo, que siguen existiendo para el cliente de papel. El cuánto: el software del año anterior genera los cupones con una estimación, y la regla del siguiente segmento da el ancla.
+
+Los estimados cubren toda la cuenta del año: el SE y el impuesto sobre la renta de la ganancia, juntos. Una sola bolsa, cuatro abonos.
+
+## S4 · El puerto seguro y la retención disfrazada
+
+Dos herramientas de planeación que convierten el «¿y cuánto pago?» en una respuesta de un minuto.
+
+El puerto seguro: si durante el año el cliente paga, entre retenciones y estimados, el 100% del impuesto total de su año anterior, queda protegido de la multa, gane lo que gane este año. La cifra del año pasado ya la tienes en tu expediente, se divide entre los cuatro pagos, y listo: cero multa garantizada; si este año ganó más, la diferencia se liquida en abril sin castigo. Para el ingreso variable de tu clientela, la comida de Rosa que sube en diciembre, los repartos de María que cambian por temporada, esta ancla es oro. La letra chica: los ingresos altos usan un porcentaje mayor del año anterior; el corte y el porcentaje, en la tarjeta.
+
+Y la retención disfrazada, para el cliente mixto: María tiene W-2 del restaurante además de su negocio. La retención de su empleo cuenta para toda su cuenta del año, negocio incluido, y trae un regalo técnico: la retención se trata como pagada pareja durante el año. Subirle la retención con un W-4 nuevo puede cubrir el impuesto del negocio sin un solo cupón. Para muchos mixtos, es el camino más cómodo. La misma jugada que le montaste a don Ramón con su pensión en la 4.4: el sistema es uno solo, y tú ya lo ves completo.
+
+> **HISTORIA · Liliana (opcional):** el cliente de negocio en su primer año, sin estimados, y el abril que los volvió creyentes a él y a su esposa. 30–60 segundos.
+
+## S5 · El consejo de mesa, y Rosa completa
+
+El hábito que le montas a todo cliente de negocio, en tu mesa, el primer año: separa el 25 al 30% de cada cobro del negocio en una cuenta aparte. Cada depósito de la app, cada fin de semana de ventas: su porción apartada antes de tocarla. De esa bolsa salen los cuatro estimados, y abril se vuelve un trámite, no un funeral. Para la gran mayoría de tu clientela, ese rango cubre SE más renta; el caso atípico se afina con números. Es un consejo de una frase que vale más que muchas deducciones, y es el tipo de cosa por la que un cliente te manda a toda su familia.
+
+Y cerramos el módulo como empezó: con Rosa en tu mesa, ahora con todo resuelto. Su Anexo C: bruto de app más efectivo, documentado, 6.1; ingredientes, comisiones, desechables y su celular prorrateado, 6.2; sus millas de los domingos al mercado y a entregas, con registro, 6.3; su rincón administrativo medido y su método elegido, 6.4. Su ganancia neta, positiva: corre al Anexo 1 como ingreso y al Anexo SE, 15.3% sobre el 92.35%. La mitad del SE se le deduce, la QBI le trabaja el 20%, y su seguro médico se ajusta en el Anexo 1. Y antes de levantarse de tu silla: sus cuatro fechas anotadas, su cuenta del IRS abierta para pagar en línea, y su regla del 25-30% explicada con su esposo de testigo.
+
+Eso es un Anexo C profesional, de punta a punta. En la práctica del módulo lo armas tú, con los números completos de Rosa.
+
+Siguiente módulo, el 7: lo que pasa después de transmitir. Los errores que más veo, las cartas del IRS y cómo se responden, y las enmiendas. La parte del oficio donde se ganan las reputaciones.

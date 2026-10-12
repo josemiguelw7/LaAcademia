@@ -1,0 +1,263 @@
+---
+id: 05-01
+module: 5
+lesson: 1
+slug: estandar-o-detallada
+title: ¿Estándar o detallada?
+objective: Decidir con números si al cliente le conviene la deducción estándar o detallar en el Anexo A, y conocer las novedades que cambian esa cuenta.
+duration_min: 9
+status: approved
+source: [Lección 4 Maestro]
+cifras: [deduccion_estandar, adicional_65_ceguera, tope_salt, limite_hipoteca, donacion_sin_detallar]
+practice: 05-creditos-familia
+demos: []
+checklist:
+  - "La decisión es una resta: suma del Anexo A contra la deducción estándar del estado civil — gana la mayor"
+  - "Deducción estándar por estado civil, más cantidades extra por 65+ o ceguera (tarjeta)"
+  - "Anexo A: médicos que excedan 7.5% del AGI, impuestos estatales/locales con tope, intereses de hipoteca (1098), donaciones con recibo"
+  - "Desde 2026 hay una deducción de donaciones aun sin detallar, con límite — tarjeta"
+  - "La mayoría de tus clientes gana con la estándar; se demuestra con la suma, no se asume"
+  - "MFS: si un cónyuge detalla, el otro no puede usar la estándar"
+questions:
+  - id: q1
+    after_segment: 1
+    concept_tag: decision-resta
+    prompt: "¿Cómo se decide entre deducción estándar y detallada?"
+    options:
+      - id: a
+        text: "Se suma lo deducible del Anexo A y se compara contra la estándar del estado civil: gana la mayor."
+        correct: true
+        feedback: "Exacto. Es una resta, no una filosofía. El software compara solo, pero tú haces la suma con el cliente para que vea por qué salió lo que salió."
+      - id: b
+        text: "Los dueños de casa siempre detallan."
+        correct: false
+        feedback: "Casi. Tener casa ayuda a la suma, pero con la estándar tan alta, muchos dueños de casa aun así ganan con la estándar. Se compara con números, no con etiquetas."
+      - id: c
+        text: "Se elige la que dé más reembolso a ojo."
+        correct: false
+        feedback: "Casi. No es a ojo: es la suma del Anexo A contra la cifra de la tarjeta. La que sea mayor reduce más el ingreso, y eso se demuestra en papel."
+  - id: q2
+    after_segment: 1
+    concept_tag: estandar-por-estado
+    prompt: "¿De qué depende el monto de la deducción estándar de un cliente?"
+    options:
+      - id: a
+        text: "De su estado civil, con cantidades extra si tiene 65 años o más o ceguera."
+        correct: true
+        feedback: "Exacto. Cada estado civil tiene su monto — soltero, casados juntos, cabeza de familia — y por cada condición de edad o ceguera se suma una cantidad extra. Todos los números, en la tarjeta del año."
+      - id: b
+        text: "De cuántos dependientes tiene."
+        correct: false
+        feedback: "Casi. Los dependientes mueven créditos y el estado civil de cabeza de familia, pero el monto de la estándar lo fija el estado civil más las condiciones de edad o ceguera."
+      - id: c
+        text: "De su ingreso: más ingreso, más deducción."
+        correct: false
+        feedback: "Casi. La estándar es fija por estado civil, no crece con el ingreso. (Excepción aparte: a un dependiente que declara se le limita.)"
+  - id: q3
+    after_segment: 2
+    concept_tag: medicos-piso
+    prompt: "Una familia gastó fuerte en médicos este año. ¿Cuánto de eso entra al Anexo A?"
+    options:
+      - id: a
+        text: "Todo lo que gastaron."
+        correct: false
+        feedback: "Casi. Solo entra la parte que excede el 7.5% de su AGI. Gastos por debajo de ese piso no cuentan, y por eso lo médico solo pesa en años de gastos realmente grandes."
+      - id: b
+        text: "Solo lo que exceda el 7.5% de su ingreso ajustado (AGI)."
+        correct: true
+        feedback: "Exacto. Es un piso, no un tope: primero se salta el 7.5% del AGI y solo el excedente deduce. Cuentan médicos, dentales, medicinas recetadas, lentes, primas pagadas con dinero ya gravado."
+      - id: c
+        text: "Nada: lo médico ya no se deduce."
+        correct: false
+        feedback: "Casi. Sí se deduce, con el piso del 7.5% del AGI. Lo que no se deduce es lo reembolsado por el seguro ni lo pagado con cuentas de dinero antes de impuestos."
+  - id: q4
+    after_segment: 2
+    concept_tag: salt-tope
+    prompt: "Un cliente pagó mucho de impuestos estatales y locales (predial incluido). ¿Entra todo al Anexo A?"
+    options:
+      - id: a
+        text: "Sí, sin límite."
+        correct: false
+        feedback: "Casi. Los impuestos estatales y locales — el paquete SALT — tienen un tope anual, que además cambió recientemente y se reduce para ingresos muy altos. El número del año, en la tarjeta."
+      - id: b
+        text: "Hasta el tope SALT del año (tarjeta); lo que exceda no deduce."
+        correct: true
+        feedback: "Exacto. Predial, impuesto estatal sobre ingresos o ventas: todo junto contra un tope. En Texas, sin impuesto estatal de ingresos, se puede usar el impuesto de ventas más el predial."
+      - id: c
+        text: "Nada: los impuestos no se deducen con impuestos."
+        correct: false
+        feedback: "Casi. Sí se deducen los estatales y locales al detallar — con su tope. Lo que nunca se deduce es el impuesto federal mismo."
+  - id: q5
+    after_segment: 2
+    concept_tag: hipoteca-1098
+    prompt: "¿Qué documento sostiene la deducción de intereses de hipoteca y qué límite tiene?"
+    options:
+      - id: a
+        text: "El Formulario 1098 del banco; el interés deduce sobre deuda hasta el límite de la tarjeta."
+        correct: true
+        feedback: "Exacto. El 1098 llega cada enero con los intereses pagados y suele traer también el predial. La deuda por encima del límite deduce solo la proporción. Casa propia, no de inversión — eso es otro mundo."
+      - id: b
+        text: "El estado de cuenta de la tarjeta de crédito."
+        correct: false
+        feedback: "Casi. Los intereses de tarjetas y préstamos personales no deducen. El que deduce es el de la hipoteca de la vivienda, y su papel es el 1098."
+      - id: c
+        text: "Ninguno: se anota lo que el cliente recuerde."
+        correct: false
+        feedback: "Casi. De memoria no se deduce nada. El 1098 trae la cifra exacta, y sin él la deducción no se sostiene."
+  - id: q6
+    after_segment: 3
+    concept_tag: donaciones-recibo
+    prompt: "Un cliente dona en efectivo cada domingo en su iglesia, sin recibos, «unos mil al año». ¿Qué entra al Anexo A?"
+    options:
+      - id: a
+        text: "Los mil, porque la iglesia es de verdad."
+        correct: false
+        feedback: "Casi. La fe no está en duda; la evidencia sí. Las donaciones deducen con recibo o registro — y las de cierto tamaño exigen carta de la organización. Sin papel, no se sostienen."
+      - id: b
+        text: "Solo lo que tenga recibo o registro; y se le enseña a pedir su carta anual a la iglesia."
+        correct: true
+        feedback: "Exacto. Casi toda iglesia da carta anual de donaciones si se le pide. Ese hábito convierte la donación real en deducción real. También deducen donaciones de bienes en buen estado, con recibo y valor razonable."
+      - id: c
+        text: "El doble, para compensar años pasados."
+        correct: false
+        feedback: "Casi. Cada año deduce lo suyo, con su evidencia. Inflar donaciones es de las mentiras más fáciles de detectar y más caras de firmar."
+  - id: q7
+    after_segment: 3
+    concept_tag: donacion-sin-detallar
+    prompt: "¿Qué novedad ayuda al que dona pero no le alcanza para detallar?"
+    options:
+      - id: a
+        text: "Desde 2026, una deducción por donaciones en efectivo aun tomando la estándar, con límite en la tarjeta."
+        correct: true
+        feedback: "Exacto. Antes, donar sin detallar no movía la aguja federal. Ahora hay una deducción con límite por estado civil, aun con la estándar. Y para quien sí detalla, ojo: hay un piso nuevo — se deduce lo que exceda un porcentaje del AGI."
+      - id: b
+        text: "Que las donaciones ya no necesitan recibo."
+        correct: false
+        feedback: "Casi. El recibo sigue siendo la regla. La novedad es dónde deduce: ahora también hay un espacio limitado para quien toma la estándar."
+      - id: c
+        text: "Que donar da un crédito dólar por dólar."
+        correct: false
+        feedback: "Casi. Sigue siendo deducción — baja el ingreso, no el impuesto directo. La diferencia entre deducción y crédito la aprendiste en el módulo 1 y aquí se aplica."
+  - id: q8
+    after_segment: 4
+    concept_tag: mayoria-estandar
+    prompt: "¿Por qué la gran mayoría de tus clientes termina con la deducción estándar?"
+    options:
+      - id: a
+        text: "Porque detallar es ilegal para ingresos bajos."
+        correct: false
+        feedback: "Casi. Detallar es legal para todos. Lo que pasa es aritmética: la estándar es alta, y sin hipoteca grande ni gastos médicos enormes, la suma del Anexo A rara vez la alcanza."
+      - id: b
+        text: "Porque la estándar es alta y la suma del Anexo A de un cliente típico — renta, sin grandes gastos — no la alcanza."
+        correct: true
+        feedback: "Exacto. Inquilino, sin gastos médicos catastróficos, donaciones moderadas: su Anexo A queda corto. Se compara igual — el que sí detalla suele ser dueño de casa con predial e intereses fuertes."
+      - id: c
+        text: "Porque el software siempre elige la estándar."
+        correct: false
+        feedback: "Casi. El software elige la mayor de las dos. Que casi siempre resulte la estándar es consecuencia de los números, no una preferencia de la máquina."
+  - id: q9
+    after_segment: 4
+    concept_tag: mfs-regla
+    prompt: "Preparas a una clienta casada que declara por separado (MFS). Su esposo ya presentó detallando. ¿Qué le pasa a ella?"
+    options:
+      - id: a
+        text: "Nada: cada quien elige lo suyo."
+        correct: false
+        feedback: "Casi. En MFS hay una regla dura: si un cónyuge detalla, el otro no puede tomar la estándar — detalla también, aunque tenga poco que detallar. Es de los castigos escondidos del MFS."
+      - id: b
+        text: "Ella también debe detallar: en MFS, si uno detalla, el otro pierde la estándar."
+        correct: true
+        feedback: "Exacto. Por eso en parejas MFS se pregunta siempre qué hizo o hará el otro. Coordinar a los dos evita que uno quede con deducción de casi nada."
+      - id: c
+        text: "Ella toma la estándar doble para compensar."
+        correct: false
+        feedback: "Casi. No existe estándar doble. La regla es la contraria: uno detalla, el otro detalla. Coordinación o dolor."
+  - id: q10
+    after_segment: 5
+    concept_tag: caso-maria-estandar
+    prompt: "María: cabeza de familia, renta su casa, gastos médicos normales, dona algo en su iglesia con recibos. ¿Qué esperas de su comparación?"
+    options:
+      - id: a
+        text: "Que detalle: siempre conviene detallar con hijos."
+        correct: false
+        feedback: "Casi. Los hijos no viven en el Anexo A: viven en los créditos, que vienen en las próximas lecciones. Sin hipoteca ni gastos gigantes, su Anexo A no alcanza la estándar de cabeza de familia."
+      - id: b
+        text: "Que gane la estándar de cabeza de familia, y sus donaciones aprovechen el espacio nuevo sin detallar."
+        correct: true
+        feedback: "Exacto. Inquilina con gastos normales: estándar. Y como HOH, su estándar es mayor que la de soltera — la victoria del módulo 3 pagando aquí. Las donaciones con recibo entran por la vía nueva."
+      - id: c
+        text: "Que no le toque ninguna deducción por rentar."
+        correct: false
+        feedback: "Casi. Rentar no la deja sin nada: la estándar es de todos, y la suya es la alta de cabeza de familia. Lo que no tendrá es Anexo A que la supere."
+---
+
+## S1 · Una resta, no una filosofía
+
+Soy Liliana. Bienvenida al módulo que tus clientes más esperan: bajar el impuesto. Y empieza con la decisión que aparece en toda declaración: ¿deducción estándar o detallada?
+
+Ya sabes del módulo 1 qué hace una deducción: reduce el ingreso que se grava. La pregunta de hoy es cuál de los dos caminos reduce más. Y la respuesta nunca es filosofía ni costumbre: es una resta.
+
+Camino uno, la deducción estándar: una cantidad fija que la ley regala según el estado civil. Soltero su monto, casados juntos el doble, cabeza de familia el suyo, más alto que el de soltero: la victoria de María en el módulo 3 pagando aquí. Y encima se suman cantidades extra por cada condición de 65 años o más o de ceguera, del contribuyente o del cónyuge. Todos los montos cambian cada año: tarjeta, no memoria.
+
+<Cifra concept="deduccion_estandar" />
+<Cifra concept="adicional_65_ceguera" />
+
+Camino dos, detallar: sumar en el Anexo A los gastos que la ley permite, y usar esa suma en lugar de la estándar.
+
+La decisión: se suma el Anexo A, se compara contra la estándar del estado civil, y gana la mayor. El software compara solo; tú haces la suma visible para el cliente, porque «¿por qué no me dedujo mi iglesia?» se responde con esta resta.
+
+## S2 · El Anexo A: las cuatro piezas grandes
+
+Qué entra al Anexo A. Cuatro piezas cargan casi todo el peso.
+
+Una: gastos médicos, con piso. Solo entra lo que exceda el 7.5% del AGI del cliente. Médicos, dentistas, medicinas recetadas, lentes, primas pagadas con dinero ya gravado, kilometraje médico. No entra lo que reembolsó el seguro ni lo pagado con cuentas de dinero antes de impuestos. Con ese piso, lo médico solo pesa en años duros: una cirugía, un tratamiento largo. Esos años, se junta todo.
+
+Dos: impuestos estatales y locales, el paquete que llaman SALT, con tope. Predial de la casa, impuesto estatal de ingresos o, a elección, el de ventas, que es la opción natural en Texas: todo junto contra un tope anual. Ese tope subió con la ley reciente y se reduce para ingresos muy altos: el número del año vive en la tarjeta.
+
+<Cifra concept="tope_salt" />
+
+Tres: intereses de hipoteca de la vivienda. El papel es el Formulario 1098 que el banco manda en enero, y que suele traer también el predial pagado. El interés deduce sobre deuda hasta el límite de la tarjeta; por encima, proporción.
+
+<Cifra concept="limite_hipoteca" />
+
+Cuatro: donaciones, que merecen su propio segmento.
+
+Y lo que ya no está, porque me lo van a preguntar los que declaraban hace años: los gastos de empleado no reembolsados, el costo de preparar impuestos y aquella lista de misceláneos se eliminaron para empleados hace años. El uniforme del trabajo W-2 no deduce. Los gastos del negocio propio, esos sí, pero viven en el Anexo C, no aquí.
+
+## S3 · Donaciones: recibo, carta, y la puerta nueva
+
+Las donaciones son la pieza con más corazón y más mentiras del Anexo A, así que reglas claras.
+
+Deducen las donaciones a organizaciones calificadas: iglesias, caridades registradas. En efectivo, con recibo o registro; las de cierto tamaño exigen además carta de la organización. En bienes, ropa, muebles en buen estado, con recibo y valor razonable de segunda mano. Lo que no deduce: darle a una persona directamente, las rifas, el tiempo trabajado como voluntario.
+
+El hábito que le enseñas a tu clientela que dona cada domingo: pídele a tu iglesia la carta anual. Casi todas la dan si se les pide, y esa carta convierte la donación real en deducción real. Sin papel, ni la fe más grande se sostiene en una revisión.
+
+Y las novedades de la ley reciente, las dos caras. La buena para la mayoría: desde 2026 existe una deducción por donaciones en efectivo incluso para quien toma la deducción estándar, con límite por estado civil: por primera vez en años, la donación del que no detalla mueve la aguja federal. La letra chica para el que sí detalla: apareció un piso, solo deduce lo que exceda un pequeño porcentaje del AGI. Montos y porcentaje: tarjeta.
+
+<Cifra concept="donacion_sin_detallar" />
+
+## S4 · Quién gana con cuál, y la trampa del MFS
+
+Con las piezas en la mesa, el patrón que verás en tu clientela.
+
+La gran mayoría gana con la estándar. El inquilino sin hipoteca, con salud normal y donaciones moderadas, junta en su Anexo A una fracción de la estándar. No es que «no le toque»: es que la ley ya le dio una deducción alta sin pedirle papeles. Tu trabajo con él: verificar con la suma rápida, mostrársela, y listo.
+
+El que sí detalla suele tener este perfil: dueño de casa con hipoteca joven, intereses fuertes más predial, o un año de gastos médicos catastróficos, o donaciones grandes sostenidas. Con dos piezas grandes, la suma compite. Tu trabajo con él: juntar 1098, recibos de predial, cartas de donación, y hacer la resta en serio.
+
+Y la trampa escondida del casado que declara por separado, que ya conociste en el módulo 3 como el estado civil de los castigos: si un cónyuge detalla, el otro no puede tomar la estándar. Detalla también, aunque su Anexo A junte dos pesos. Por eso en toda pareja MFS se pregunta primero: «¿tu esposo ya presentó? ¿detalló?». Coordinar a los dos, o uno queda desnudo.
+
+> **HISTORIA · Liliana (opcional):** el cliente que insistía en detallar «porque siempre ha detallado», y qué mostró la resta. 30–45 segundos.
+
+## S5 · María, la resta en vivo
+
+Cerramos con María, como siempre.
+
+Su cuadro: cabeza de familia, gracias al módulo 3. Renta, así que ni 1098 ni predial. Salud normal: sus gastos médicos no se acercan al piso del 7.5%. Dona en su iglesia, y desde este año le pediste su carta anual.
+
+La resta: su Anexo A junta poco, muy lejos de la estándar de cabeza de familia, que es de las altas. Decisión: estándar. Y sus donaciones no se pierden: entran por la puerta nueva del que no detalla, hasta el límite de la tarjeta.
+
+Así se lo explicas en un minuto, con la pantalla enfrente: «La ley te da esta cantidad fija por ser cabeza de familia. Tus gastos deducibles suman esto otro, menos. Usamos la mayor, la fija, y tus donaciones además entran por una regla nueva. Tu iglesia sí contó.» Cliente que entiende, cliente que vuelve.
+
+Y la frase con la que abrimos el módulo que sigue: las deducciones de hoy son la mesa; los créditos son la comida. Para María, lo grande no está en el Anexo A: está en el EITC y en el crédito por hijos. Eso empieza en la siguiente lección, con el crédito más grande y más vigilado de todos.
+
+Dónde va: la deducción elegida, a su línea de la 1040, antes del ingreso gravable. Al expediente: la suma comparativa, el 1098 si hubo, y las cartas de donación.

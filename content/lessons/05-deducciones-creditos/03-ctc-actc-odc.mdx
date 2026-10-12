@@ -1,0 +1,259 @@
+---
+id: 05-03
+module: 5
+lesson: 3
+slug: ctc-actc-odc
+title: "CTC, ACTC y ODC: los créditos por hijos y dependientes"
+objective: Aplicar el crédito por hijos, su parte reembolsable y el crédito por otros dependientes, cada uno con sus requisitos.
+duration_min: 9
+status: approved
+source: [Lección 5 Maestro]
+cifras: [ctc_monto, actc_max, odc_monto, ctc_phaseout, actc_ingreso_minimo]
+practice: 05-creditos-familia
+demos: []
+checklist:
+  - "CTC: por cada hijo menor de 17 al cierre del año, con SSN, dependiente del cliente — monto en tarjeta"
+  - "El CTC baja impuesto; si sobra crédito, el ACTC devuelve hasta su tope por hijo, y exige ingreso del trabajo sobre el mínimo"
+  - "ODC: para dependientes que no dan CTC — hijos de 17+, hijos con ITIN, padres, otros parientes; no reembolsable"
+  - "Se reduce con ingresos altos desde los umbrales de la tarjeta"
+  - "Todo pasa por el Anexo 8812"
+  - "Reembolsos con ACTC: también esperan a mediados de febrero"
+questions:
+  - id: q1
+    after_segment: 1
+    concept_tag: ctc-requisitos
+    prompt: "¿Qué tres cosas verifica el CTC de cada niño?"
+    options:
+      - id: a
+        text: "Que sea menor de 17 al terminar el año, tenga SSN válido, y sea dependiente reclamado del cliente."
+        correct: true
+        feedback: "Exacto. Edad al 31 de diciembre, SSN del niño, y la relación de dependencia que verificaste en el módulo 3. Las tres, o no hay CTC."
+      - id: b
+        text: "Que viva en la casa, sin importar edad ni número."
+        correct: false
+        feedback: "Casi. Vivir en la casa es parte de ser dependiente, pero el CTC además corta a los 17 y exige el SSN del niño. Un dependiente de 17 años ya no da CTC."
+      - id: c
+        text: "Que esté en la escuela y saque buenas calificaciones."
+        correct: false
+        feedback: "Casi. La escuela sirve de evidencia de residencia, pero no es requisito del crédito. Edad, SSN y dependencia — eso verifica el CTC."
+  - id: q2
+    after_segment: 1
+    concept_tag: ctc-corte-17
+    prompt: "El hijo de una clienta cumplió 17 en noviembre. Ella espera «su crédito de siempre». ¿Qué le explicas?"
+    options:
+      - id: a
+        text: "Que no cambia nada hasta los 18."
+        correct: false
+        feedback: "Casi. El corte del CTC es ser menor de 17 al cierre del año. Cumplidos los 17, aunque sea en diciembre, el CTC se va — y entra el ODC, más chico. Anticiparlo evita el reclamo en la revisión final."
+      - id: b
+        text: "Que a los 17 el CTC termina; su hijo ahora da el crédito por otros dependientes, menor."
+        correct: true
+        feedback: "Exacto. Es de las decepciones más comunes de la temporada, y la manejas anunciándola tú antes de que la vea en el resultado. Sigue siendo dependiente; cambia el crédito."
+      - id: c
+        text: "Que puede seguir con el CTC si el niño no trabaja."
+        correct: false
+        feedback: "Casi. Trabajar o no, no importa aquí: la edad manda. Menor de 17 al 31 de diciembre, o no hay CTC."
+  - id: q3
+    after_segment: 2
+    concept_tag: actc-mecanica
+    prompt: "Una familia debe poco impuesto y su CTC es mayor que ese impuesto. ¿Qué pasa con lo que sobra?"
+    options:
+      - id: a
+        text: "Se pierde: el CTC solo baja impuesto."
+        correct: false
+        feedback: "Casi. Ahí entra el ACTC, la parte reembolsable: del crédito que sobró, se puede devolver hasta el tope por hijo del año, si hay ingreso del trabajo suficiente. El Anexo 8812 hace la cuenta."
+      - id: b
+        text: "Puede volverse reembolso vía el ACTC, hasta el tope por hijo, según su ingreso del trabajo."
+        correct: true
+        feedback: "Exacto. CTC hasta donde alcance el impuesto; el resto, ACTC reembolsable con su tope y su fórmula de ingreso del trabajo. Por eso familias de ingreso modesto sí reciben cheque por sus hijos."
+      - id: c
+        text: "Se guarda como crédito para el año siguiente."
+        correct: false
+        feedback: "Casi. El CTC no se arrastra a otros años. Lo que no se usa contra impuesto se evalúa como ACTC este año, y lo que no entre ahí, se pierde."
+  - id: q4
+    after_segment: 2
+    concept_tag: actc-ingreso-minimo
+    prompt: "¿Por qué una familia sin ingreso del trabajo en el año no recibe ACTC aunque tenga hijos que califican?"
+    options:
+      - id: a
+        text: "Porque el ACTC se calcula sobre el ingreso del trabajo que exceda un mínimo: sin ingreso ganado, no hay base."
+        correct: true
+        feedback: "Exacto. La fórmula del ACTC toma un porcentaje del ingreso del trabajo por encima del mínimo de la tarjeta. Es la misma lógica del EITC: estos créditos premian el trabajo declarado."
+      - id: b
+        text: "Porque sin trabajo los hijos dejan de ser dependientes."
+        correct: false
+        feedback: "Casi. Los hijos siguen siendo dependientes. Lo que falta es la base de cálculo del reembolso: ingreso del trabajo sobre el mínimo."
+      - id: c
+        text: "Porque el ACTC solo es para trabajadores de W-2."
+        correct: false
+        feedback: "Casi. La ganancia del negocio propio también es ingreso del trabajo y también construye ACTC. Lo que no sirve es no tener ingreso ganado declarado."
+  - id: q5
+    after_segment: 3
+    concept_tag: odc-quien
+    prompt: "¿Quiénes dan el crédito por otros dependientes (ODC)?"
+    options:
+      - id: a
+        text: "Solo los bebés menores de 2 años."
+        correct: false
+        feedback: "Casi. Es al revés del instinto: el ODC recoge a los dependientes que NO dan CTC — hijos de 17 o más, estudiantes de universidad, hijos con ITIN, los papás que mantienes, otros parientes calificados."
+      - id: b
+        text: "Los dependientes que no califican al CTC: hijos de 17+, hijos con ITIN, padres y otros parientes calificados."
+        correct: true
+        feedback: "Exacto. Todo dependiente verificado da algo: CTC los niños con SSN menores de 17; ODC los demás. Los papás en México con ITIN del módulo 3 cobran aquí."
+      - id: c
+        text: "Cualquier persona que viva en la casa, sea dependiente o no."
+        correct: false
+        feedback: "Casi. Primero hay que ser dependiente — las pruebas del módulo 3. El ODC no crea dependientes: paga por los ya verificados que el CTC no cubre."
+  - id: q6
+    after_segment: 3
+    concept_tag: odc-no-reembolsable
+    prompt: "Un cliente con impuesto en cero mantiene a su papá (pariente calificado). ¿Cuánto le devuelve el ODC?"
+    options:
+      - id: a
+        text: "El monto completo del ODC, como cheque."
+        correct: false
+        feedback: "Casi. El ODC no es reembolsable: baja el impuesto hasta cero y ahí se detiene. Con impuesto ya en cero, este crédito no genera cheque. La diferencia reembolsable/no reembolsable del módulo 1, aplicada."
+      - id: b
+        text: "Nada: el ODC solo reduce impuesto; con impuesto en cero, no hay qué reducir."
+        correct: true
+        feedback: "Exacto. Y así se lo explicas antes de que pregunte: «tu papá sí es tu dependiente y sí da crédito — pero es del tipo que baja impuesto, y tu impuesto ya está en cero»."
+      - id: c
+        text: "La mitad."
+        correct: false
+        feedback: "Casi. No hay mitades: no reembolsable significa que su límite es el impuesto que había. Cero impuesto, cero efecto."
+  - id: q7
+    after_segment: 4
+    concept_tag: phaseout
+    prompt: "¿A qué clientes se les empieza a reducir el CTC?"
+    options:
+      - id: a
+        text: "A los de ingresos altos, desde los umbrales de la tarjeta según estado civil."
+        correct: true
+        feedback: "Exacto. Por encima del umbral, el crédito se reduce por tramos. Son umbrales altos: la gran mayoría de tu clientela los ve de lejos, pero el profesional sabe que existen y dónde consultarlos."
+      - id: b
+        text: "A los que presentan tarde."
+        correct: false
+        feedback: "Casi. La fecha no reduce créditos (aunque presentar tarde tiene sus propios costos). La reducción del CTC es por nivel de ingreso, desde los umbrales del año."
+      - id: c
+        text: "A los que tienen más de dos hijos."
+        correct: false
+        feedback: "Casi. No hay castigo por número de hijos: cada hijo calificado suma su crédito. La reducción viene por ingreso alto, no por familia grande."
+  - id: q8
+    after_segment: 4
+    concept_tag: anexo-8812
+    prompt: "¿Dónde se calcula todo esto — CTC, ACTC y ODC?"
+    options:
+      - id: a
+        text: "En el Anexo 8812, que acompaña a la 1040."
+        correct: true
+        feedback: "Exacto. Un solo anexo arma los tres: cuenta los hijos del CTC, los dependientes del ODC, aplica la reducción por ingreso y corre la fórmula del ACTC. El software lo llena con tus datos verificados."
+      - id: b
+        text: "En el Anexo C."
+        correct: false
+        feedback: "Casi. El C es del negocio propio. Los créditos por hijos y dependientes viven en el Anexo 8812."
+      - id: c
+        text: "No hay formulario: el software lo hace invisible."
+        correct: false
+        feedback: "Casi. El software lo llena, pero el formulario existe y se llama 8812 — y saber leerlo te deja explicar cada número cuando el cliente pregunte de dónde salió."
+  - id: q9
+    after_segment: 5
+    concept_tag: 8332-ctc-viaja
+    prompt: "Con un 8332 firmado, el papá no custodio reclama al niño este año. ¿Qué se lleva y qué no?"
+    options:
+      - id: a
+        text: "Se lleva todo: CTC, EITC y cabeza de familia."
+        correct: false
+        feedback: "Casi. El 8332 transfiere al niño como dependiente y con él el CTC. El EITC y la cabeza de familia no viajan: se quedan con la mamá custodia, con quien el niño vive."
+      - id: b
+        text: "Se lleva el CTC del niño; el EITC y el HOH se quedan con la madre custodia."
+        correct: true
+        feedback: "Exacto. Es el detalle fino que separa preparadores: cada beneficio tiene su propia regla de residencia. Dos declaraciones bien hechas — cada una con lo suyo — y cero rechazos."
+      - id: c
+        text: "No se lleva nada: el 8332 es solo informativo."
+        correct: false
+        feedback: "Casi. Sí transfiere: la dependencia y el CTC. Lo que no puede transferir es lo que exige convivencia — EITC y HOH."
+  - id: q10
+    after_segment: 5
+    concept_tag: maria-8812
+    prompt: "María: Sofía (7) y Mateo (4), ambos con SSN, dependientes verificados; su ingreso es modesto y su impuesto bajo. ¿Cómo cobra sus créditos por hijos?"
+    options:
+      - id: a
+        text: "CTC por los dos contra su impuesto, y el sobrante se le devuelve como ACTC hasta el tope por hijo, gracias a su ingreso del trabajo."
+        correct: true
+        feedback: "Exacto. Dos hijos menores de 17 con SSN: crédito completo. Su impuesto es chico, así que la mayor parte llega como ACTC reembolsable — sumado a su EITC, el corazón de su reembolso. Y todo espera a mediados de febrero."
+      - id: b
+        text: "Solo lo que alcance contra su impuesto; el resto se pierde."
+        correct: false
+        feedback: "Casi. Con ingreso del trabajo declarado, el sobrante no se pierde: se vuelve ACTC reembolsable hasta el tope por hijo. El 8812 hace esa cuenta."
+      - id: c
+        text: "Nada, porque ya recibió EITC."
+        correct: false
+        feedback: "Casi. EITC y CTC/ACTC son créditos distintos y compatibles: la misma familia puede — y suele — recibir ambos. Se suman en su reembolso."
+---
+
+## S1 · El CTC: edad, SSN, dependencia
+
+Soy Liliana. Segunda pieza grande del módulo: los créditos por hijos y dependientes. Tres siglas que trabajan juntas: CTC, ACTC y ODC. Hoy las separas para siempre.
+
+El CTC, el crédito por hijos: un monto por cada hijo calificado, el del año está en la tarjeta. Sus tres verificaciones, sobre la base que ya construiste en el módulo 3:
+
+<Cifra concept="ctc_monto" />
+
+Una: edad. Menor de 17 años al terminar el año. Este corte duele y se anticipa: el niño que cumplió 17 en noviembre ya no da CTC, aunque siga en la preparatoria y coma como tres. Cumplió 17, cambió de crédito. Díselo tú a la clienta antes de que lo descubra en el resultado.
+
+Dos: SSN. El niño necesita su propio Seguro Social válido. Hijo con ITIN: dependiente sí, CTC no; le toca el ODC, ya lo sabes del módulo 3, y hoy ves cuánto.
+
+Tres: dependencia. El niño es dependiente reclamado del cliente, con todas las pruebas de hijo calificado que ya dominas: relación, residencia, sustento.
+
+Tres verificaciones, tres papeles que ya están en tu expediente si hiciste el módulo 3 como se debe.
+
+## S2 · El ACTC: cuando el crédito es más grande que el impuesto
+
+Ahora la mecánica que convierte este crédito en cheque para las familias de tu clientela.
+
+El CTC, de entrada, es un crédito que baja impuesto. Familia con impuesto grande: el CTC se lo come y listo. Pero tu clientela típica, María incluida, debe poco impuesto, y sus créditos por hijos son más grandes que ese impuesto. ¿Se pierde el sobrante?
+
+Ahí entra el ACTC, el crédito adicional por hijos: la parte reembolsable. Del crédito que sobró después de bajar el impuesto a cero, el ACTC devuelve hasta un tope por hijo, el del año en la tarjeta, calculado como un porcentaje del ingreso del trabajo que exceda un mínimo. Misma filosofía que el EITC: el reembolso se construye sobre trabajo declarado. Sin ingreso del trabajo sobre el mínimo, no hay ACTC, aunque los hijos califiquen.
+
+<Cifra concept="actc_max" />
+<Cifra concept="actc_ingreso_minimo" />
+
+Y otro puente con la lección 4.3: la ganancia del negocio propio también es ingreso del trabajo. La señora del efectivo que ahora declara no solo abrió su EITC: abrió su ACTC.
+
+Calendario: los reembolsos que llevan ACTC esperan, igual que los del EITC, a mediados de febrero. La misma frase en tu mesa sirve para los dos.
+
+## S3 · El ODC: nadie verificado se queda sin nada
+
+Tercera sigla: el ODC, el crédito por otros dependientes. Su trabajo es recoger a todos los dependientes verificados que el CTC no cubre.
+
+¿Quiénes son? El hijo que cumplió 17 o 18 y sigue en casa. El estudiante de universidad de 20 que es dependiente por la regla de los 24. Los hijos con ITIN. Los papás que el cliente mantiene, aquí o en México, los de la lección 3.2 con sus envíos de dinero documentados. El hermano, el sobrino, cualquier pariente calificado de las cuatro pruebas.
+
+Su monto: fijo por dependiente, más chico que el CTC, en la tarjeta. Y su carácter: no reembolsable. Baja el impuesto hasta cero y ahí se detiene; no genera cheque. El cliente con impuesto ya en cero que mantiene a su papá no verá dinero por este crédito, y se lo explicas con la distinción del módulo 1: «tu papá sí da crédito, pero es del tipo que baja impuesto, y el tuyo ya está en cero».
+
+<Cifra concept="odc_monto" />
+
+La regla de mesa que ordena las tres siglas: todo dependiente verificado da algo. Niño con SSN menor de 17: CTC, con su ACTC si sobra. Todos los demás: ODC. Nadie verificado se queda en cero crédito, y nadie sin verificar recibe ninguno.
+
+## S4 · La reducción por ingreso y el Anexo 8812
+
+Dos piezas técnicas para completar el cuadro.
+
+La reducción por ingresos altos: el CTC y el ODC se reducen para clientes por encima de umbrales de ingreso, distintos por estado civil, altos. La gran mayoría de tu clientela los ve de lejos, pero cuando llegue el matrimonio de dos buenos sueldos preguntando por qué su crédito salió recortado, tú sabrás: reducción por tramos desde el umbral de la tarjeta.
+
+<Cifra concept="ctc_phaseout" />
+
+Y el formulario donde vive todo esto: el Anexo 8812. Un solo anexo arma las tres siglas: cuenta los hijos del CTC, cuenta los dependientes del ODC, aplica la reducción por ingreso, y corre la fórmula del ACTC con el ingreso del trabajo. El software lo llena con tus datos; tú sabes leerlo, porque cuando el cliente pregunte «¿de dónde salió este número?», la respuesta está en las líneas del 8812, no en «así lo dijo la computadora».
+
+> **HISTORIA · Liliana (opcional):** una familia que llegó contigo tras años reclamando mal a un hijo de 18 «porque siempre había dado crédito», y cómo se los explicaste. 30–45 segundos.
+
+## S5 · El 8332 revisitado, y María completa
+
+Un nudo fino que ya conoces a medias, y hoy se cierra: el 8332 de los padres separados.
+
+Cuando la madre custodia firma el 8332 cediendo el año, ¿qué viaja con el niño hacia la declaración del papá? La dependencia y el CTC. ¿Qué no viaja jamás? Lo que exige convivencia: el EITC y la cabeza de familia se quedan con la madre, con quien el niño vive. Resultado correcto: dos declaraciones, cada una con lo suyo, el papá con el CTC del niño, la mamá con su HOH y su EITC, y cero rechazos. Ese reparto fino es exactamente el tipo de detalle que separa a la profesional del capturista.
+
+Y María, para cerrar el trío de créditos de su declaración. Sofía, 7, y Mateo, 4: menores de 17, con SSN, dependientes verificados con escuela y doctor en el expediente. CTC completo por los dos. Su impuesto es bajo, así que el crédito lo aplasta a cero y el sobrante corre por el 8812 hacia el ACTC, hasta el tope por hijo, sostenido por su ingreso del trabajo: W-2 más su ganancia de DoorDash. Sumado a su EITC de la lección pasada, ahí está el corazón del reembolso de María. Y todo, EITC y ACTC juntos, llega a fines de febrero, como ya sabe porque tú se lo dijiste.
+
+Dónde va: Anexo 8812, y de ahí a las líneas de créditos de la 1040, el CTC/ODC con los no reembolsables, el ACTC con los reembolsables. Al expediente: lo del módulo 3, que sigue siendo la evidencia de todo.
+
+Siguiente lección: el formulario que te protege a ti, el 8867. La debida diligencia del preparador, sanción por sanción.
