@@ -70,12 +70,13 @@
           </div>
         </header>
         <div id="content-scroll">
-          <div id="hero">
+          <section id="hero" class="has-media autoscroll">
             <div id="hero-wrapper">
               <div id="hero-caption" class="content-full-width text-align-default-desktop">
                 <div class="inner">
+                  <div class="hero-infotitle caption-timeline"><span class="word-wrapper"><span class="body-medium hero-eyebrow">La Academia · Liliana Miranda</span></span></div>
                   <h1 class="hero-title caption-timeline"><span class="word-wrapper"><span>Acceso directo</span></span><span class="word-wrapper"><span>a mí, en tu idioma.</span></span></h1>
-                  <div class="hero-subtitle caption-timeline"><span class="word-wrapper"><span>Aprende a preparar impuestos con Liliana Miranda</span></span></div>
+                  <div class="hero-subtitle caption-timeline"><span class="word-wrapper"><span>Aprende a preparar impuestos con Liliana Miranda: 8 módulos, 31 lecciones y práctica en los formularios de verdad.</span></span></div>
                 </div>
               </div>
               <div id="hero-footer" class="has-border">
@@ -89,7 +90,12 @@
                 <div class="hero-footer-right"><div class="info-text"><span>En español</span></div></div>
               </div>
             </div>
-          </div>
+            <div id="hero-media" class="parallax-media">
+              <div id="hero-media-effects">
+                <div id="hero-media-wrapper"><img src="images/hero-inicio.webp" class="item-image" alt="Liliana Miranda" style="object-position:60% 0%"></div>
+              </div>
+            </div>
+          </section>
           <div id="main-content">
             <div id="main-page-content">
 
@@ -123,7 +129,7 @@
               <section class="content-row row_padding_top row_padding_bottom row_padding_left row_padding_right dark-section" data-bgcolor="#1C1B19">
                 <div class="columns-group">
                   <div class="one_half" data-parallax-start="60" data-parallax-end="-60" data-parallax-mobile="false">
-                    <figure data-animate class="liliana-portrait"><img src="images/liliana.webp" alt="Liliana Miranda"></figure>
+                    <figure data-animate class="liliana-portrait"><img src="images/liliana-retrato.webp" alt="Liliana Miranda"></figure>
                   </div>
                   <div class="one_half align_content_center">
                     <p class="body-medium no-margins section-label" data-animate>Sobre Liliana</p>
@@ -199,18 +205,21 @@
                   <div class="one_full"><p class="body-medium no-margins section-label" data-animate>Por dentro</p><h2 class="has-mask" data-play-once>Así se ve una lección por dentro</h2></div>
                 </div>
                 <div class="columns-group">
-                  <div class="one_third" data-animate data-animate-translate="20"><hr class="animated-line"><h5>Un video corto, una pregunta</h5><p>Ves un segmento, respondes, y si fallas te explico exactamente dónde está la confusión.</p></div>
-                  <div class="one_third" data-animate data-animate-translate="20"><hr class="animated-line"><h5>Las cifras siempre al día</h5><p>Ningún monto va grabado en el video: salen de la tabla del año, verificada contra el IRS.</p></div>
-                  <div class="one_third" data-animate data-animate-translate="20"><hr class="animated-line"><h5>Prácticas en el formulario real</h5><p>Terminas llenando réplicas del Anexo C y la 1040, casilla por casilla, con casos como Rosa y María.</p></div>
-                </div>
-                <div class="columns-group"><div class="one_full">
-                  <div class="button-wrap button-icon-box outline-solid reveal-icon right rounded-edge" data-sticky>
+                  <div class="one_half" data-parallax-start="40" data-parallax-end="-40" data-parallax-mobile="false">
+                    <figure data-animate class="photo-frame"><img src="images/liliana-escritorio.webp" alt="Liliana Miranda en su escritorio"></figure>
+                  </div>
+                  <div class="one_half align_content_center">
+                    <div class="dentro-item" data-animate data-animate-translate="20"><hr class="animated-line"><h5>Un video corto, una pregunta</h5><p>Ves un segmento, respondes, y si fallas te explico exactamente dónde está la confusión.</p></div>
+                    <div class="dentro-item" data-animate data-animate-translate="20"><hr class="animated-line"><h5>Las cifras siempre al día</h5><p>Ningún monto va grabado en el video: salen de la tabla del año, verificada contra el IRS.</p></div>
+                    <div class="dentro-item" data-animate data-animate-translate="20"><hr class="animated-line"><h5>Prácticas en el formulario real</h5><p>Terminas llenando réplicas del Anexo C y la 1040, casilla por casilla, con casos como Rosa y María.</p></div>
+                    <div class="button-wrap button-icon-box outline-solid reveal-icon right rounded-edge" data-sticky>
             <a href="https://la-academia-eta.vercel.app/entrar" target="_blank" rel="noopener">
               <div class="icon-wrap"><div class="icon-effects parallax-wrap"><div class="button-icon parallax-element"><i class="fa-solid fa-arrow-right"></i></div></div></div>
               <div class="text-wrap"><div class="button-text"><span data-hover="Entra a tu curso">Entra a tu curso</span></div></div>
             </a>
           </div>
-                </div></div>
+                  </div>
+                </div>
               </section>
 
               <!-- Testimonios -->
@@ -219,8 +228,11 @@
                   <div class="one_full"><p class="body-medium no-margins section-label" data-animate>Testimonios</p><h2 class="has-mask" data-play-once>Alumnas que ya recorrieron este camino</h2></div>
                 </div>
                 <div class="columns-group">
-                  <div class="one_half testimonial"><h4 class="has-mask" data-play-once>«Liliana me ayudó a comprender cada detalle del proceso fiscal. Gracias a su asesoría, me siento mucho más segura y preparada.»</h4><p class="body-medium" data-animate>Diana Monroy · Preparadora de impuestos</p></div>
-                  <div class="one_half testimonial"><h4 class="has-mask" data-play-once>«El soporte constante que he recibido ha marcado la diferencia. Ahora me siento más segura para hacer crecer mi negocio y ofrecer un mejor servicio a mis clientes.»</h4><p class="body-medium" data-animate>Dhiandra Betancourt · Preparadora de impuestos</p></div>
+                  <div class="one_third">
+                    <figure data-animate class="photo-frame small"><img src="images/liliana-sonrisa.webp" alt="Liliana Miranda"></figure>
+                  </div>
+                  <div class="one_third testimonial" data-animate data-animate-translate="20"><p class="quote-mark">“</p><p class="body-large quote">Liliana me ayudó a comprender cada detalle del proceso fiscal. Gracias a su asesoría, me siento mucho más segura y preparada.</p><p class="body-medium">Diana Monroy · Preparadora de impuestos</p></div>
+                  <div class="one_third testimonial" data-animate data-animate-translate="20"><p class="quote-mark">“</p><p class="body-large quote">El soporte constante que he recibido ha marcado la diferencia. Ahora me siento más segura para hacer crecer mi negocio y ofrecer un mejor servicio a mis clientes.</p><p class="body-medium">Dhiandra Betancourt · Preparadora de impuestos</p></div>
                 </div>
               </section>
 
@@ -230,9 +242,9 @@
                   <div class="one_full"><p class="body-medium no-margins section-label" data-animate>Los tres niveles</p><h2 class="has-mask" data-play-once>El mismo curso en los tres. Lo que cambia es cuánto acceso tienes a mí.</h2></div>
                 </div>
                 <div class="columns-group">
-                  <div class="one_third plan-mini" data-animate data-animate-translate="20"><p class="body-medium">Curso</p><p class="plan-price">$497</p><p class="plan-meta">Pago único · acceso de por vida</p></div>
-                  <div class="one_third plan-mini destacado" data-animate data-animate-translate="20"><p class="body-medium">Curso + soporte de temporada</p><p class="plan-price">$897</p><p class="plan-meta">Pago único · acceso de por vida</p></div>
-                  <div class="one_third plan-mini" data-animate data-animate-translate="20"><p class="body-medium">Mentoría</p><p class="plan-price">$1,497</p><p class="plan-meta">Pago único · acceso de por vida</p></div>
+                  <div class="one_third plan-mini" data-animate data-animate-translate="20"><p class="body-medium">Curso</p><p class="plan-price">$497</p><p class="plan-hours">Solo el curso</p><p class="plan-meta">Pago único · acceso de por vida</p></div>
+                  <div class="one_third plan-mini destacado" data-animate data-animate-translate="20"><p class="body-medium">Curso + soporte de temporada</p><p class="plan-price">$897</p><p class="plan-hours">5 horas conmigo</p><p class="plan-meta">Pago único · acceso de por vida</p></div>
+                  <div class="one_third plan-mini" data-animate data-animate-translate="20"><p class="body-medium">Mentoría</p><p class="plan-price">$1,497</p><p class="plan-hours">10 horas conmigo</p><p class="plan-meta">Pago único · acceso de por vida</p></div>
                 </div>
                 <div class="columns-group"><div class="one_full"><div class="button-wrap button-icon-box apart-icon right rounded-edge" data-sticky>
             <a class="ajax-link" data-type="page-transition" href="precios.html">
