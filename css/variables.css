@@ -1,0 +1,457 @@
+
+/*--------------------------------------------------
+	Variables
+---------------------------------------------------*/	
+
+	:root {
+		
+		/* Helpers */		
+		--vh: 1vh; 
+		--dvh: 1dvh;
+		--gap: 24px;
+		--scroll-bar-w: 0px;
+		--horizontal-gutter: 50px;
+		--vertical-gutter: 120px;
+		--breakpoint-desktop: 1025px;
+		--breakpoint-tablet: 1024px;
+		--primary-color:#b880ff;
+		--secondary-color:#b880ff;		
+		--color-black: #000;
+		--color-white: #fff;
+		--color-black-faded: rgba(0,0,0,0.15);
+		--color-white-faded: rgba(255,255,255,0.15);
+		
+		
+		/* Header and Footer */		
+		--header-height: 120px;
+		--footer-height: 120px;
+		
+		
+		/* Classic Menu */		
+		--dark-content-header-logo-black-opacity: 1;
+		--dark-content-header-logo-white-opacity: 0;
+		--dark-content-header-elements-initial-color: #000;
+		--dark-content-header-elements-inverted-color: #fff;
+		
+		--light-content-header-logo-black-opacity: 0;
+		--light-content-header-logo-white-opacity: 1;
+		--light-content-header-elements-initial-color: #fff;
+		--light-content-header-elements-inverted-color: #000;
+		
+		
+		/* Classic Menu Font Styles */		
+		--classic-menu-font-size: 1rem;
+		--classic-menu-line-height: 24px;
+		--classic-menu-font-weight: 500;
+		
+		
+		/* FullScreen Menu */		
+		--fullscreen-header-elements-color: #fff;
+		--fullscreen-header-logo-black-opacity: 0;
+		--fullscreen-header-logo-white-opacity: 1;
+		
+		
+		/* Fullscreen Menu Font Styles */	
+		--fullscreen-menu-font-size: clamp(2rem, 1.5rem + 4vw, 5.5rem);
+		--fullscreen-menu-line-height: 1.05;
+		--fullscreen-menu-font-weight: 600;
+		--fullscreen-menu-letter-spacing: -0.02em;
+		--fullscreen-menu-bg-color: #0c0c0c;
+		
+		
+		/* Cursor Default */		
+		--cursor-width: 14px;
+		--cursor-height: 14px;		
+		--cursor-info-color: #999999;		
+		--cursor-background-color: #b880ff;		
+		--cursor-border-color: #b880ff;
+		--cursor-border-width: 2px;
+		--cursor-border-radius: 2px;		
+		--cursor-font-size: 16px;
+		--cursor-icon-size: 14px;
+		
+		
+		/* Cursor Hover Colors */
+		--cursor-hover-solid-color: #fff;
+		--cursor-hover-solid-info-color: #000;		
+		--cursor-hover-outline-color: #fff;
+		--cursor-hover-outline-info-color: #fff;		
+		--cursor-hover-blur-color: rgba(0,0,0,0.3);
+		--cursor-hover-blur-info-color: #fff;
+		
+		
+		/* Cursor Hover Sizes */
+		--cursor-hover-small-width: 40px;
+		--cursor-hover-small-height: 40px;
+		--cursor-hover-large-width: 80px;
+		--cursor-hover-large-height: 80px;
+
+		
+		/* Cursor Hover Radius */
+		--cursor-hover-radius-square: 0px;
+		--cursor-hover-radius-rounded: 3px;
+		--cursor-hover-radius-circle: 50%;
+		
+		
+		/* Cursor Hide  */		
+		--cursor-hide-width: 10px;
+		--cursor-hide-height: 10px;
+		--cursor-hide-background-color: transparent;
+		--cursor-hide-border-color: transparent;
+		--cursor-hide-border-radius: 50%;
+		--cursor-hide-opacity: 0;
+		
+		
+		/* Cursor Highlight  */		
+		--cursor-highlight-width: 80px;
+		--cursor-highlight-height: 80px;
+		--cursor-highlight-background-color: #999;
+		--cursor-highlight-border-color: #999;
+		--cursor-highlight-border-radius: 50%;
+		--cursor-highlight-opacity: 0.2;
+		
+		
+		/* Cursor Predefined Effects */		
+		--cursor-predefined-width: auto;
+		--cursor-predefined-height: auto;
+		--cursor-predefined-info-color: #fff;
+		--cursor-predefined-bg-color: #000;
+		--cursor-predefined-border-color: #000;
+		--cursor-predefined-border-radius: 4px;
+		
+		
+		/* Cursor Drag */		
+		--cursor-drag-width: 80px;
+		--cursor-drag-height: 80px;
+		--cursor-drag-border-radius: 50%;
+		
+		--cursor-drag-light-info-color: #fff;
+		--cursor-drag-light-bg-color: #000;
+		--cursor-drag-light-border-color: #000;
+		
+		--cursor-drag-dark-info-color: #000;
+		--cursor-drag-dark-bg-color: #fff;
+		--cursor-drag-dark-border-color: #fff;
+		
+		
+		/* Cursor Show Loader */		
+		--cursor-loader-opacity: 1;
+		--cursor-loader-width: 40px;
+		--cursor-loader-height: 40px;
+		--cursor-loader-color: #999999;
+		--cursor-loader-border-radius: 40px;		
+		
+		
+		/* Page Font Styles */		
+		--default-font-family: 'Inter Tight';
+		--primary-font-family: 'FunnelDisplayWeb';
+		--secondary-font-family: 'Roboto Mono';
+		
+		
+		/* Body and Paragraphs Font Styles */		
+		--default-body-font-size: 1rem;
+		--default-body-line-height: 24px;
+		--default-body-font-weight: 500;
+		--default-body-letter-spacing: 0.01em;
+		
+		--medium-body-font-size: 1.2rem;
+		--medium-body-line-height: 1.3;
+		--medium-body-font-weight: 500;
+		--medium-body-letter-spacing: 0em;
+		
+		--large-body-font-size: 1.6rem;
+		--large-body-line-height: 1.4;
+		--large-body-font-weight: 500;
+		--large-body-letter-spacing: -0.015em;
+		
+		
+		
+		
+		
+		/* Headings Font Styles */
+		--bt-font-size: clamp(2rem, 1.5rem + 12vw, 14rem);
+		--bt-line-height: 1.05;
+		--bt-font-weight: 600;
+		--bt-letter-spacing: -0.02em;
+		--bt-left-position: -0.08em;
+		
+		--h1-font-size: clamp(2rem, 1.5rem + 4vw, 5.5rem);
+		--h1-line-height: 1.05;
+		--h1-font-weight: 600;
+		--h1-letter-spacing: -0.02em;
+
+		--h2-font-size: clamp(1.75rem, 1.25rem + 3vw, 4.5rem);
+		--h2-line-height: 1.05;
+		--h2-font-weight: 600;
+		--h2-letter-spacing: -0.02em;
+
+		--h3-font-size: clamp(1.75rem, 1.1rem + 2vw, 3rem);
+		--h3-line-height: 1.1;
+		--h3-font-weight: 600;
+		--h3-letter-spacing: -0.02em;
+
+		--h4-font-size: clamp(1.35rem, 1rem + 1.2vw, 2.25rem);
+		--h4-line-height: 1.1;
+		--h4-font-weight: 600;
+		--h4-letter-spacing: -0.01em;
+
+		--h5-font-size: clamp(1.1rem, 0.95rem + 0.6vw, 1.6rem);
+		--h5-line-height: 1.15;
+		--h5-font-weight: 600;
+		--h5-letter-spacing: -0.01em;
+
+		--h6-font-size: clamp(0.95rem, 0.9rem + 0.3vw, 1.25rem);
+		--h6-line-height: 1.2;
+		--h6-font-weight: 600;
+		--h6-letter-spacing: 0em;
+
+		
+		/* Primary Title Font Styles for Hero and Page Nav */		
+		--title-font-size: clamp(2rem, 1.5rem + 6vw, 8rem);
+		--title-line-height: 1.15em;
+		--title-font-weight: 600;
+		--title-letter-spacing: -0.02em;
+		--title-margin-bottom: 10px;
+		--title-left-position: -0.06em;
+		--title-span-margin:-0.075em 0;
+		
+		
+		/* Secondary Title Font Styles for Hero and Page Nav  */		
+		--small-title-font-size: clamp(2.25rem, 1.25rem + 3vw, 4.5rem);
+		--small-title-line-height: 1.15em;
+		--small-title-font-weight: 600;
+		--small-title-letter-spacing: -0.015em;
+		--small-title-margin-bottom: 30px;
+		--small-title-span-margin:-0.05em 0;
+		
+		
+		/* Subtitle Font Styles for Hero and Page Nav  */		
+		--subtitle-font-size: clamp(1rem, 1rem + 0.3vw, 1.5rem);
+		--subtitle-line-height: 1.35em;
+		--subtitle-font-weight: 500;
+		--subtitle-letter-spacing: -0.001em;
+		--subtitle-margin-bottom: 90px;
+		
+		
+		/* Infotitle Font Styles for Hero and Page Nav  */	
+		--infotitle-margin-bottom: 40px;
+
+		
+		/* Hero and Page Nav Caption Alignment */
+		--caption-display: flex;
+		--caption-flex-column: column;
+		--caption-flex-row: row;
+		--caption-justify-content:center;
+		--caption-align-items-left: flex-start;
+		--caption-align-items-center: center;
+		--caption-align-items-right: flex-end;
+		
+		
+		/* Default Hero Section Vertical Padding */
+		--hero-caption-padding-top: 230px;
+		--hero-caption-padding-bottom: 120px;
+		
+		
+		/* Default Page Nav Section Vertical Padding */		
+		--nav-caption-padding-top: 160px;
+		--nav-caption-padding-bottom: 120px;
+		
+		
+		/* Project Hero Section Vertical Padding  */
+		--project-hero-caption-padding-top: 120px;
+		--project-hero-caption-padding-bottom: 120px;
+		
+		
+		/* Project Page Nav Section Vertical Padding */		
+		--project-nav-caption-padding-top: 120px;
+		--project-nav-caption-padding-bottom: 120px;	
+		
+		
+		/* Hero Footer  */		
+		--hero-footer-height: 120px;
+		
+		
+		/* Portfolio Grid  */		
+		--thumbs-margins-width: 12px;
+		--thumbs-gap-vertical: 60px;
+		--thumbs-list-gap-vertical: 40px;
+	
+	}
+
+@media only screen and (max-width: 1537px) {
+	
+	:root {
+		
+		/* Helpers */		
+		--horizontal-gutter:40px;
+		--vertical-gutter: 120px;
+		
+		
+		/* Primary Title Font Styles for Hero and Page Nav */		
+		--title-margin-bottom: 10px;
+		--subtitle-margin-bottom: 30px;
+		--infotitle-margin-bottom: 30px;
+				
+		
+		/* Default Hero Section Vertical Padding */
+		--hero-caption-padding-top: 200px;
+		--hero-caption-padding-bottom: 120px;
+		
+		
+		/* Default Page Nav Section Vertical Padding */		
+		--nav-caption-padding-top: 160px;
+		--nav-caption-padding-bottom: 120px;
+		
+		
+		/* Project Hero Section Vertical Padding  */
+		--project-hero-caption-padding-top: 120px;
+		--project-hero-caption-padding-bottom: 120px;
+		
+		
+		/* Project Page Nav Section Vertical Padding */		
+		--project-nav-caption-padding-top: 120px;
+		--project-nav-caption-padding-bottom: 120px;	
+		
+	}
+	
+}
+	
+	
+@media only screen and (max-width: 1466px) {
+	
+	:root {
+		
+		/* Helpers */
+		--horizontal-gutter:40px;
+		--vertical-gutter: 100px;
+		
+		
+		/* Header and Footer */		
+		--header-height: 100px;
+		--footer-height: 100px;
+		
+		
+		/* Default Hero Section Vertical Padding */
+		--hero-caption-padding-top: 180px;
+		--hero-caption-padding-bottom: 100px;
+		
+		
+		/* Default Page Nav Section Vertical Padding */		
+		--nav-caption-padding-top: 140px;
+		--nav-caption-padding-bottom: 100px;
+		
+		
+		/* Project Hero Section Vertical Padding  */
+		--project-hero-caption-padding-top: 100px;
+		--project-hero-caption-padding-bottom: 100px;
+		
+		
+		/* Project Page Nav Section Vertical Padding */		
+		--project-nav-caption-padding-top: 100px;
+		--project-nav-caption-padding-bottom: 100px;
+		
+		/* Hero Footer  */		
+		--hero-footer-height: 100px;
+		
+	}
+		
+}	
+	
+	
+@media only screen and (max-width: 1024px) {	
+
+	:root {
+		
+		/* Helpers */
+		--horizontal-gutter:30px;
+		--vertical-gutter: 100px;
+		
+		
+		/* Default Hero Section Vertical Padding */
+		--hero-caption-padding-top: 180px;
+		--hero-caption-padding-bottom: 100px;
+		
+		
+		/* Default Page Nav Section Vertical Padding */		
+		--nav-caption-padding-top: 320px;
+		--nav-caption-padding-bottom: 240px;
+		
+		
+		/* Project Hero Section Vertical Padding  */
+		--project-hero-caption-padding-top: 100px;
+		--project-hero-caption-padding-bottom: 100px;
+		
+		
+		/* Project Page Nav Section Vertical Padding */		
+		--project-nav-caption-padding-top: 100px;
+		--project-nav-caption-padding-bottom: 100px;
+		
+	}
+
+}
+	
+	
+@media only screen and (max-width: 767px) {
+
+	
+	:root {
+		
+		/* Helpers */
+		--gap: 12px;
+		--horizontal-gutter:20px;
+		--vertical-gutter: 80px;
+		
+		
+		/* Header and Footer */		
+		--header-height: 80px;
+		--footer-height: 80px;
+		
+		
+		/* Default Hero Section Vertical Padding */
+		--hero-caption-padding-top: 140px;
+		--hero-caption-padding-bottom: 80px;
+		
+		
+		/* Default Page Nav Section Vertical Padding */		
+		--nav-caption-padding-top: 240px;
+		--nav-caption-padding-bottom: 160px;
+		
+		
+		/* Project Hero Section Vertical Padding  */
+		--project-hero-caption-padding-top: 80px;
+		--project-hero-caption-padding-bottom: 80px;
+		
+		
+		/* Project Page Nav Section Vertical Padding */		
+		--project-nav-caption-padding-top: 80px;
+		--project-nav-caption-padding-bottom: 80px;
+		
+		
+		/* Hero Section  */		
+		--hero-footer-height: 80px;
+		
+		
+		/* Portfolio Grid  */		
+		--thumbs-margins-width: 8px;
+		--thumbs-gap-vertical: 30px;
+		
+	}
+	
+
+}
+
+@media only screen and (max-width: 479px) {
+	
+	:root {
+		
+		/* Helpers */
+		--horizontal-gutter:20px;
+		--vertical-gutter: 80px;
+		
+		
+		/* Portfolio Grid  */		
+		--thumbs-margins-width: 0px;
+		--thumbs-gap-vertical: 20px;
+	}
+	
+}	

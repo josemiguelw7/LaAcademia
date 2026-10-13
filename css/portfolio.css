@@ -1,0 +1,688 @@
+
+/*------------------------------------------------------------------
+    Fit Thumb Screen Temporary Clone Wrapper
+-------------------------------------------------------------------*/
+
+	#thumb-clone {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		z-index: 900;
+		width: 100%;
+		height: calc(100 * var(--dvh, 1vh));
+		pointer-events: none;
+	}
+
+	#thumb-clone-wrapper {
+		position: absolute;
+		z-index: 10;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: calc(100 * var(--dvh, 1vh));
+		box-sizing: border-box;
+		padding: 120px 20px;
+		margin: 0 auto;
+	}
+
+	#thumb-clone-wrapper .item-media {
+		position: absolute;
+		width: 30%;
+		height: auto;
+		aspect-ratio: unset;
+	}
+
+	#thumb-clone-wrapper .canvas-slider {
+		position: absolute;
+		top: auto;
+		right: auto;
+		width: 30%;
+		height: auto;
+		aspect-ratio: unset;
+	}
+
+	#thumb-clone-wrapper .item-media::before,
+	#thumb-clone-wrapper .canvas-slider::before {
+		content: "";
+		float: left;
+		padding-top: 90%;
+	}
+
+
+
+/*------------------------------------------------------------------
+    Fit Thumb Screen Page Cover Transition
+-------------------------------------------------------------------*/
+
+	.load-project-thumb-with-cover #clapat-header {
+		opacity: 0;
+	}
+
+	#page-ajax-cover {
+		position: fixed;
+		top: 0;
+		z-index: 800;
+		display: block;
+		width: 100%;
+		height: calc(100 * var(--dvh, 1vh));
+		color: var(--color-white);
+	}
+
+	#clapat-page-content #page-ajax-cover {
+		z-index: 0;
+	}
+
+	#page-ajax-cover.end-position {
+		background-color: var(--color-black);
+		transform-origin: bottom;
+	}
+
+	#page-ajax-cover .ajax-cover-reveal {
+		position: absolute;
+		inset: 0;
+		z-index: 10;
+		display: flex;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+
+	#page-ajax-cover .ajax-cover-reveal span {
+		width: 20%;
+		background-color: var(--primary-color);
+		transform-origin: top;
+		transform: scaleX(1.01) scaleY(0);
+		will-change: transform;
+	}
+
+	#page-ajax-cover.end-position .ajax-cover-reveal span {
+		transform-origin: bottom;
+	}
+
+	#page-ajax-cover .ajax-cover-reveal span::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		width: 1px;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+
+	#page-ajax-cover .ajax-cover-reveal span:nth-child(3) {
+		width: 40%;
+	}
+
+	#page-ajax-cover .ajax-cover-background {
+		position: absolute;
+		z-index: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+
+
+
+/*------------------------------------------------------------------
+    Portfolio Filters
+-------------------------------------------------------------------*/
+
+	.filters-wrapper {
+		position: absolute;
+		z-index: 1000;
+		display: flex;
+		justify-content: flex-start;
+		width: 100%;
+		height: auto;
+		box-sizing: border-box;
+		padding-top: 60px;
+		padding-bottom: 280px;
+		background-color: rgb(200, 200, 200);
+		mask-image: linear-gradient(to bottom, rgb(200, 200, 200) 0%, rgb(200, 200, 200) 50%, transparent 100%);
+		opacity: 0;
+		pointer-events: none;
+		will-change: opacity, height;
+	}
+
+	#filters {
+		margin: 0;
+		text-align: left;
+	}
+
+	.filters-wrapper.open-filters #filters {
+		pointer-events: initial;
+	}
+
+	#filters li {
+		position: relative;
+		display: inline-flex;
+		box-sizing: border-box;
+		overflow: hidden;
+		margin: 0 auto;
+		padding: 0;
+		line-height: inherit;
+	}
+
+	#filters li a {
+		position: relative;
+		display: block;
+		box-sizing: border-box;
+		will-change: transform, opacity;
+	}
+
+	#filters li a.is_active {
+		pointer-events: none;
+	}
+
+	#filters li a span {
+		position: relative;
+		opacity: 0.2;
+		-webkit-transition: opacity 0.15s ease-out 0s;
+		transition: opacity 0.15s ease-out 0s;
+	}
+
+	#filters li a.is_active span,
+	#filters li:hover a span {
+		opacity: 1;
+	}
+
+	#filters li a span::after {
+		content: ",";
+	}
+
+	#filters li:last-child a span::after {
+		content: "";
+	}
+
+	#close-filters {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		display: block;
+		width: 100%;
+		height: 100%;
+		pointer-events: initial;
+	}
+
+
+
+/*------------------------------------------------------------------
+    Change Layout Options
+-------------------------------------------------------------------*/
+
+	.layout-options-wrapper {
+		position: relative;
+		display: flex;
+		gap: var(--gap);
+	}
+
+	.layout-option {
+		opacity: 0.2;
+		transition: opacity 0.2s ease-in-out;
+	}
+
+	.layout-option.active {
+		opacity: 1;
+		pointer-events: none;
+	}
+
+	.layout-options-wrapper:hover .layout-option {
+		opacity: 0.2;
+	}
+
+	.layout-options-wrapper:hover .layout-option.active {
+		opacity: 1;
+	}
+
+	.layout-options-wrapper:hover .layout-option:not(.active):hover {
+		opacity: 1;
+	}
+
+	.layout-options-wrapper:has(.layout-option:not(.active):hover) .layout-option.active {
+		opacity: 0.2;
+	}
+
+
+
+/*------------------------------------------------------------------
+    General Styles For Thumb Content Structure
+-------------------------------------------------------------------*/
+
+	.item-content {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+	}
+
+	.item-effects {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.item-media {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.item-media-wrapper {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	.item-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	.item-video-wrapper {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		overflow: hidden;
+		pointer-events: none;
+		isolation: isolate;
+		transform: translateZ(0);
+		will-change: transform;
+	}
+
+	.item-video-wrapper video {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transform: translateZ(0);
+		will-change: transform;
+	}
+
+	/*.hero-video-wrapper {
+		position: absolute;
+    	box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		padding:0;
+		overflow:hidden!important;
+		opacity:1;		
+	}
+	
+	.item .hero-video-wrapper, .clapat-item .hero-video-wrapper, .clapat-slider .hero-video-wrapper, .open-thumbnail .hero-video-wrapper, .slider-zoom-wrapper .hero-video-wrapper, .overlapping-image .hero-video-wrapper, .section-image .hero-video-wrapper {
+		position: absolute;
+		box-sizing: border-box;
+		min-width: 100%;
+		min-height: 100%;
+		width: 100%;
+		height: auto;
+		background-size: cover;
+		padding: 0;
+		overflow: hidden !important;
+		opacity: 1;
+		top: 0;
+		z-index: 120;
+		pointer-events: none;
+	}
+	
+	.content-video-wrapper {
+		position: absolute;
+    	box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		left:0;
+		top:0;
+		padding:0;
+		overflow:hidden!important;
+		z-index: 1;
+	}
+	
+	.hero-video-wrapper video.bgvid, .content-video-wrapper video.bgvid {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}*/
+
+
+/*------------------------------------------------------------------
+    Thumb Follow Image Cursor
+-------------------------------------------------------------------*/
+
+	.has-follow-image {
+		position: relative;
+		display: inline-block;
+		cursor: pointer;
+	}
+
+	.has-follow-image .item-effects {
+		position: fixed;
+		z-index: -1;
+		width: 280px;
+		height: 280px;
+		overflow: visible;
+		opacity: 0;
+		pointer-events: none;
+		will-change: transform, opacity;
+	}
+
+	.has-follow-image.flip-thumb .item-effects {
+		opacity: 1 !important;
+	}
+
+	[data-lock-axis="x"] .item-effects {
+		left: calc(50vw - 140px);
+	}
+
+	[data-lock-axis="y"] .item-effects {
+		top: calc(50vh - 140px);
+	}
+
+	[data-lock-axis="both"] .item-effects {
+		top: calc(50vh - 140px);
+		left: calc(50vw - 140px);
+	}	
+
+
+
+/*--------------------------------------------------
+	Portfolio Grid
+---------------------------------------------------*/
+	
+	.showcase-portfolio-wrapper {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+	}
+
+	.showcase-portfolio {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex: 0 0 calc(100% + (2 * var(--thumbs-margins-width)));
+		align-items: flex-start;
+		justify-content: flex-start;
+		width: calc(100% + (2 * var(--thumbs-margins-width)));
+		row-gap: var(--thumbs-gap-vertical);
+		padding-top: 80px;
+		margin: 0 auto;
+	}
+
+	/* Grid View */
+
+	.showcase-portfolio .clapat-item {
+		position: relative;
+		display: flex;
+		width: calc(33.33% - (2 * var(--thumbs-margins-width)));
+		height: auto;
+		box-sizing: border-box;
+		margin-left: var(--thumbs-margins-width);
+		margin-right: var(--thumbs-margins-width);
+		overflow: hidden;
+	}
+
+	.showcase-portfolio .clapat-item::before {
+		content: "";
+		float: left;
+		padding-top: 65%;
+	}
+
+	.showcase-portfolio.items-filtered .clapat-item {
+		width: calc(25% - (2 * var(--thumbs-margins-width)));
+	}
+
+	.showcase-portfolio .clapat-item .item-content {
+		position: relative;
+		display: flex;
+		width: 100%;
+		height: auto;
+		cursor: pointer;
+	}
+
+	.showcase-portfolio .item-content .item-media-wrapper {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		-webkit-transition: transform 1.25s cubic-bezier(.19, 1, .22, 1);
+		transition: transform 1.25s cubic-bezier(.19, 1, .22, 1);
+	}
+
+	.showcase-portfolio .item-content:hover .item-media-wrapper {
+		-webkit-transform: scale(1.025);
+		transform: scale(1.025);
+	}
+
+	.show-loader .showcase-portfolio .item-content .item-media-wrapper {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+
+	.viewport-mobile .showcase-portfolio .item-content:hover .item-media-wrapper {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+
+	/* Portfolio Thumb Caption */
+
+	.showcase-portfolio .clapat-item .item-caption {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-end;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		padding: 25px 30px;
+		pointer-events: none;
+	}
+
+	.showcase-portfolio .item-caption .item-title {
+		position: relative;
+		overflow: hidden;
+		line-height: 30px;
+	}
+
+	.showcase-portfolio .item-caption .item-title span {
+		position: relative;
+		display: block;
+	}
+
+	.showcase-portfolio .item-caption .item-cat {
+		position: relative;
+		overflow: hidden;
+		line-height: 30px;
+	}
+
+	.showcase-portfolio .item-caption .item-cat span {
+		position: relative;
+		display: block;
+	}
+
+	.showcase-portfolio .clapat-item .item-date {
+		position: relative;
+		overflow: hidden;
+		line-height: 30px;
+	}
+
+	.showcase-portfolio .item-caption .item-date span {
+		position: relative;
+		display: block;
+	}
+
+	/* Switch to List View */
+
+	.showcase-portfolio.switch-layout.portfolio-list-view {
+		flex: 1;
+		width: 100%;
+		padding: 0;
+		row-gap: 0;
+	}
+
+	.showcase-portfolio.switch-layout.portfolio-list-view .clapat-item {
+		width: 100%;
+		margin: 0;
+		overflow: visible;
+	}
+
+	.showcase-portfolio.switch-layout.portfolio-list-view.items-filtered .clapat-item {
+		width: 100%;
+	}
+
+	.showcase-portfolio.switch-layout.portfolio-list-view .clapat-item::before {
+		content: "";
+		float: left;
+		padding-top: 100px;
+	}
+
+	.showcase-portfolio.switch-layout.portfolio-list-view .clapat-item::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 100vw;
+		height: 1px;
+		background-color: currentColor;
+		opacity: 0.15;
+		transform: translate(-50%, 0);
+		-webkit-transition: all 1.25s cubic-bezier(.19, 1, .22, 1);
+		transition: all 1.25s cubic-bezier(.19, 1, .22, 1);
+	}
+
+	.show-loader .showcase-portfolio.switch-layout.portfolio-list-view .clapat-item::after {
+		opacity: 0;
+	}
+
+	.showcase-portfolio.switch-layout.portfolio-list-view .clapat-item .item-caption {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		height: 100%;
+		gap: var(--gap);
+		padding: 0;
+	}
+
+	.showcase-portfolio.switch-layout.portfolio-list-view .clapat-item .item-caption > * {
+		flex: 1 1 33.333%;
+	}
+
+	.showcase-portfolio.switch-layout.portfolio-list-view .clapat-item .item-caption > div:last-child {
+		text-align: right;
+	}
+
+	/* Flip to List View */
+
+	.showcase-portfolio.flip-layout.portfolio-list-view {
+		flex: 1;
+		width: 100%;
+		padding: 0;
+		row-gap: 0;
+	}
+
+	.showcase-portfolio.flip-layout.portfolio-list-view .clapat-item {
+		width: 100%;
+		margin: 0;
+		overflow: visible;
+	}
+
+	.showcase-portfolio.flip-layout.portfolio-list-view.items-filtered .clapat-item {
+		width: 100%;
+	}
+
+	.showcase-portfolio.flip-layout.portfolio-list-view .clapat-item::before {
+		content: "";
+		float: left;
+		padding-top: 100px;
+	}
+
+	.showcase-portfolio.flip-layout .clapat-item::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 100vw;
+		height: 1px;
+		background-color: currentColor;
+		opacity: 0;
+		transform: translate(-50%, 0);
+		-webkit-transition: all 1.25s cubic-bezier(.19, 1, .22, 1);
+		transition: all 1.25s cubic-bezier(.19, 1, .22, 1);
+	}
+
+	.showcase-portfolio.flip-layout.portfolio-list-view .clapat-item::after {
+		opacity: 0.15;
+	}
+
+	.show-loader .showcase-portfolio.flip-layout.portfolio-list-view .clapat-item::after {
+		opacity: 0;
+	}
+
+	.showcase-portfolio.flip-layout.portfolio-list-view .clapat-item .item-effects {
+		width: 100px;
+		height: 100%;
+	}
+
+	.showcase-portfolio.flip-layout.portfolio-list-view .clapat-item .item-caption {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		height: 100%;
+		gap: var(--gap);
+		padding-left: 120px;
+	}
+
+	.showcase-portfolio.flip-layout.portfolio-list-view .clapat-item .item-caption > * {
+		flex: 1 1 33.333%;
+	}
+
+	.showcase-portfolio.flip-layout.portfolio-list-view .clapat-item .item-caption > div:first-child {
+		flex: 1 1 calc(33.333% - 120px);
+	}
+	
+
+
+/*--------------------------------------------------
+	Responsive
+---------------------------------------------------*/
+
+	@media only screen and (max-width: 1024px) {
+
+		.showcase-portfolio .clapat-item {
+			width: calc(50% - (2 * var(--thumbs-margins-width)));
+		}
+
+	}
+
+	@media only screen and (max-width: 479px) {
+
+		.showcase-portfolio .clapat-item {
+			width: 100%;
+		}
+
+	}			
