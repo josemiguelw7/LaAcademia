@@ -86,3 +86,11 @@ export async function createIntakeLink(caseId: string): Promise<{ url: string | 
   const origin = (await headers()).get("origin") ?? "";
   return { url: `${origin}/c/${token}`, error: null };
 }
+
+/** Después de la aprobación, el graduado envía en TaxAct con su EFIN y lo marca aquí. */
+export async function markFiled(form: FormData) {
+  const { sb } = await requireGraduate();
+  const caseId = String(form.get("case_id"));
+  await sb.from("cases").update({ status: "enviada", filed_at: new Date().toISOString() }).eq("id", caseId).eq("status", "aprobada");
+  revalidatePath(`/negocio/casos/${caseId}`);
+}

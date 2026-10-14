@@ -55,7 +55,7 @@ export const PREP_STEPS: PrepStep[] = [
   {
     id: "plan_seguridad",
     title: "Escribe tu plan de seguridad",
-    body: "La ley pide a cada preparadora un plan escrito para proteger los datos de sus clientes. Te dejo la plantilla aquí en noviembre.",
+    body: "La ley pide a cada preparadora un plan escrito para proteger los datos de sus clientes. En el nivel alto tienes la plantilla en Mi negocio.",
   },
 ];
 

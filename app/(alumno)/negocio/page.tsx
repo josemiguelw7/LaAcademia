@@ -35,6 +35,7 @@ export default async function Negocio() {
         </p>
       )}
       <Link href="/negocio/clientes/nuevo" className="mt-6 flex h-[52px] items-center justify-center rounded-boton bg-tinta text-[16px] font-bold text-blanco">Nuevo cliente</Link>
+      <Link href="/negocio/plantillas" className="mt-3 block text-center text-[15px] font-semibold text-bronce-oscuro underline underline-offset-4">Plantillas: plan de seguridad, carta de compromiso y precios</Link>
       <ul className="mt-6 space-y-3">
         {(cases ?? []).map((c) => {
           const client = c.clients as unknown as { full_name: string; ssn_last4: string | null };

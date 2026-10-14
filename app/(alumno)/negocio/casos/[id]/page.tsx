@@ -7,7 +7,9 @@ import { QuestionnaireFields } from "@/components/questionnaire/Fields";
 import { Uploader } from "@/components/upload/Uploader";
 import { IntakeLink } from "./IntakeLink";
 import { DOC_KINDS, DOC_STATUS_LABEL, type DocStatus } from "@/lib/documents";
-import { saveQuestionnaire, setDocStatus, addDocument } from "../../actions";
+import { saveQuestionnaire, setDocStatus, addDocument, markFiled } from "../../actions";
+import { DeclarationUpload } from "./DeclarationUpload";
+import { BAND_LABEL } from "@/lib/score";
 
 export const metadata = { title: "Caso · La Academia" };
 
@@ -23,7 +25,7 @@ export default async function Caso({ params }: { params: Promise<{ id: string }>
   const { sb, firm } = await requireGraduate();
   if (!firm) redirect("/negocio");
   const { data: c } = await sb.from("cases")
-    .select("id, status, tax_year, questionnaire, questionnaire_completed_at, clients(full_name, email, phone_e164, ssn_last4), case_documents(id, kind, label, status, uploaded_at), consents(kind)")
+    .select("id, status, tax_year, score, score_reasons, review_mode, questionnaire, questionnaire_completed_at, clients(full_name, email, phone_e164, ssn_last4), case_documents(id, kind, label, status, uploaded_at), consents(kind), return_reviews(id, version, submitted_at, decision, decided_at, notes)")
     .eq("id", id).maybeSingle();
   if (!c) notFound();
   const client = c.clients as unknown as { full_name: string; email: string | null; phone_e164: string | null; ssn_last4: string | null };
@@ -33,6 +35,9 @@ export default async function Caso({ params }: { params: Promise<{ id: string }>
   const missing = docs.filter((d) => d.status === "esperado").length;
   const consented = ((c.consents ?? []) as { kind: string }[]).some((x) => x.kind === "7216_divulgar");
   const save = saveQuestionnaire.bind(null, c.id);
+  const reviews = [...((c.return_reviews ?? []) as { id: string; version: number; submitted_at: string; decision: string | null; decided_at: string | null; notes: string | null }[])].sort((a, b) => b.version - a.version);
+  const band = c.score === null ? null : c.score >= 90 ? "rapida" : c.score >= 70 ? "marcada" : "completa";
+  const fecha = (d: string) => new Date(d).toLocaleDateString("es-US", { day: "numeric", month: "long", timeZone: "America/Chicago" });
 
   return (
     <main className="px-5 pt-8 sm:px-8">
@@ -46,6 +51,48 @@ export default async function Caso({ params }: { params: Promise<{ id: string }>
         {consented ? <span className="text-correcto">✓ Permiso del cliente firmado</span> : <span className="text-bronce-oscuro">Falta el permiso del cliente: lo firma con su enlace</span>}
       </p>
       <IntakeLink caseId={c.id} clientName={client.full_name} />
+
+      <section className="mt-8 rounded-tarjeta border border-linea bg-blanco p-4">
+        <h2 className="text-[20px]">Revisión con Liliana</h2>
+        {c.status === "en_revision" && <p className="mt-1 text-[15px] text-tinta-2">En revisión. Te aviso aquí en cuanto la revise.</p>}
+        {c.status === "aprobada" && (
+          <>
+            <p className="mt-1 text-[15px] font-semibold text-correcto">✓ Aprobada. Ya puedes enviarla en TaxAct con tu EFIN.</p>
+            <form action={markFiled} className="mt-3">
+              <input type="hidden" name="case_id" value={c.id} />
+              <button className="h-11 w-full rounded-boton border-[1.5px] border-tinta text-[15px] font-semibold">Ya la envié</button>
+            </form>
+          </>
+        )}
+        {c.status === "enviada" && <p className="mt-1 text-[15px] font-semibold text-correcto">✓ Enviada.</p>}
+        {(c.status === "recepcion" || c.status === "listo_para_preparar" || c.status === "devuelta") && (
+          <>
+            <p className="mt-1 text-[15px] text-tinta-2">
+              {c.status === "devuelta" ? "Te la devolví con notas. Corrígela en TaxAct y mándame la nueva versión." : "Cuando la prepares en TaxAct, mándamela antes de enviarla."}
+            </p>
+            {consented ? <DeclarationUpload caseId={c.id} again={c.status === "devuelta"} /> : <p className="mt-2 text-[14px] font-semibold text-bronce-oscuro">Primero tu cliente tiene que firmar su permiso con su enlace.</p>}
+          </>
+        )}
+        {band && c.score !== null && (
+          <div className="mt-4 border-t border-linea pt-3">
+            <p className="text-[14px] font-semibold">Puntaje <span className="cifras">{c.score}</span> · {BAND_LABEL[band]}</p>
+            {(c.score_reasons as string[]).length > 0 && (
+              <ul className="mt-1 list-disc pl-5 text-[14px] text-tinta-2">{(c.score_reasons as string[]).map((r) => <li key={r}>{r}</li>)}</ul>
+            )}
+          </div>
+        )}
+        {reviews.length > 0 && (
+          <ul className="mt-4 space-y-2 border-t border-linea pt-3">
+            {reviews.map((r) => (
+              <li key={r.id} className="text-[14px]">
+                <a href={`/declaraciones/${r.id}`} target="_blank" rel="noopener" className="font-semibold text-bronce-oscuro underline underline-offset-4">Versión {r.version}</a>
+                <span className="text-gris-texto"> · mandada el {fecha(r.submitted_at)}{r.decision ? ` · ${r.decision === "aprobada" ? "aprobada" : "devuelta"} el ${fecha(r.decided_at!)}` : " · en revisión"}</span>
+                {r.notes && <p className="mt-1 rounded-boton bg-bronce-suave p-3 text-[15px] text-tinta">«{r.notes}» — Liliana</p>}
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
 
       <section className="mt-8">
         <h2 className="text-[20px]">Documentos</h2>
