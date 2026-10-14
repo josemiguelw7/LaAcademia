@@ -32,4 +32,4 @@ export async function middleware(request: NextRequest) {
   return response;
 }
 
-export const config = { matcher: ["/((?!_next/static|_next/image|icon.png|brand/|.*\\.(?:png|jpg|svg|pdf)$).*)"] };
+export const config = { matcher: ["/((?!_next/static|_next/image|icon.png|brand/|app/|css/|js/|lib/|images/|webfonts/|manifest.webmanifest|.*\\.(?:png|jpg|jpeg|webp|svg|pdf|ico|css|js|woff2?|ttf|html)$).*)"] };
