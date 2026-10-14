@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { requireGraduate, currentTaxYear } from "@/lib/platform";
 import { FirmForm } from "./Forms";
+import { ExportButton } from "./ExportButton";
 
 export const metadata = { title: "Mi negocio · La Academia" };
 
@@ -21,6 +22,8 @@ export default async function Negocio() {
     );
   }
   const year = await currentTaxYear(sb);
+  const { data: season } = await sb.from("seasons").select("purge_on").eq("tax_year", year ?? 0).maybeSingle();
+  const daysToPurge = season ? Math.ceil((new Date(`${season.purge_on}T00:00:00`).getTime() - Date.now()) / 864e5) : null;
   const [{ data: cases }, { data: quota }] = await Promise.all([
     sb.from("cases").select("id, status, created_at, clients(full_name, ssn_last4), case_documents(status)").eq("firm_id", firm.id).eq("tax_year", year ?? 0).order("created_at", { ascending: false }),
     sb.from("firm_review_quota").select("allowed, used, strikes").eq("firm_id", firm.id).eq("tax_year", year ?? 0).maybeSingle(),
@@ -35,6 +38,13 @@ export default async function Negocio() {
         </p>
       )}
       <Link href="/negocio/clientes/nuevo" className="mt-6 flex h-[52px] items-center justify-center rounded-boton bg-tinta text-[16px] font-bold text-blanco">Nuevo cliente</Link>
+      {year && daysToPurge !== null && daysToPurge <= 45 && (
+        <section className="mt-6 rounded-tarjeta border border-bronce bg-bronce-suave p-4">
+          <p className="text-[15px] font-bold">La temporada {year} se borra en {daysToPurge} {daysToPurge === 1 ? "día" : "días"}</p>
+          <p className="mt-1 text-[14px] text-tinta-2">Descarga tu archivo con documentos y declaraciones. La ley te pide guardar copia de cada declaración tres años.</p>
+          <ExportButton year={year} />
+        </section>
+      )}
       <Link href="/negocio/plantillas" className="mt-3 block text-center text-[15px] font-semibold text-bronce-oscuro underline underline-offset-4">Plantillas: plan de seguridad, carta de compromiso y precios</Link>
       <ul className="mt-6 space-y-3">
         {(cases ?? []).map((c) => {
@@ -55,6 +65,7 @@ export default async function Negocio() {
         })}
       </ul>
       {!cases?.length && <p className="mt-6 text-[15px] text-tinta-2">Todavía no tienes clientes en esta temporada. Empieza con el primero.</p>}
+      {year && !!cases?.length && (daysToPurge === null || daysToPurge > 45) && <div className="mt-8"><ExportButton year={year} /></div>}
     </main>
   );
 }
