@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { requireViewer } from "@/lib/auth";
 import { BottomNav } from "./BottomNav";
+import { createClient } from "@/lib/supabase/server";
 
 export default async function AlumnoLayout({ children }: { children: React.ReactNode }) {
   const v = await requireViewer();
@@ -14,10 +15,12 @@ export default async function AlumnoLayout({ children }: { children: React.React
       </main>
     );
   }
+  const sb = await createClient();
+  const { count: unread } = await sb.from("notifications").select("id", { count: "exact", head: true }).eq("user_id", v.id).is("read_at", null);
   return (
     <div className="mx-auto min-h-dvh max-w-2xl pb-24">
       {children}
-      <BottomNav isStaff={v.isStaff} hasPlatform={v.hasPlatform} />
+      <BottomNav isStaff={v.isStaff} hasPlatform={v.hasPlatform} unread={unread ?? 0} />
     </div>
   );
 }

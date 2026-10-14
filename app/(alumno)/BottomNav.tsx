@@ -2,13 +2,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export function BottomNav({ isStaff, hasPlatform }: { isStaff: boolean; hasPlatform: boolean }) {
+export function BottomNav({ isStaff, hasPlatform, unread }: { isStaff: boolean; hasPlatform: boolean; unread: number }) {
   const p = usePathname();
   const items = [
     { href: "/progreso", label: "Progreso" },
     { href: "/curso", label: "Curso" },
     { href: "/preparacion", label: "Preparación" },
     ...(hasPlatform ? [{ href: "/negocio", label: "Mi negocio" }] : []),
+    { href: "/avisos", label: "Avisos" },
     ...(isStaff ? [{ href: "/panel", label: "Panel" }] : []),
   ];
   if (p.startsWith("/leccion") || p.startsWith("/practica")) return null;
@@ -20,7 +21,7 @@ export function BottomNav({ isStaff, hasPlatform }: { isStaff: boolean; hasPlatf
           return (
             <li key={i.href} className="flex-1">
               <Link href={i.href} className={`flex h-14 items-center justify-center text-[14px] font-semibold ${on ? "text-tinta" : "text-gris-texto"}`}>
-                <span className={on ? "border-b-2 border-bronce pb-1" : "pb-1"}>{i.label}</span>
+                <span className={`relative ${on ? "border-b-2 border-bronce pb-1" : "pb-1"}`}>{i.label}{i.href === "/avisos" && unread > 0 && <span aria-label={`${unread} sin leer`} className="absolute -right-3 -top-1 h-2.5 w-2.5 rounded-full bg-bronce" />}</span>
               </Link>
             </li>
           );

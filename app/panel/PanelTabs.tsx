@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const TABS = [{ href: "/panel", label: "Alumnas" }, { href: "/panel/revisiones", label: "Revisiones" }, { href: "/panel/fallos", label: "Fallos" }, { href: "/panel/cifras", label: "Cifras del año" }, { href: "/revision", label: "Guiones" }];
+const TABS = [{ href: "/panel", label: "Alumnas" }, { href: "/panel/revisiones", label: "Revisiones" }, { href: "/panel/fallos", label: "Fallos" }, { href: "/panel/cifras", label: "Cifras del año" }, { href: "/revision", label: "Guiones" }, { href: "/avisos", label: "Avisos" }];
 export function PanelTabs() {
   const p = usePathname();
   return (
