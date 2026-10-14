@@ -82,7 +82,7 @@ events          (id, user_id, name, props jsonb, created_at)   -- video_started,
 - `v_failed_questions_30d`: question, lesson, fail rate over last 30 days (from `attempt_answers`).
 - `v_inbox`: open escalations with student, plan, lesson ref, age.
 
-## Plataforma del graduado (migración 20261013000009)
+## Plataforma del graduado (migración 20261014012310)
 
 Decidido con Liliana el 13 oct 2026. Mínimo privilegio: el graduado ve lo suyo; la directora solo casos mandados a revisión; el admin no ve datos de clientes.
 
