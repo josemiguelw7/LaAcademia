@@ -2,6 +2,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { getCourseTree } from "@/lib/course";
+import { getDemoCode } from "@/lib/demo";
 
 async function viewerId() {
   const supabase = await createClient();
@@ -16,7 +17,13 @@ async function canAccess(userId: string, lessonId: string) {
   const staff = profile?.role === "directora" || profile?.role === "admin";
   if (!staff) {
     const { count } = await db.from("purchases").select("id", { count: "exact", head: true }).eq("user_id", userId).eq("status", "paid");
-    if (!count) return false;
+    if (!count) {
+      // sin compra: solo la lección demo
+      const demo = await getDemoCode();
+      if (!demo) return false;
+      const { data: l } = await db.from("lessons").select("code").eq("id", lessonId).single();
+      return l?.code === demo;
+    }
   }
   const tree = await getCourseTree(userId, staff);
   const lesson = tree.flatMap((m) => m.lessons).find((l) => l.id === lessonId);

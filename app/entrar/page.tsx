@@ -18,8 +18,17 @@ export default async function Entrar({ searchParams }: { searchParams: Promise<{
         </>
       ) : (
         <>
-          <h1 className="mt-12 text-[26px] leading-tight">Entra a tu curso</h1>
-          <p className="mt-3 text-[16px] text-tinta-2">Escribe tu correo y te mando un código para entrar. Sin contraseñas.</p>
+          {sigue === "/demo" ? (
+            <>
+              <h1 className="mt-12 text-[26px] leading-tight">Ve una clase completa, gratis</h1>
+              <p className="mt-3 text-[16px] text-tinta-2">Escribe tu correo y te mando un código. Con eso entras a una lección entera, con sus preguntas. Sin tarjeta y sin contraseñas.</p>
+            </>
+          ) : (
+            <>
+              <h1 className="mt-12 text-[26px] leading-tight">Entra a tu curso</h1>
+              <p className="mt-3 text-[16px] text-tinta-2">Escribe tu correo y te mando un código para entrar. Sin contraseñas.</p>
+            </>
+          )}
           <EmailForm sigue={sigue} />
         </>
       )}

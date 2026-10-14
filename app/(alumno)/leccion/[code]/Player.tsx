@@ -11,7 +11,7 @@ const DOWNLOADS: Record<string, { href: string; title: string }> = {
 type Seg = PlayerSegment & { html: string };
 type Step = { kind: "segment"; seg: number } | { kind: "question"; seg: number; q: number };
 
-export function Player({ lesson, mastered }: { lesson: PlayerLesson & { segments: Seg[] }; mastered: boolean }) {
+export function Player({ lesson, mastered, demo = false }: { lesson: PlayerLesson & { segments: Seg[] }; mastered: boolean; demo?: boolean }) {
   const [attemptId, setAttemptId] = useState<string | null>(null);
   const [step, setStep] = useState<Step>({ kind: "segment", seg: 0 });
   const [picked, setPicked] = useState<string | null>(null);
@@ -46,7 +46,7 @@ export function Player({ lesson, mastered }: { lesson: PlayerLesson & { segments
   const header = (
     <header className="sticky top-0 z-10 border-b border-linea bg-marfil/95 px-5 pb-3 pt-4 backdrop-blur sm:px-8">
       <div className="flex items-center justify-between gap-3">
-        <Link href="/curso" className="text-[14px] font-semibold text-bronce-oscuro">← Curso</Link>
+        <Link href={demo ? "/" : "/curso"} className="text-[14px] font-semibold text-bronce-oscuro">{demo ? "← Inicio" : "← Curso"}</Link>
         <span className="text-[13px] font-semibold text-gris-texto cifras">{answered}/{totalQ} preguntas</span>
       </div>
       <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-linea"><div className="h-full rounded-full bg-bronce transition-[width]" style={{ width: `${(answered / totalQ) * 100}%` }} /></div>
@@ -61,14 +61,21 @@ export function Player({ lesson, mastered }: { lesson: PlayerLesson & { segments
           <p className={`font-titulo text-[56px] leading-none cifras ${ok ? "text-tinta" : "text-bronce-oscuro"}`}>{final.score}<span className="text-[28px] text-gris-texto">/{final.total}</span></p>
           <h1 className="mt-4 text-[26px] leading-tight">{ok ? "Lección dominada" : "Vas bien, todavía no la dominas"}</h1>
           <p className="mt-3 text-[16px] text-tinta-2">
-            {ok ? "Lo tienes. La siguiente lección ya está abierta."
-                : `Para dominarla necesitas ${final.threshold} de ${final.total}. Vuelve a ver los segmentos donde fallaste y repítela: cada intento cuenta.`}
+            {demo
+              ? ok ? "Lo tienes. Así es cada lección del curso: te explico, te pregunto y avanzas cuando lo dominas."
+                   : `Para dominarla necesitas ${final.threshold} de ${final.total}. Así funciona todo el curso: repites hasta que lo dominas, y cada intento cuenta.`
+              : ok ? "Lo tienes. La siguiente lección ya está abierta."
+                   : `Para dominarla necesitas ${final.threshold} de ${final.total}. Vuelve a ver los segmentos donde fallaste y repítela: cada intento cuenta.`}
           </p>
           <div className="mt-8 space-y-3">
-            {ok && final.nextCode
+            {demo
+              ? <Link href="/precios" className="flex h-[52px] items-center justify-center rounded-boton bg-tinta text-[15px] font-bold text-blanco">Ver los tres niveles</Link>
+              : ok && final.nextCode
               ? <Link href={`/leccion/${final.nextCode}`} className="flex h-[52px] items-center justify-center rounded-boton bg-tinta text-[15px] font-bold text-blanco">Siguiente lección</Link>
               : <button onClick={() => location.reload()} className="h-[52px] w-full rounded-boton bg-tinta text-[15px] font-bold text-blanco">Repetir la lección</button>}
-            <Link href="/curso" className="flex h-[52px] items-center justify-center rounded-boton border-[1.5px] border-linea bg-blanco text-[15px] font-semibold">Volver al curso</Link>
+            {demo
+              ? !ok && <button onClick={() => location.reload()} className="h-[52px] w-full rounded-boton border-[1.5px] border-linea bg-blanco text-[15px] font-semibold">Repetir la lección</button>
+              : <Link href="/curso" className="flex h-[52px] items-center justify-center rounded-boton border-[1.5px] border-linea bg-blanco text-[15px] font-semibold">Volver al curso</Link>}
           </div>
           {DOWNLOADS[lesson.practiceCode ?? ""] && (
             <a href={DOWNLOADS[lesson.practiceCode!].href} download className="mt-8 flex items-center justify-between rounded-tarjeta border border-bronce bg-bronce-suave p-4">

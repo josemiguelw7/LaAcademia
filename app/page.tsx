@@ -95,6 +95,9 @@ export default async function Home() {
               >
                 Ver los tres niveles
               </Link>
+              <Link href="/demo" className="text-[15px] font-semibold text-bronce-oscuro underline underline-offset-4">
+                Ve una clase gratis
+              </Link>
               <Link href="/entrar" className="text-[15px] font-semibold text-bronce-oscuro underline underline-offset-4">
                 ¿Ya tienes el curso? Entra
               </Link>
