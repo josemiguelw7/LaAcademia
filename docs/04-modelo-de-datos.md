@@ -81,3 +81,27 @@ events          (id, user_id, name, props jsonb, created_at)   -- video_started,
 - `v_students`: profile + plan + % mastered + last activity + inactive_7d flag.
 - `v_failed_questions_30d`: question, lesson, fail rate over last 30 days (from `attempt_answers`).
 - `v_inbox`: open escalations with student, plan, lesson ref, age.
+
+## Plataforma del graduado (migración 20261013000009)
+
+Decidido con Liliana el 13 oct 2026. Mínimo privilegio: el graduado ve lo suyo; la directora solo casos mandados a revisión; el admin no ve datos de clientes.
+
+```sql
+subscriptions   (user_id, plan_id, stripe_subscription_id, status, current_period_end)   -- nivel alto anual
+seasons         (tax_year pk, opens_on, closes_on, purge_on)                              -- 2026: nov 2026 → oct 2027
+firms           (owner_id unique, business_name, logo_path, ptin_last4, efin_status, stripe_account_id, agreement_*)
+clients         (firm_id, full_name, email, phone_e164, ssn_enc, ssn_last4, dob_enc)       -- *_enc cifrado por la app
+cases           (firm_id, client_id, tax_year, status, questionnaire, score, score_reasons, review_mode, random_audit)
+case_documents  (case_id, kind, status esperado|recibido|no_aplica, storage_path, mime, size ≤ 4 MB, sha256, key_version,
+                 extracted, extracted_secure_enc)
+return_reviews  (case_id, version, pdf_path, sha256, key_version, submitted_by, decision aprobada|devuelta, decided_by, notes)
+review_packs    (firm_id, tax_year, reviews 10)        violations (firm_id, case_id, tax_year, kind)
+consents        (case_id, kind 7216_divulgar|7216_usar, text_version, signer_name, signed_at, ip)
+intake_links    (case_id, token_hash, expires_at)      -- sin políticas: solo servidor
+access_log      (actor, case_id, object_kind, action, at)  -- solo agregar
+firm_review_quota (vista: allowed = 15 + paquetes, used = casos distintos revisados, strikes)
+```
+
+Reglas en la base: el graduado no puede poner estados de revisión ni puntaje; «enviada» solo desde «aprobada»; cupo y suspensión (2 faltas) al mandar a revisión; la directora solo cambia campos de decisión y una sola vez. Depósitos `documentos` y `declaraciones`: privados, sin políticas, contenido cifrado con `lib/crypto.ts` (AES-256-GCM, llaves `DATA_KEYS` / `DATA_KEY_CURRENT` fuera de la base).
+
+Pruebas: `supabase/tests/graduate_platform_rls.sql` (18 casos) sobre `00_supabase_shim.sql` en un Postgres local.
