@@ -11,15 +11,19 @@ import type { Answers } from "@/lib/questionnaire";
 /**
  * Cuentas y datos de demostración para recorrer la plataforma. Todo lleva «Ejemplo» o «Demo» en el nombre,
  * los documentos son PDF que dicen que no son reales y los números de Seguro Social son de prueba (900-…).
- * Las cuentas usan el correo del admin con +etiqueta, así los códigos de entrada le llegan a él.
+ * Las cuentas usan el dominio demo.lilianamiranda.com, que no recibe correo: se entra sin código desde /entrar
+ * mientras la demostración esté encendida (lib/demo-login.ts).
  */
 const KEY = "demo_cuentas";
 export type DemoState = { users: { role: string; email: string; id: string }[]; firmId: string | null; createdAt: string };
 
-export const demoEmail = (base: string, tag: string) => {
-  const [local, domain] = base.split("@");
-  return `${local.split("+")[0]}+${tag}@${domain}`;
-};
+export const DEMO_DOMAIN = "demo.lilianamiranda.com";
+export const DEMO_ACCOUNTS = [
+  { role: "alumna", email: `alumna@${DEMO_DOMAIN}`, name: "Alumna Demo", home: "/curso" },
+  { role: "graduada", email: `graduada@${DEMO_DOMAIN}`, name: "Graduada Demo", home: "/negocio" },
+  { role: "directora", email: `directora@${DEMO_DOMAIN}`, name: "Liliana Demo", home: "/panel/revisiones" },
+] as const;
+const demoEmail = (tag: string) => `${tag}@${DEMO_DOMAIN}`;
 
 export async function getDemoState(): Promise<DemoState | null> {
   const { data } = await createAdminClient().from("settings").select("value").eq("key", KEY).maybeSingle();
@@ -76,16 +80,16 @@ async function ensureUser(email: string, fullName: string): Promise<string> {
   return data.user.id;
 }
 
-export async function seedDemo(adminEmail: string): Promise<DemoState> {
+export async function seedDemo(): Promise<DemoState> {
   await clearDemo();
   const db = createAdminClient();
   const { data: course } = await db.from("courses").select("id").limit(1).single();
   const { data: season } = await db.from("seasons").select("tax_year").order("tax_year", { ascending: true }).limit(1).single();
   const year = season!.tax_year as number;
 
-  const alumna = { role: "alumna", email: demoEmail(adminEmail, "alumna"), id: "" };
-  const graduada = { role: "graduada", email: demoEmail(adminEmail, "graduada"), id: "" };
-  const liliana = { role: "directora", email: demoEmail(adminEmail, "liliana"), id: "" };
+  const alumna = { role: "alumna", email: DEMO_ACCOUNTS[0].email as string, id: "" };
+  const graduada = { role: "graduada", email: DEMO_ACCOUNTS[1].email as string, id: "" };
+  const liliana = { role: "directora", email: DEMO_ACCOUNTS[2].email as string, id: "" };
   alumna.id = await ensureUser(alumna.email, "Alumna Demo");
   graduada.id = await ensureUser(graduada.email, "Graduada Demo");
   liliana.id = await ensureUser(liliana.email, "Liliana Demo");
@@ -118,7 +122,7 @@ export async function seedDemo(adminEmail: string): Promise<DemoState> {
   const actor = { kind: "cliente" as const, id: null, ip: null };
   for (const plan of CLIENTS) {
     const { data: client } = await db.from("clients").insert({
-      firm_id: firm!.id, full_name: plan.name, email: demoEmail(adminEmail, plan.name.split(" ")[0].toLowerCase()),
+      firm_id: firm!.id, full_name: plan.name, email: demoEmail(plan.name.split(" ")[0].toLowerCase()),
       ssn_enc: encryptField(plan.ssn), ssn_last4: plan.ssn.slice(-4),
     }).select("id").single();
     const { data: kase } = await db.from("cases").insert({ firm_id: firm!.id, client_id: client!.id, tax_year: year }).select("id").single();

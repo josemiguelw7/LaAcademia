@@ -2,6 +2,7 @@
 import { revalidatePath } from "next/cache";
 import { requireViewer } from "@/lib/auth";
 import { seedDemo, clearDemo } from "@/lib/demo-seed";
+import { setDemoEnabled } from "@/lib/demo-login";
 
 type State = { error: string | null; done?: string } | null;
 
@@ -9,7 +10,8 @@ export async function loadDemo(): Promise<State> {
   const v = await requireViewer();
   if (v.role !== "admin") return { error: "Solo el administrador carga la demostración." };
   try {
-    await seedDemo(v.email);
+    await seedDemo();
+    await setDemoEnabled(true);
     revalidatePath("/panel/demo");
     return { error: null, done: "Listo: cuentas y datos de demostración cargados." };
   } catch (e) {
@@ -22,6 +24,7 @@ export async function removeDemo(): Promise<State> {
   const v = await requireViewer();
   if (v.role !== "admin") return { error: "Solo el administrador borra la demostración." };
   await clearDemo();
+  await setDemoEnabled(false);
   revalidatePath("/panel/demo");
   return { error: null, done: "Demostración borrada." };
 }
