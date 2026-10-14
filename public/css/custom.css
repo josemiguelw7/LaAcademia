@@ -1339,6 +1339,8 @@
 
 /* Precios — resumen */
 .plan-mini {
+  box-sizing: border-box;
+  flex-direction: column;
   border: 1px solid rgba(244, 241, 236, .15);
   border-radius: 16px;
   padding: 28px;
@@ -1514,4 +1516,33 @@
     background: linear-gradient(180deg, rgba(28, 27, 25, .55) 0%, rgba(28, 27, 25, .45) 45%, rgba(28, 27, 25, .88) 100%);
   }
   .hayler #hero.has-media #hero-caption .hero-title { max-width: 100%; }
+}
+
+/* Imágenes de la academia (pase 3) */
+.wide-band { margin: 0; border-radius: 24px; overflow: hidden; aspect-ratio: 21 / 9; }
+.wide-band img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.wide-band.dark { margin-top: 64px; aspect-ratio: 16 / 7; }
+.photo-frame.landscape { max-width: 640px; aspect-ratio: 16 / 10; }
+.photo-frame.side { max-width: 300px; aspect-ratio: 16 / 10; margin-top: 32px; }
+.plan-21 { margin-top: 24px; }
+.plan-21 .note { margin-top: 0; }
+.bg-papeles { position: relative; isolation: isolate; }
+.bg-papeles::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(28, 27, 25, .97) 0%, rgba(28, 27, 25, .9) 50%, rgba(28, 27, 25, .55) 100%),
+    url(../images/papeles-fondo.webp) right center / cover no-repeat;
+}
+@media only screen and (max-width: 767px) {
+  .wide-band, .wide-band.dark { aspect-ratio: 4 / 3; border-radius: 16px; }
+  .wide-band.dark { margin-top: 40px; }
+  .photo-frame.landscape { aspect-ratio: 4 / 3; }
+  .photo-frame.side { display: none; }
+  .bg-papeles::before { background: linear-gradient(180deg, rgba(28, 27, 25, .9), rgba(28, 27, 25, .97)), url(../images/papeles-fondo.webp) center / cover no-repeat; }
 }
