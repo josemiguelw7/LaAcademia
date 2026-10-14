@@ -3,6 +3,7 @@ import Image from "next/image";
 import { redirect } from "next/navigation";
 import { requireViewer } from "@/lib/auth";
 import { PanelTabs } from "./PanelTabs";
+import { AccountBar } from "@/components/AccountBar";
 
 export const metadata: Metadata = { title: "Panel · La Academia", robots: { index: false, follow: false } };
 
@@ -15,7 +16,8 @@ export default async function PanelLayout({ children }: { children: React.ReactN
         <Image src="/brand/logo-horizontal-tinta.png" alt="Liliana Miranda · La Academia" width={150} height={40} className="h-auto w-[140px]" />
         <a href="/curso" className="text-[14px] font-semibold text-bronce-oscuro">Ver el curso</a>
       </div>
-      <PanelTabs />
+      <AccountBar v={v} className="mt-3" />
+      <PanelTabs isAdmin={v.role === "admin"} />
       {children}
     </div>
   );
