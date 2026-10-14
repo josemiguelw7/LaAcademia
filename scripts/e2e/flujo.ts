@@ -167,8 +167,10 @@ async function main() {
   step("10. Borrado de temporada");
   const report = await runPurge("2099-12-31");
   const { data: gone } = await admin.from("cases").select("id").eq("id", caseId);
-  const { error: fileGone } = await admin.storage.from("documentos").download(w2Path);
-  ok(report.seasons.includes(2026) && gone?.length === 0 && !!fileGone, `casos y archivos borrados (${report.files} archivos)`);
+  // se revisa la lista del depósito: una descarga recién borrada puede salir todavía de la caché
+  const folder = w2Path.split("/").slice(0, -1).join("/");
+  const { data: left } = await admin.storage.from("documentos").list(folder);
+  ok(report.seasons.includes(2026) && gone?.length === 0 && (left ?? []).length === 0, `casos y archivos borrados (${report.files} archivos)`);
   const { data: logsLeft } = await admin.from("access_log").select("id").is("case_id", null);
   ok((logsLeft ?? []).length > 0, "el registro de accesos se conserva sin la referencia");
 
