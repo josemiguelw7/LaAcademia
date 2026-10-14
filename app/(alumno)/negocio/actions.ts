@@ -1,6 +1,8 @@
 "use server";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
+import { headers } from "next/headers";
+import { issueIntakeLink } from "@/lib/intake";
 import { requireGraduate, currentTaxYear, AGREEMENT_VERSION } from "@/lib/platform";
 import { encryptField } from "@/lib/crypto";
 import { parseAnswers, isComplete, type Answers } from "@/lib/questionnaire";
@@ -74,4 +76,13 @@ export async function addDocument(form: FormData) {
   if (!isDocKind(kind)) return;
   await sb.from("case_documents").insert({ case_id: caseId, kind, label });
   revalidatePath(`/negocio/casos/${caseId}`);
+}
+
+export async function createIntakeLink(caseId: string): Promise<{ url: string | null; error: string | null }> {
+  const { sb, v } = await requireGraduate();
+  const { data: c } = await sb.from("cases").select("id, firms!inner(owner_id)").eq("id", caseId).eq("firms.owner_id", v.id).maybeSingle();
+  if (!c) return { url: null, error: "Ese caso no es tuyo." };
+  const token = await issueIntakeLink(caseId);
+  const origin = (await headers()).get("origin") ?? "";
+  return { url: `${origin}/c/${token}`, error: null };
 }
