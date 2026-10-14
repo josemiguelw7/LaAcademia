@@ -7,6 +7,7 @@ export function BottomNav({ isStaff }: { isStaff: boolean }) {
   const items = [
     { href: "/progreso", label: "Progreso" },
     { href: "/curso", label: "Curso" },
+    { href: "/preparacion", label: "Preparación" },
     ...(isStaff ? [{ href: "/panel", label: "Panel" }] : []),
   ];
   if (p.startsWith("/leccion") || p.startsWith("/practica")) return null;
