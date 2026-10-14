@@ -2,12 +2,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export function BottomNav({ isStaff }: { isStaff: boolean }) {
+export function BottomNav({ isStaff, hasPlatform }: { isStaff: boolean; hasPlatform: boolean }) {
   const p = usePathname();
   const items = [
     { href: "/progreso", label: "Progreso" },
     { href: "/curso", label: "Curso" },
     { href: "/preparacion", label: "Preparación" },
+    ...(hasPlatform ? [{ href: "/negocio", label: "Mi negocio" }] : []),
     ...(isStaff ? [{ href: "/panel", label: "Panel" }] : []),
   ];
   if (p.startsWith("/leccion") || p.startsWith("/practica")) return null;

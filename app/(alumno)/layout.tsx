@@ -17,7 +17,7 @@ export default async function AlumnoLayout({ children }: { children: React.React
   return (
     <div className="mx-auto min-h-dvh max-w-2xl pb-24">
       {children}
-      <BottomNav isStaff={v.isStaff} />
+      <BottomNav isStaff={v.isStaff} hasPlatform={v.hasPlatform} />
     </div>
   );
 }
